@@ -13,7 +13,7 @@ class Plugin extends Base
     {
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
-        $this->template->setTemplateOverride('action/index', 'pluginNameExampleCamelCase:action/index');
+        $this->template->setTemplateOverride('task_comments/show', 'templateManager:task_comments/show');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
