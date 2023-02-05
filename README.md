@@ -8,8 +8,9 @@
 Features
 -------------
 
-- `main features list`
-- `main features list`
+**Task Comments**
+- Show total number of comments created
+
 
 
 Screenshots
@@ -33,6 +34,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
 #### Core Files & Templates
 - `01` Template override
 - _No database changes_

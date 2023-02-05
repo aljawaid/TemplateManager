@@ -1,5 +1,10 @@
 <details class="accordion-section" <?= empty($comments) ? '' : 'open' ?>>
-    <summary class="accordion-title"><?= t('Comments') ?></summary>
+    <summary class="accordion-title acc-comments-title">
+        <i class="fa fa-comments-o"></i> <?= t('Comments') ?>
+        <?php if (! empty($comments)): ?>
+            <span class="">(<?= count($comments) ?>)</span>
+        <?php endif ?>
+    </summary>
     <div class="accordion-content comments" id="comments">
         <?php if (!isset($is_public) || !$is_public): ?>
             <div class="comment-sorting">
