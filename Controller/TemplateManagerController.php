@@ -1,17 +1,17 @@
 <?php
 
-namespace Kanboard\Plugin\PluginNameExampleStudlyCaps\Controller;
+namespace Kanboard\Plugin\TemplateManager\Controller;
 
 use Kanboard\Controller\BaseController;
 use Kanboard\Core\Plugin\Directory;
 
 /**
- * Plugin PluginNameExampleStudlyCaps
+ * Plugin TemplateManager
  * Class myController
  * @author aljawaid
  */
 
-class MyController extends \Kanboard\Controller\PluginController
+class TemplateManagerController extends \Kanboard\Controller\PluginController
 {
     /**
      * Display the Settings Page
@@ -26,7 +26,7 @@ class MyController extends \Kanboard\Controller\PluginController
     public function show()
     {
         $this->response->html($this->helper->layout->config('pluginNameExampleCamelCase:folder/filename', array(
-            'title' => t('PluginNameExampleStudlyCaps').' &#10562; '.t('Settings'),
+            'title' => t('TemplateManager').' &#10562; '.t('Settings'),
         )));
     }
 }
