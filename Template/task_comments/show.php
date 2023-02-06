@@ -18,17 +18,11 @@
                     <?php endif ?>
                 </small>
             </div>
+        <details class="accordion-section" <?= empty($comments) ? '' : 'open' ?>>
+            <summary class="acc-comments-title">
+                <span class="pp-grey" style="cursor: pointer;"><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i> Add a comment</span>
+            </summary>
         <?php endif ?>
-        <?php foreach ($comments as $comment): ?>
-            <?= $this->render('comment/show', array(
-                'comment'   => $comment,
-                'task'      => $task,
-                'project'   => $project,
-                'editable'  => $editable,
-                'is_public' => isset($is_public) && $is_public,
-            )) ?>
-        <?php endforeach ?>
-
         <?php if ($editable): ?>
             <?= $this->render('task_comments/create', array(
                 'values'   => array(
@@ -40,5 +34,16 @@
                 'task'     => $task,
             )) ?>
         <?php endif ?>
+        </details>
+        <?php foreach ($comments as $comment): ?>
+            <?= $this->render('comment/show', array(
+                'comment'   => $comment,
+                'task'      => $task,
+                'project'   => $project,
+                'editable'  => $editable,
+                'is_public' => isset($is_public) && $is_public,
+            )) ?>
+        <?php endforeach ?>
+
     </div>
 </details>
