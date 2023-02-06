@@ -24,6 +24,7 @@
             </summary>
         <?php endif ?>
         <?php if ($editable): ?>
+            <div id="commentsEditor" class="accordion-content comments">
             <?= $this->render('task_comments/create', array(
                 'values'   => array(
                     'user_id' => $this->user->getId(),
@@ -33,6 +34,7 @@
                 'errors'   => array(),
                 'task'     => $task,
             )) ?>
+            </div>
         <?php endif ?>
         </details>
         <hr>
