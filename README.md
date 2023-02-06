@@ -36,7 +36,7 @@ Compatibility
 - _No known issues_
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle)
 #### Core Files & Templates
-- `01` Template override
+- `02` Template overrides
 - _No database changes_
 
 
