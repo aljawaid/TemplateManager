@@ -10,25 +10,38 @@
 <?php if (! empty($predefined_task_descriptions)): ?>
     <h3 class=""><?= t('Predefined Task Descriptions') ?></h3>
     <table class="">
+        <thead>
+            <tr class="">
+                <th class=""><?= t('Title') ?></th>
+                <th class=""><?= t('ID') ?></th>
+                <th class=""><?= t('CSS Styling Class') ?></th>
+                <th class=""><?= t('CSS Reference') ?></th>
+            </tr>
+        </thead>
+        <tbody>
         <?php foreach ($predefined_task_descriptions as $template): ?>
-        <tr class="">
-            <td class="">
-                <div class="dropdown">
-                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog"></i><i class="fa fa-caret-down"></i></a>
-                    <ul class="">
-                        <li class="">
-                            <?= $this->modal->medium('edit', t('Edit'), 'PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
-                        </li>
-                        <li class="">
-                            <?= $this->modal->confirm('trash-o', t('Remove'), 'PredefinedTaskDescriptionController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
-                        </li>
-                    </ul>
-                </div>
-                <?= $this->text->e($template['title']) ?>
-                <?= $this->app->tooltipMarkdown($template['description']) ?>
-            </td>
-        </tr>
+            <tr class="">
+                <td class="">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog"></i><i class="fa fa-caret-down"></i></a>
+                        <ul class="">
+                            <li class="">
+                                <?= $this->modal->medium('edit', t('Edit'), 'PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
+                            </li>
+                            <li class="">
+                                <?= $this->modal->confirm('trash-o', t('Remove'), 'PredefinedTaskDescriptionController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <?= $this->text->e($template['title']) ?>
+                    <?= $this->app->tooltipMarkdown($template['description']) ?>
+                </td>
+                <td class=""><?= $this->text->e($template['id']) ?></td>
+                <td class=""><code>id="TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
+                <td class=""><code>#TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
+            </tr>
         <?php endforeach ?>
+        </tbody>
     </table>
 <?php endif ?>
 
