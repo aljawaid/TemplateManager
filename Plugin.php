@@ -14,6 +14,7 @@ class Plugin extends Base
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
         $this->template->setTemplateOverride('task_comments/show', 'templateManager:task_comments/show');
+        $this->template->setTemplateOverride('project_predefined_content/show', 'templateManager:project_predefined_content/show');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
@@ -25,7 +26,7 @@ class Plugin extends Base
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        //  - Example for menu item in kanboard settings page: $this->template->hook->attach('template:config:sidebar', 'pluginNameExampleCamelCase:config/sidebar');
+        $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
