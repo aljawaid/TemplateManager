@@ -35,6 +35,7 @@
             )) ?>
         <?php endif ?>
         </details>
+        <hr>
         <?php foreach ($comments as $comment): ?>
             <?= $this->render('comment/show', array(
                 'comment'   => $comment,
