@@ -14,8 +14,10 @@
             <tr class="">
                 <th class=""><?= t('Title') ?></th>
                 <th class=""><?= t('ID') ?></th>
-                <th class=""><?= t('CSS Styling Class') ?></th>
-                <th class=""><?= t('CSS Reference') ?></th>
+                <?php if (file_exists('plugins/TemplateTitle')): ?>
+                    <th class=""><?= t('CSS Styling Class') ?></th>
+                    <th class=""><?= t('CSS Reference') ?></th>
+                <?php endif ?>
             </tr>
         </thead>
         <tbody>
@@ -37,8 +39,10 @@
                     <?= $this->app->tooltipMarkdown($template['description']) ?>
                 </td>
                 <td class=""><?= $this->text->e($template['id']) ?></td>
-                <td class=""><code>id="TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
-                <td class=""><code>#TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
+                <?php if (file_exists('plugins/TemplateTitle')): ?>
+                    <td class=""><code>id="TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
+                    <td class=""><code>#TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
+                <?php endif ?>
             </tr>
         <?php endforeach ?>
         </tbody>
