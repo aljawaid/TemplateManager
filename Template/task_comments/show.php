@@ -6,6 +6,9 @@
         <?php endif ?>
     </summary>
     <div class="accordion-content comments" id="comments">
+        <?php if (empty($comments)): ?>
+            <div class="no-data"><?= t('No comments') ?></div>
+        <?php endif ?>
         <?php if (!isset($is_public) || !$is_public): ?>
             <div class="comment-sorting">
                 <small>

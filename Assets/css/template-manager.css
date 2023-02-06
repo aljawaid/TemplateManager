@@ -46,3 +46,9 @@
 .text-center { text-align: center; }
 
 .relative { position: relative; }
+
+#comments .no-data {
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 10px;
+}
