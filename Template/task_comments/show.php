@@ -20,7 +20,7 @@
             </div>
         <details class="accordion-section" <?= empty($comments) ? '' : 'open' ?>>
             <summary class="acc-comments-title">
-                <span class="pp-grey" style="cursor: pointer;"><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i> Add a comment</span>
+                <span class="pp-grey" style="cursor: pointer;"><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i> <?= t('Add a comment') ?></span>
             </summary>
         <?php endif ?>
         <?php if ($editable): ?>
