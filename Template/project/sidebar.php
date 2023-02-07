@@ -9,6 +9,8 @@
         </li>
         <?php endif ?>
 
+        <?= $this->hook->render('template:project:sidebar:top', array('project' => $project)) ?>
+
         <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
             <li <?= $this->app->checkMenuSelection('ProjectEditController') ?>>
                 <?= $this->url->link(t('Edit project'), 'ProjectEditController', 'show', array('project_id' => $project['id'])) ?>

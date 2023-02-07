@@ -11,6 +11,8 @@ Features
 **Task Comments**
 - Show total number of comments created
 
+**NEW Project Sidebar**
+- Add new hook `'template:project:sidebar:top'` (shows after the Custom Filter menu link)
 
 
 Screenshots
