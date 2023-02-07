@@ -1,5 +1,5 @@
-<div class="sidebar">
-    <ul>
+<div id="ProjectSidebar" class="sidebar">
+    <ul class="">
         <li <?= $this->app->checkMenuSelection('ProjectViewController', 'show') ?>>
             <?= $this->url->link(t('Summary'), 'ProjectViewController', 'show', array('project_id' => $project['id'])) ?>
         </li>
@@ -38,12 +38,12 @@
                 <?= $this->url->link(t('Tags'), 'ProjectTagController', 'index', array('project_id' => $project['id'])) ?>
             </li>
             <?php if ($project['is_private'] == 0): ?>
-            <li <?= $this->app->checkMenuSelection('ProjectPermissionController') ?>>
-                <?= $this->url->link(t('Permissions'), 'ProjectPermissionController', 'index', array('project_id' => $project['id'])) ?>
-            </li>
-            <li <?= $this->app->checkMenuSelection('ProjectRoleController') ?>>
-                <?= $this->url->link(t('Custom roles'), 'ProjectRoleController', 'show', array('project_id' => $project['id'])) ?>
-            </li>
+                <li <?= $this->app->checkMenuSelection('ProjectPermissionController') ?>>
+                    <?= $this->url->link(t('Permissions'), 'ProjectPermissionController', 'index', array('project_id' => $project['id'])) ?>
+                </li>
+                <li <?= $this->app->checkMenuSelection('ProjectRoleController') ?>>
+                    <?= $this->url->link(t('Custom roles'), 'ProjectRoleController', 'show', array('project_id' => $project['id'])) ?>
+                </li>
             <?php endif ?>
             <li <?= $this->app->checkMenuSelection('ActionController') ?>>
                 <?= $this->url->link(t('Automatic actions'), 'ActionController', 'index', array('project_id' => $project['id'])) ?>
@@ -55,14 +55,16 @@
                 <?= $this->url->link(t('Import Tasks'), 'ProjectViewController', 'importTasks', array('project_id' => $project['id'])) ?>
             </li>
             <?php if ($project['is_active']): ?>
+                <li class="project-close">
                     <?= $this->modal->confirmLink(t('Close this project'), 'ProjectStatusController', 'confirmDisable', array('project_id' => $project['id'])) ?>
                 </li>
             <?php else: ?>
+                <li class="project-open">
                     <?= $this->modal->confirmLink(t('Open this project'), 'ProjectStatusController', 'confirmEnable', array('project_id' => $project['id'])) ?>
                 </li>
             <?php endif ?>
             <?php if ($this->user->hasProjectAccess('ProjectStatusController', 'remove', $project['id'])): ?>
-                <li>
+                <li class="project-delete">
                     <?= $this->modal->confirmLink(t('Remove'), 'ProjectStatusController', 'confirmRemove', array('project_id' => $project['id'])) ?>
                 </li>
             <?php endif ?>
