@@ -15,6 +15,7 @@ class Plugin extends Base
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
         $this->template->setTemplateOverride('task_comments/show', 'templateManager:task_comments/show');
         $this->template->setTemplateOverride('project_predefined_content/show', 'templateManager:project_predefined_content/show');
+        $this->template->setTemplateOverride('project/sidebar', 'templateManager:project/sidebar');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
