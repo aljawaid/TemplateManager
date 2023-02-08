@@ -102,14 +102,14 @@
     <?php endif ?>
 </fieldset>
 
-<form method="post" action="<?= $this->url->href('ProjectPredefinedContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit')) ?>" autocomplete="off">
-    <?= $this->form->csrf() ?>
+<fieldset class="">
+    <legend class=""><?= t('Email Subject Templates') ?></legend>
+    <form method="post" action="<?= $this->url->href('ProjectPredefinedContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit')) ?>" autocomplete="off">
+        <?= $this->form->csrf() ?>
 
-    <fieldset class="">
-        <legend class=""><?= t('Email Subject Templates') ?></legend>
         <?= $this->form->textarea('predefined_email_subjects', $values, $errors, array('tabindex="1"')) ?>
         <p class="form-help"><?= t('Write one subject by line.') ?></p>
-        <?= $this->modal->submitButtons(array('tabindex' => 2)) ?>
-    </fieldset>
 
-</form>
+        <?= $this->modal->submitButtons(array('tabindex' => 2)) ?>
+    </form>
+</fieldset>
