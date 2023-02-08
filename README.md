@@ -2,11 +2,16 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-`Brief intro`
+Predefined Contents becomes the new Template Manager. A new interface allows you to create, update and delete new comment templates for each project. This new interface bring task desciption templates, predefined email subjects and the new comment templates together for each project.
 
 
 Features
 -------------
+
+**NEW Comment Templates**
+- Add, update or delete templates for your regular comments which you may use in any task
+- Saved comment templates can be selected from each task
+- Show template count in project dropdown
 
 **Task Comments**
 - Show total number of comments created
@@ -18,7 +23,7 @@ Features
 Screenshots
 ----------
 
-**title**  
+**Template Manager**  
 
 ![Screenshot Name](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
 
@@ -26,7 +31,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562;
+Go to `Project Settings` &#10562; Template Manager
 
 
 Compatibility
@@ -39,7 +44,7 @@ Compatibility
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle)
 #### Core Files & Templates
 - `03` Template overrides
-- _No database changes_
+- `01` New database table created as `comment_templates`
 
 
 Changelog
