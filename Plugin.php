@@ -32,10 +32,6 @@ class Plugin extends Base
         //  - Must have the corresponding action in the matching controller
         //$this->route->addRoute('/ / ', ' ', ' ', 'TemplateManager');
 
-        // Helper
-        //  - Example: $this->helper->register('helperClassNameCamelCase', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\HelperNameExampleStudlyCaps');
-        //  - Add each Helper in the 'use' section at the top of this file
-        //$this->helper->register(' ', '\Kanboard\Plugin\  \Helper\  ');
     }
 
     public function onStartup()
