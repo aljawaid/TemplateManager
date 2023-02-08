@@ -84,7 +84,7 @@
                             </ul>
                         </div>
                         <?= $this->text->e($commentTemplate['title']) ?>
-                        <?= $this->app->tooltipMarkdown($commentTemplate['description']) ?>
+                        <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                     </td>
                     <td class=""><?= $this->text->e($commentTemplate['id']) ?></td>
                     <?php if (file_exists('plugins/TemplateTitle')): ?>
