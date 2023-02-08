@@ -48,7 +48,7 @@ class CommentTemplateController extends BaseController
     public function edit(array $values = array(), array $errors = array())
     {
         $project = $this->getProject();
-        $template = $this->taskCommentTemplateModel->getById($project['id'], $this->request->getIntegerParam('id'));
+        $template = $this->taskCommentTemplateModel->getByProjectId($project['id'], $this->request->getIntegerParam('id'));
 
         $this->response->html($this->template->render('templateManager:comment_template/edit', array(
             'values' => empty($values) ? $template : $values,
@@ -67,7 +67,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->update($project['id'], $template['id'], $values['title'], $values['description']) !== false) {
+            if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description']) !== false) {
                 $this->flash->success(t('Template updated successfully.'));
             } else {
                 $this->flash->failure(t('Unable to update this template.'));
@@ -96,7 +96,7 @@ class CommentTemplateController extends BaseController
         $project = $this->getProject();
         $template = $this->getTemplate($project);
 
-        if ($this->taskCommentTemplateModel->remove($project['id'], $template['id'])) {
+        if ($this->taskCommentTemplateModel->deleteCommentTemplate($project['id'], $template['id'])) {
             $this->flash->success(t('Template removed successfully.'));
         } else {
             $this->flash->failure(t('Unable to remove this template.'));
@@ -107,7 +107,7 @@ class CommentTemplateController extends BaseController
 
     protected function getTemplate(array $project)
     {
-        $template = $this->taskCommentTemplateModel->getById($project['id'], $this->request->getIntegerParam('id'));
+        $template = $this->taskCommentTemplateModel->getByProjectId($project['id'], $this->request->getIntegerParam('id'));
 
         if (empty($template)) {
             throw new PageNotFoundException();
