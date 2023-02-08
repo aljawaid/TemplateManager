@@ -18,7 +18,7 @@ class CommentTemplateController extends BaseController
     {
         $project = $this->getProject();
 
-        $this->response->html($this->template->render('comment_template/create', array(
+        $this->response->html($this->template->render('templateManager:comment_template/create', array(
             'values' => $values,
             'errors' => $errors,
             'project' => $project,
@@ -33,13 +33,13 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->create($project['id'], $values['title'], $values['template_content']) !== false) {
+            if ($this->taskCommentTemplateModel->createCommentTemplate($project['id'], $values['title'], $values['description']) !== false) {
                 $this->flash->success(t('Template created successfully'));
             } else {
                 $this->flash->failure(t('Unable to create this template'));
             }
 
-            $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'])), true);
+            $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
         } else {
             $this->create($values, $errors);
         }
@@ -50,7 +50,7 @@ class CommentTemplateController extends BaseController
         $project = $this->getProject();
         $template = $this->taskCommentTemplateModel->getById($project['id'], $this->request->getIntegerParam('id'));
 
-        $this->response->html($this->template->render('comment_template/edit', array(
+        $this->response->html($this->template->render('templateManager:comment_template/edit', array(
             'values' => empty($values) ? $template : $values,
             'template' => $template,
             'errors' => $errors,
@@ -67,7 +67,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->update($project['id'], $template['id'], $values['title'], $values['template_content']) !== false) {
+            if ($this->taskCommentTemplateModel->update($project['id'], $template['id'], $values['title'], $values['description']) !== false) {
                 $this->flash->success(t('Template updated successfully.'));
             } else {
                 $this->flash->failure(t('Unable to update this template.'));
@@ -84,7 +84,7 @@ class CommentTemplateController extends BaseController
         $project = $this->getProject();
         $template = $this->getTemplate($project);
 
-        $this->response->html($this->template->render('comment_template/remove', array(
+        $this->response->html($this->template->render('templateManager:comment_template/remove', array(
             'template' => $template,
             'project' => $project,
         )));
