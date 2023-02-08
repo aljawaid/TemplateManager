@@ -17,7 +17,13 @@ class TaskCommentTemplateModel extends Base
      *
      * @var string
      */
+
     const TABLE = 'comment_templates';
+
+    public function getAll($projectId)
+    {
+        return $this->db->table(self::TABLE)->eq('project_id', $projectId)->findAll();
+    }
 
     public function getList($projectId)
     {
