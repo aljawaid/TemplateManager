@@ -37,12 +37,12 @@
             </div>
             <div class="quick-templates-bar">
                 <div class="quick-templates-title">
-                    <i class="fa fa-star" aria-hidden="true"></i> Quick Templates
+                    <i class="fa fa-star" aria-hidden="true"></i> <?= t('Comment Templates') ?>
                 </div>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <details class="quick-templates-section">
                         <summary class="cursor-pointer"><strong><?= $commentTemplate['title'] ?></strong></summary>
-                        <div class="acc-category-code">
+                        <div class="comment-template-content">
                             <hr>
                         <?= $this->text->e($commentTemplate['description']) ?>
                         </div>
