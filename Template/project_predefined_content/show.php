@@ -10,9 +10,9 @@
     </ul>
 </div>
 
-<?php if (! empty($predefined_task_descriptions)): ?>
-    <fieldset class="">
-        <legend class=""><?= t('Task Description Templates') ?></legend>
+<fieldset class="">
+    <legend class=""><?= t('Task Description Templates') ?></legend>
+    <?php if (! empty($predefined_task_descriptions)): ?>
         <table class="template-table">
             <thead>
                 <tr class="">
@@ -51,6 +51,8 @@
             <?php endforeach ?>
             </tbody>
         </table>
+    <?php else: ?>
+        <span class=""><?= t('No templates') ?></span>
     <?php endif ?>
 </fieldset>
 
