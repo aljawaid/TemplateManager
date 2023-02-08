@@ -57,7 +57,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('description text');
+        return t('Predefined Contents becomes the new Template Manager. A new interface allows you to create, update and delete new comment templates for each project. This new feature brings task description templates, predefined email subjects and the new comment templates together in one section for each project.');
     }
 
     public function getPluginAuthor()
