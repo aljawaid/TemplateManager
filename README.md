@@ -12,6 +12,16 @@ Features
 - Show template count in project dropdown
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total templates are shown in the Admin Dashboard
+- Add pretty URLs
+  - `https://mydomain.com/project/<project_id>/templates` goes to the relevant project's Template Manager section
+  - _Tasks:_
+    - `https://mydomain.com/project/:project_id/templates/tasks/add`
+    - `https://mydomain.com/project/:project_id/templates/tasks/edit/<template_id>`
+    - `https://mydomain.com/project/:project_id/templates/tasks/delete/<template_id>`
+  - _Comments:_
+    - `https://mydomain.com/project/:project_id/templates/comments/add`
+    - `https://mydomain.com/project/:project_id/templates/comments/edit/<template_id>`
+    - `https://mydomain.com/project/:project_id/templates/comments/delete/<template_id>`
 
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which you may use in any task
@@ -47,7 +57,7 @@ Compatibility
 - _No known issues_
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
 #### Core Files & Templates
-- `03` Template overrides
+- `04` Template overrides
 - `01` New database table created as `comment_templates`
 
 
