@@ -10,6 +10,6 @@
     <?= $this->modal->confirmButtons(
         'CommentTemplateController',
         'remove',
-        array('project_id' => $project['id'], 'id' => $template['id'])
+        array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager')
     ) ?>
 </div>
