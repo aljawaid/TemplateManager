@@ -23,6 +23,10 @@ class Plugin extends Base
         //  - Keep filename lowercase
         $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/template-manager.js'));
 
+        // Views - Add Menu Item - Template Hook
+        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
+        $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
+
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
