@@ -4,8 +4,6 @@ namespace Kanboard\Plugin\TemplateManager;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-// use Kanboard\Plugin\PluginNameExampleStudlyCaps\AgeHelper;  // Helper Class and Filename should be exact
-// use Kanboard\Helper;  // Add core Helper for using forms etc. inside external templates
 
 class Plugin extends Base
 {
@@ -25,10 +23,6 @@ class Plugin extends Base
         //  - Keep filename lowercase
         $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/template-manager.js'));
 
-        // Views - Add Menu Item - Template Hook
-        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
-
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
@@ -43,6 +37,15 @@ class Plugin extends Base
     public function onStartup()
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+    }
+
+    public function getClasses()
+    {
+        return [
+            'Plugin\TemplateManager\Model' => [
+                'TaskCommentTemplateModel',
+            ]
+        ];
     }
 
     public function getPluginName()
