@@ -8,13 +8,17 @@ Predefined Contents becomes the new Template Manager. A new interface allows you
 Features
 -------------
 
+- Revised predefined contents as Task Description Templates
+- Show template count in project dropdown
+- Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
+  - Total templates are shown in the Admin Dashboard
+
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which you may use in any task
-- Saved comment templates can be selected from each task
-- Show template count in project dropdown
 
 **Task Comments**
 - Show total number of comments created
+- Saved comment templates can be selected from each task
 
 **NEW Project Sidebar**
 - Add new hook `'template:project:sidebar:top'` (shows after the Custom Filter menu link)
@@ -41,7 +45,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle)
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
 #### Core Files & Templates
 - `03` Template overrides
 - `01` New database table created as `comment_templates`
