@@ -56,9 +56,9 @@
     <?php endif ?>
 </fieldset>
 
-<?php if (! empty($saved_comment_templates)): ?>
-    <fieldset class="">
-        <legend class=""><?= t('Task Comment Templates') ?></legend>
+<fieldset class="">
+    <legend class=""><?= t('Task Comment Templates') ?></legend>
+    <?php if (! empty($saved_comment_templates)): ?>
         <table class="template-table">
             <thead>
                 <tr class="">
@@ -97,6 +97,8 @@
             <?php endforeach ?>
             </tbody>
         </table>
+    <?php else: ?>
+        <span class=""><?= t('No templates') ?></span>
     <?php endif ?>
 </fieldset>
 
