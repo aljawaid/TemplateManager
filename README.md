@@ -38,7 +38,7 @@ Compatibility
 - _No known issues_
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle)
 #### Core Files & Templates
-- `02` Template overrides
+- `03` Template overrides
 - _No database changes_
 
 
@@ -65,7 +65,7 @@ Installation
 
 **_or_**
 
-- **Install via [GitHub](https://github.com/ "Find the correct plugin from the list of repositories")**
+- **Install via [GitHub](https://github.com/aljawaid "Find the correct plugin from the list of repositories")**
   - Download the `.zip` file and decompress everything under the directory `/plugins`
   - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
 
@@ -86,7 +86,7 @@ Translations
 Authors & Contributors
 ----------------------
 
-- [@](https://github.com/url) - Author
+- [@aljawaid](https://github.com/aljawaid) - Author
 - _Contributors welcome_
 
 
