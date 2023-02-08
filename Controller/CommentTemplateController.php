@@ -73,7 +73,7 @@ class CommentTemplateController extends BaseController
                 $this->flash->failure(t('Unable to update this template.'));
             }
 
-            $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'])), true);
+            $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
         } else {
             $this->edit($values, $errors);
         }
@@ -102,7 +102,7 @@ class CommentTemplateController extends BaseController
             $this->flash->failure(t('Unable to remove this template.'));
         }
 
-        $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'])), true);
+        $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
     }
 
     protected function getTemplate(array $project)
