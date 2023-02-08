@@ -48,6 +48,7 @@
     'comments' => $comments,
     'project' => $project,
     'editable' => $this->user->hasProjectAccess('CommentController', 'edit', $project['id']),
+    'saved_comment_templates' => $this->task->taskCommentTemplateModel->getAll($project['id']),
 )) ?>
 
 <?= $this->hook->render('template:task:show:bottom', array('task' => $task, 'project' => $project)) ?>
