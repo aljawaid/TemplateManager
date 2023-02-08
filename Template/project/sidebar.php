@@ -15,7 +15,7 @@
             <li <?= $this->app->checkMenuSelection('ProjectEditController') ?>>
                 <?= $this->url->link(t('Edit project'), 'ProjectEditController', 'show', array('project_id' => $project['id'])) ?>
             </li>
-            <li <?= $this->app->checkMenuSelection('ProjectPredefinedContentController') ?>>
+            <li <?= $this->app->checkMenuSelection('TemplateContentController') ?>>
                 <?= $this->url->link(t('Template Manager'), 'TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')) ?>
             </li>
             <li <?= $this->app->checkMenuSelection('ProjectViewController', 'share') ?>>

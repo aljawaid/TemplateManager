@@ -1,4 +1,4 @@
-<li <?= $this->app->checkMenuSelection('ProjectPredefinedContentController') ?>>
+<li <?= $this->app->checkMenuSelection('TemplateContentController') ?>>
     <?= $this->url->link('
         <svg width="20px" height="20px" class="project-tags v-middle" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="CurrentColor">
             <g fill="none" fill-rule="evenodd" id="" stroke="none" stroke-width="1">
