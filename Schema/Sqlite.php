@@ -12,7 +12,7 @@ function version_1(PDO $pdo)
         id INT NOT NULL AUTO_INCREMENT,
         project_id INT NOT NULL,
         title TEXT NOT NULL,
-        template_content TEXT NOT NULL,
+        description TEXT NOT NULL,
         FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE,
         PRIMARY KEY(id)
         )
