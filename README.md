@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Predefined Contents becomes the new Template Manager. A new interface allows you to create, update and delete new comment templates for each project. This new interface bring task desciption templates, predefined email subjects and the new comment templates together for each project.
+Predefined Contents becomes the new Template Manager. A new interface allows you to create, update and delete new comment templates for each project. This new feature brings task description templates, predefined email subjects and the new comment templates together in one section for each project.
 
 
 Features
