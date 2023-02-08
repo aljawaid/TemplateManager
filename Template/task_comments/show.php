@@ -35,6 +35,20 @@
                 'task'     => $task,
             )) ?>
             </div>
+            <div class="quick-templates-bar">
+                <div class="quick-templates-title">
+                    <i class="fa fa-star" aria-hidden="true"></i> Quick Templates
+                </div>
+                <?php foreach ($saved_comment_templates as $commentTemplate): ?>
+                    <details class="quick-templates-section">
+                        <summary class="cursor-pointer"><strong><?= $commentTemplate['title'] ?></strong></summary>
+                        <div class="acc-category-code">
+                            <hr>
+                        <?= $this->text->e($commentTemplate['description']) ?>
+                        </div>
+                    </details>
+                <?php endforeach ?>
+            </div>
         <?php endif ?>
         </details>
         <hr>
