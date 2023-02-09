@@ -84,6 +84,11 @@
 }
 
 
+.template-manager-menu svg {
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
 .no-templates {
     font-style: italic;
 }
