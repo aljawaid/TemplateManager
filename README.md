@@ -14,7 +14,8 @@ Features
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total number of templates are shown in the Admin Dashboard
 - Add pretty URLs (if globally configured)
-  - `https://mydomain.com/project/[project_id]/templates` links to the relevant project's Template Manager section
+  - `https://mydomain.com/project/[project_id]/templates`
+     - _Links to the relevant project's Template Manager section_
   - _Tasks:_
     - `https://mydomain.com/project/[project_id]/templates/tasks/add`
     - `https://mydomain.com/project/[project_id]/templates/tasks/edit/[template_id]`
@@ -35,7 +36,8 @@ Features
 
 **NEW Project Sidebar**
 - Replaced default code to extend the functionality of the project sidebar menu
-- Add new hook `'template:project:sidebar:top'` (shows after the Custom Filter menu link to show content to all user roles)
+- Add new hook `'template:project:sidebar:top'`
+  - _Shows after the Custom Filter menu link to show content to all user roles_
 
 
 Screenshots
