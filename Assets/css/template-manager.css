@@ -74,8 +74,13 @@
     cursor: text !important;
 }
 
-.quick-templates-section .cursor-pointer {
-    cursor: pointer;
+.templates-menu-count {
+    margin-left: 5px;
+    font-size: .8em;
+    border: 1px solid var(--blue-border-gradient-match);
+    padding: 0px 3px;
+    border-radius: var(--border-radius-t-manager);
+    vertical-align: super;
 }
 
 .comment-template-content {
