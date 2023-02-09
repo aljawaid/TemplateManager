@@ -19,7 +19,7 @@
     --button-background-delete: #D05C84;
     --link-color-primary: #36C;
     --header-page-margin-t-manager: 5px 15px 10px 15px;
-    --page-margin-t-manager: 0px 15px 0px 15px;
+    --page-margin-t-manager: 5px 15px 10px 15px;
     --title-margin-t-manager: 0px 15px 0px 15px;
     --border-radius-t-manager: 3px;
     --panel-background-t-manager: #EEEEEE;
@@ -47,6 +47,21 @@
 
 .relative { position: relative; }
 
+.template-manager-page-margin {
+    margin: var(--page-margin-t-manager);
+}
+
+.template-manager-page-header h2 {
+    margin-top: 0;
+    font-weight: 600;
+    border-bottom: 2px outset var(--button-blue-border-gradient-match);
+}
+
+.template-manager-page-header h2 svg {
+    vertical-align: bottom;
+    width: 28px;
+    height: 28px;
+}
 
 .add-templates-bar {
     margin-bottom: 20px;
@@ -81,6 +96,48 @@
     color: var(--pp-black);
     text-decoration: none;
 }
+
+fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subject-section {
+    border: 1px solid var(--blue-border-gradient-match);
+    border-radius: var(--border-radius-t-manager);
+}
+
+.task-desc-section legend, .task-comments-section legend, .email-subject-section legend {
+    line-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.task-desc-section svg, .task-comments-section svg, .email-subject-section svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: bottom;
+}
+
+.template-table, .email-subject-form {
+    margin-block: 10px;
+}
+
+.email-subject-form {
+    margin-bottom: 0;
+}
+
+.email-subject-form .form-actions {
+    padding-top: 0;
+}
+
+textarea#form-predefined_email_subjects {
+    padding: 4px;
+    border: 1px solid var(--blue-border-gradient-match);
+    border-radius: var(--border-radius-t-manager);
+    width: 400px;
+    max-width: 99%;
+    height: 200px;
+    font-family: revert;
+    font-size: 1em;
+    background: #D8E2F9;
+}
+
 #comments .no-data {
     font-style: italic;
     margin-left: 20px;

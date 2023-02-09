@@ -13,7 +13,7 @@ Features
 - Show total template count in project dropdown with a link to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total number of templates are shown in the Admin Dashboard
-- Add pretty URLs (if globally configured)
+- Add pretty URLs _(if globally configured)_
   - `https://mydomain.com/project/[project_id]/templates`
      - _Links to the relevant project's Template Manager section_
   - _Tasks:_
