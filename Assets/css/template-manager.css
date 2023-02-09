@@ -83,6 +83,9 @@
     vertical-align: super;
 }
 
+.dropdown-submenu-open li:not(.no-hover):hover .templates-menu-count {
+    border-color: var(--pp-white);
+}
 
 .template-manager-menu svg {
     vertical-align: bottom;
