@@ -64,7 +64,7 @@
             </tbody>
         </table>
     <?php else: ?>
-        <span class=""><?= t('No templates') ?></span>
+        <span class="no-templates"><?= t('No templates') ?></span>
     <?php endif ?>
 </fieldset>
 
@@ -110,7 +110,7 @@
             </tbody>
         </table>
     <?php else: ?>
-        <span class=""><?= t('No templates') ?></span>
+        <span class="no-templates"><?= t('No templates') ?></span>
     <?php endif ?>
 </fieldset>
 

@@ -83,11 +83,7 @@
     vertical-align: super;
 }
 
-.comment-template-content {
-    background-color: #828282;
-    padding: .5em 1.5em;
-    width: max-content;
-    border-radius: var(--border-radius-kbcss);
-    font-family: Tahoma;
-    letter-spacing: 1px;
+
+.no-templates {
+    font-style: italic;
 }
