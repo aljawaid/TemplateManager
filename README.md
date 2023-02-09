@@ -34,10 +34,15 @@ Features
 - Show total number of comments created
 - Saved comment templates can be selected from each task through a `Favourites` bar
 
-**NEW Project Sidebar**
+**Revised Project Sidebar**
 - Replaced default code to extend the functionality of the project sidebar menu
+  - Moved the core hook `'template:project:sidebar'`
+    - _Now shows before the Close Project menu link to show content to **all users**_
+  - Changed sort order of menu for faster access to project configuration sections
 - Add new hook `'template:project:sidebar:top'`
-  - _Shows after the Custom Filter menu link to show content to all user roles_
+  - _Shows after the Summary menu link to show content to **all users**_
+- Add new hook `'template:project:sidebar:bottom'`
+  - _Shows after the Delete Project menu link to show content to **all users**_
 
 
 Screenshots
