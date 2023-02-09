@@ -47,6 +47,40 @@
 
 .relative { position: relative; }
 
+
+.add-templates-bar {
+    margin-bottom: 20px;
+}
+
+.add-templates-bar li {
+    list-style-type: none;
+    display: inline-block;
+    margin: auto 20px 0 0;
+}
+
+.add-desc-template-btn, .add-comment-template-btn, .add-desc-template-btn:visited, .add-comment-template-btn:visited {
+    font-size: 1em;
+    border: 2px solid var(--pp-black);
+    border-radius: var(--border-radius-t-manager);
+    transition: var(--transition-t-manager);
+}
+
+.add-desc-template-btn a, .add-comment-template-btn a {
+    text-decoration: none;
+}
+
+.add-desc-template-btn a svg, .add-comment-template-btn a svg {
+    vertical-align: bottom;
+}
+
+.add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus {
+    border-color: var(--pp-green);
+}
+
+.add-desc-template-btn:hover a, .add-comment-template-btn:hover a, .add-desc-template-btn:focus a, .add-comment-template-btn:focus a {
+    color: var(--pp-black);
+    text-decoration: none;
+}
 #comments .no-data {
     font-style: italic;
     margin-left: 20px;
