@@ -36,17 +36,14 @@
             )) ?>
             </div>
             <div class="quick-templates-bar">
-                <div class="quick-templates-title">
+                <div class="quick-templates-header">
                     <i class="fa fa-star" aria-hidden="true"></i> <?= t('Comment Templates') ?>
                 </div>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
-                    <details class="quick-templates-section">
-                        <summary class="cursor-pointer"><strong><?= $commentTemplate['title'] ?></strong></summary>
-                        <div class="comment-template-content">
-                            <hr>
-                        <?= $this->text->e($commentTemplate['description']) ?>
-                        </div>
-                    </details>
+                    <div class="quick-templates-label">
+                        <div class="quick-templates-title"><?= $commentTemplate['title'] ?></div>
+                        <div class="quick-template-content"><?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?></div>
+                    </div>
                 <?php endforeach ?>
             </div>
         <?php endif ?>
