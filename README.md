@@ -8,30 +8,43 @@ Predefined Contents becomes the new Template Manager. A new interface allows you
 Features
 -------------
 
-- Revised predefined contents as Task Description Templates
-- Show template count in project dropdown
+- Revised `predefined contents` as `Task Description Templates`
+- Renamed the `predefined contents` section to `Template Manager`
+- Show total template count in project dropdown with a link to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
-  - Total templates are shown in the Admin Dashboard
-- Add pretty URLs
-  - `https://mydomain.com/project/<project_id>/templates` goes to the relevant project's Template Manager section
+  - Total number of templates are shown in the Admin Dashboard
+- Add pretty URLs _(if globally configured)_
+  - `https://mydomain.com/project/[project_id]/templates`
+     - _Links to the relevant project's Template Manager section_
   - _Tasks:_
-    - `https://mydomain.com/project/:project_id/templates/tasks/add`
-    - `https://mydomain.com/project/:project_id/templates/tasks/edit/<template_id>`
-    - `https://mydomain.com/project/:project_id/templates/tasks/delete/<template_id>`
+    - `https://mydomain.com/project/[project_id]/templates/tasks/add`
+    - `https://mydomain.com/project/[project_id]/templates/tasks/edit/[template_id]`
+    - `https://mydomain.com/project/[project_id]/templates/tasks/delete/[template_id]`
   - _Comments:_
-    - `https://mydomain.com/project/:project_id/templates/comments/add`
-    - `https://mydomain.com/project/:project_id/templates/comments/edit/<template_id>`
-    - `https://mydomain.com/project/:project_id/templates/comments/delete/<template_id>`
+    - `https://mydomain.com/project/[project_id]/templates/comments/add`
+    - `https://mydomain.com/project/[project_id]/templates/comments/edit/[template_id]`
+    - `https://mydomain.com/project/[project_id]/templates/comments/delete/[template_id]`
+- Revised Email Subject Templates
+  - Added user instructions related to tasks and automatic actions
 
 **NEW Comment Templates**
-- Add, update or delete templates for your regular comments which you may use in any task
+- Add, update or delete templates for your regular comments which can be used repeatedly in any task
+- Templates utilise the Markdown Editor to enable complete formatting of comments
+- Templates are saved in the database
 
 **Task Comments**
 - Show total number of comments created
-- Saved comment templates can be selected from each task
+- Saved comment templates can be selected from each task through a `Favourites` bar
 
-**NEW Project Sidebar**
-- Add new hook `'template:project:sidebar:top'` (shows after the Custom Filter menu link)
+**Revised Project Sidebar**
+- Replaced default code to extend the functionality of the project sidebar menu
+  - Moved the core hook `'template:project:sidebar'`
+    - _Now shows before the Close Project menu link to show content to **all users**_
+  - Changed sort order of menu for faster access to project configuration sections
+- Add new hook `'template:project:sidebar:top'`
+  - _Shows after the Summary menu link to show content to **all users**_
+- Add new hook `'template:project:sidebar:bottom'`
+  - _Shows after the Delete Project menu link to show content to **all users**_
 
 
 Screenshots
@@ -39,13 +52,19 @@ Screenshots
 
 **Template Manager**  
 
-![Screenshot Name](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
+![Template Manager](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
 
 
 Usage
 -------------
 
-Go to `Project Settings` &#10562; Template Manager
+- Go to `Settings` &#10562; About 
+  - _To view your global totals for your saved templates_
+  - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
+- Go to any `Project` &#10562; `Project Settings` &#10562; Template Manager
+  - _To manage your templates_
+- Go to any `Project` &#10562; `Task` &#10562; Add Comment
+  - _To use your comment templates_
 
 
 Compatibility
