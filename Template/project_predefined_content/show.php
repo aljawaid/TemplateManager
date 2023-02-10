@@ -127,8 +127,8 @@
             <table class="template-table">
                 <thead>
                     <tr class="">
-                        <th class=""><?= t('Title') ?></th>
-                        <th class=""><?= t('ID') ?></th>
+                        <th class="column-2"><?= t('ID') ?></th>
+                        <th class="column-42"><?= t('Title') ?></th>
                         <?php if (file_exists('plugins/TemplateTitle')): ?>
                             <th class=""><?= t('CSS Styling Class') ?></th>
                             <th class=""><?= t('CSS Reference') ?></th>
@@ -138,11 +138,11 @@
                 <tbody>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
+                        <td class=""><?= $this->text->e($commentTemplate['id']) ?></td>
                         <td class="">
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
-                        <td class=""><?= $this->text->e($commentTemplate['id']) ?></td>
                         <?php if (file_exists('plugins/TemplateTitle')): ?>
                             <td class=""><code>id="TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
                             <td class=""><code>#TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
