@@ -222,17 +222,21 @@
                         <div class="email-section-example">
                             <?= t('This option can use templates with interpolation expressions (double braces). Follow the example below:') ?>
                             <div class="example-result">
-                                <span class="example-detail"><span>Activity Result:</span> <i>The task was moved to the \'Done\' column by the user</i></span>
-                                <span class="example-detail"><span>Email Subject Received:</span> <code>Done: Make Sales Report (#101)</code></span>
+                                <span class="example-detail">
+                                    <span><?= t('Activity Result:') ?></span> <i><?= t('The task was moved to the \'Done\' column by the user') ?></i>
+                                </span>
+                                <span class="example-detail">
+                                    <span><?= t('Email Subject Received:') ?></span> <code><?= t('Done: Make Sales Report (#101)') ?></code>
+                                </span>
                             </div>
                             <div class="example-steps">
-                                <div class="steps-title">Automatic Action Procedure:</div>
+                                <div class="steps-title"><?= t('Automatic Action Procedure:') ?></div>
                                 <ol class="steps-list">
-                                    <li class="">Send a task by email to someone</li>
-                                    <li class="">Event Name: <i>Move a task to another column</i></li>
-                                    <li class="">Column: <i>Done</i></li>
-                                    <li class="">User that will receive the email: <i>User</i></li>
-                                    <li class="">Email Subject: <code><strong><span>{{column_title}}</span>: <span>{{title}}</span> (#<span>{{id}}</span>)</strong></code></li>
+                                    <li class=""><?= t('Send a task by email to someone') ?></li>
+                                    <li class=""><?= t('Event Name:') ?> <i><?= t('Move a task to another column') ?></i></li>
+                                    <li class=""><?= t('Column:') ?> <i><?= t('Done') ?></i></li>
+                                    <li class=""><?= t('User that will receive the email:') ?> <i><?= t('User') ?></i></li>
+                                    <li class=""><?= t('Email Subject:') ?> <code><strong><span>{{column_title}}</span>: <span>{{title}}</span> (#<span>{{id}}</span>)</strong></code></li>
                                 </ol>
                             </div>
                         </div>
