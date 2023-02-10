@@ -112,7 +112,7 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     padding-right: 5px;
 }
 
-.task-desc-section svg, .task-comments-section svg, .email-subject-section svg {
+.task-desc-section legend > svg, .task-comments-section legend > svg, .email-subject-section legend > svg {
     width: 30px;
     height: 30px;
     vertical-align: bottom;
@@ -131,6 +131,10 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
 .template-table {
     margin-block: 10px;
 }
+
+.edit-desc-template-btn, .delete-desc-template-btn {}
+
+.edit-desc-template-btn a svg, .delete-desc-template-btn a svg {}
 
 .email-form-wrapper {
     display: inline-block;
