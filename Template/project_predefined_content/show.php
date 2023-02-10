@@ -194,13 +194,49 @@
                 </g>
             </svg> <?= t('Email Subject Templates') ?>
         </legend>
-        <form method="post" class="email-subject-form" action="<?= $this->url->href('ProjectPredefinedContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit')) ?>" autocomplete="off">
-            <?= $this->form->csrf() ?>
+        <p class="section-intro">
+            <?= t('Subjects for emails are used both by tasks and automatic actions which can help in creating automated emails (as confirmations, reports or for auditing activity).') ?>
+        </p>
+        <div class="email-form-wrapper" style="width: 30%;">
+            <form method="post" class="email-subject-form" action="<?= $this->url->href('ProjectPredefinedContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit')) ?>" autocomplete="off">
+                <?= $this->form->csrf() ?>
 
-            <?= $this->form->textarea('predefined_email_subjects', $values, $errors, array('tabindex="1"')) ?>
-            <p class="form-help"><?= t('Write one subject per line') ?></p>
+                <?= $this->form->textarea('predefined_email_subjects', $values, $errors, array('tabindex="1"')) ?>
+                <p class="form-help"><?= t('Write one subject per line') ?></p>
 
-            <?= $this->modal->submitButtons(array('tabindex' => 2)) ?>
-        </form>
+                <?= $this->modal->submitButtons(array('tabindex' => 2)) ?>
+            </form>
+        </div>
+        <div class="email-form-wrapper" style="width: 69%;">
+            <div class="section-intro">
+                <div class="email-section-wrapper">
+                    <fieldset class="email-section-task">
+                        <legend class="email-section-task-title" style="line-height: 1;"><?= t('Inside a task') ?></legend>
+                        <?= t('Use the \'Send by email\' option from the task side menu') ?>
+                    </fieldset>
+                    <fieldset class="email-section-action">
+                        <legend class="email-section-action-title" style="margin-bottom: 0;"><?= t('Using Automatic Actions') ?></legend>
+                        <?= t('Choose the \'Send a task by email to someone\' action') ?>
+                        <div class="email-section-example">
+                            <?= t('This option can use templates with interpolation expressions (double braces). Follow the example below:') ?>
+                            <div class="example-result">
+                                <span class="example-detail"><span>Activity Result:</span> <i>The task was moved to the \'Done\' column by the user</i></span>
+                                <span class="example-detail"><span>Email Subject Received:</span> <code>Done: Make Sales Report (#101)</code></span>
+                            </div>
+                            <div class="example-steps">
+                                <div class="steps-title">Automatic Action Procedure:</div>
+                                <ol class="steps-list">
+                                    <li class="">Send a task by email to someone</li>
+                                    <li class="">Event Name: <i>Move a task to another column</i></li>
+                                    <li class="">Column: <i>Done</i></li>
+                                    <li class="">User that will receive the email: <i>User</i></li>
+                                    <li class="">Email Subject: <code><strong><span>{{column_title}}</span>: <span>{{title}}</span> (#<span>{{id}}</span>)</strong></code></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
     </fieldset>
 </div>

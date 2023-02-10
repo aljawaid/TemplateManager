@@ -24,6 +24,8 @@ Features
     - `https://mydomain.com/project/[project_id]/templates/comments/add`
     - `https://mydomain.com/project/[project_id]/templates/comments/edit/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/comments/delete/[template_id]`
+- Revised Email Subject Templates
+  - Added user instructions related to tasks and automatic actions
 
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repeatedly in any task
