@@ -139,17 +139,6 @@
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
                         <td class="">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog"></i><i class="fa fa-caret-down"></i></a>
-                                <ul class="">
-                                    <li class="">
-                                        <?= $this->modal->medium('edit', t('Edit'), 'CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager')) ?>
-                                    </li>
-                                    <li class="">
-                                        <?= $this->modal->confirm('trash-o', t('Delete'), 'CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager')) ?>
-                                    </li>
-                                </ul>
-                            </div>
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
