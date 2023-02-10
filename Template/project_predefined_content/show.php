@@ -48,7 +48,9 @@
             </li>
         </ul>
     </div>
-
+    <p class="page-intro">
+        <?= t('Content templates are useful for repetitive content. Templates listed here apply to this project only. Each section describes how users should use the saved templates.') ?>
+    </p>
     <fieldset class="task-desc-section">
         <legend class="">
             <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -69,7 +71,7 @@
             </svg> <?= t('Task Description Templates') ?>
         </legend>
         <p class="section-intro">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <?= t('These templates are used as descriptions for tasks in each project. When you create a task, you can choose from a list of these templates in the task creation form (below the description editor box).') ?>
         </p>
         <?php if (! empty($predefined_task_descriptions)): ?>
             <table class="template-table">
@@ -130,7 +132,7 @@
             </svg> <?= t('Task Comment Templates') ?>
         </legend>
         <p class="section-intro">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task.') ?>
         </p>
         <?php if (! empty($saved_comment_templates)): ?>
             <table class="template-table">
