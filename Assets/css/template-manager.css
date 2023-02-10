@@ -132,6 +132,11 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     margin-block: 10px;
 }
 
+.template-row span.tooltip {
+    float: right;
+    margin-right: 10px;
+}
+
 .edit-desc-template-btn, .delete-desc-template-btn {}
 
 .edit-desc-template-btn a svg, .delete-desc-template-btn a svg {}
