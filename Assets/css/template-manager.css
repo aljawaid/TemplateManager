@@ -97,6 +97,10 @@
     text-decoration: none;
 }
 
+.template-manager-page-margin .page-intro {
+    margin-bottom: 15px;
+}
+
 fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subject-section {
     border: 1px solid var(--blue-border-gradient-match);
     border-radius: var(--border-radius-t-manager);
@@ -114,8 +118,30 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     vertical-align: bottom;
 }
 
-.template-table, .email-subject-form {
+.task-desc-section .section-intro, .task-comments-section .section-intro {
+    font-size: .9em;
+    margin: 5px auto 15px auto;
+}
+
+.email-subject-section .section-intro {
+    font-size: .9em;
+    margin: 10px auto 10px auto;
+}
+
+.template-table {
     margin-block: 10px;
+}
+
+.email-form-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.email-form-wrapper .section-intro {
+    margin-left: 22px;
+    font-size: .9em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .email-subject-form {
@@ -132,10 +158,92 @@ textarea#form-predefined_email_subjects {
     border-radius: var(--border-radius-t-manager);
     width: 400px;
     max-width: 99%;
-    height: 200px;
+    height: 225px;
     font-family: revert;
     font-size: 1em;
     background: #D8E2F9;
+    margin-top: 8px;
+}
+
+.email-section-wrapper {}
+
+.email-section-task {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 3px 5px 6px 5px;
+    border: 1px solid var(--blue-border-gradient-match);
+    border-radius: var(--border-radius-t-manager);
+}
+
+.email-section-task-title, .email-section-action-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email-section-action {
+    padding: 3px 5px 6px 5px;
+    border: 1px solid var(--blue-border-gradient-match);
+    border-radius: var(--border-radius-t-manager);
+    margin-top: 5px;
+}
+
+.email-section-example {
+    display: block;
+    border: 1px solid var(--blue-border-gradient-match);
+    border-radius: var(--border-radius-app-branding-alt);
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.example-result {
+    margin-block: 5px;
+}
+
+.example-detail {
+    display: block;
+}
+
+span.example-detail code, .example-steps code {
+    background-color: rgba(27, 31, 35, 0.22);
+    font-size: 1em;
+    font-family: Monospace;
+    letter-spacing: 0.08rem;
+    color: #373737;
+    margin: 0;
+    padding: 1px 1px 2px 3px;
+    border-radius: var(--border-radius-t-manager);
+}
+
+.steps-list li code > strong > span {
+    color: var(--pp-red-alt-2);
+    font-weight: 700;
+}
+
+.steps-list i, .steps-list code {
+    margin-left: 5px;
+}
+
+.example-detail span {
+    width: 160px;
+    font-weight: 600;
+    color: var(--pp-green-dark);
+    display: inline-block;
+}
+
+.example-steps {
+    margin-block: 5px;
+}
+
+.example-steps .steps-title {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.example-steps ol {
+    margin-left: 14px;
 }
 
 #comments .no-data {
