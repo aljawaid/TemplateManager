@@ -201,6 +201,10 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
     text-decoration: none !important;
 }
 
+.edit-desc-template-btn a svg, .delete-desc-template-btn a svg, .edit-comment-template-btn a svg, .delete-comment-template-btn a svg {
+    vertical-align: bottom;
+}
+
 .email-form-wrapper {
     display: inline-block;
     vertical-align: top;
