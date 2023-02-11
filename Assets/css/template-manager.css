@@ -98,6 +98,7 @@ tr:last-child > td.table-corner-br:last-child {
     border: 2px solid var(--pp-black);
     border-radius: var(--border-radius-t-manager);
     transition: var(--transition-t-manager);
+    background: var(--pp-white);
 }
 
 .add-desc-template-btn a, .add-comment-template-btn a {
@@ -195,7 +196,27 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
     border-bottom: 0;
 }
 
-.edit-desc-template-btn, .delete-desc-template-btn {}
+.edit-desc-template-btn, .delete-desc-template-btn, .edit-comment-template-btn, .delete-comment-template-btn {
+    font-size: 1em;
+    padding: 3px 6px;
+    border-color: var(--pp-black);
+    transition: var(--transition-t-manager);
+    background: var(--pp-white);
+}
+
+.edit-desc-template-btn:hover, .delete-desc-template-btn:hover, .edit-comment-template-btn:hover, .delete-comment-template-btn:hover {
+    border-color: var(--pp-green);
+    background: rgba(46, 160, 46, .4);
+}
+
+.edit-desc-template-btn:hover a, .delete-desc-template-btn:hover a, .edit-comment-template-btn:hover a, .delete-comment-template-btn:hover a {
+    color: var(--pp-black) !important;
+}
+
+.delete-desc-template-btn:hover, .delete-comment-template-btn:hover {
+    border-color: var(--pp-red-alt-2);
+    background: rgba(174, 0, 61, .4);
+}
 
 #EditDescTemplate, #DeleteDescTemplate, #EditCommentTemplate, #DeleteCommentTemplate {
     text-decoration: none !important;
