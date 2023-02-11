@@ -120,7 +120,7 @@ tr:last-child > td.table-corner-br:last-child {
 }
 
 fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subject-section {
-    border: 1px solid var(--blue-border-gradient-match);
+    border: 2px outset var(--pp-green);
     border-radius: var(--border-radius-t-manager);
 }
 
