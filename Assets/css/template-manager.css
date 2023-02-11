@@ -156,6 +156,27 @@ table.template-table {
     margin-right: 10px;
 }
 
+table.template-table thead tr th.template-header {
+    border: 1px solid var(--pp-grey);
+    border-bottom: 0;
+}
+
+table.template-table tbody tr td.template-row {
+    border: 1px solid var(--pp-grey);
+}
+
+table.template-table > thead > tr > th.template-header:not(:first-child) {
+    border-left: 0;
+}
+
+table.template-table > tbody > tr > td.template-row:not(:first-child) {
+    border-left: 0;
+}
+
+table.template-table > tbody > tr:not(:last-child) > td.template-row {
+    border-bottom: 0;
+}
+
 .edit-desc-template-btn, .delete-desc-template-btn {}
 
 .edit-desc-template-btn a svg, .delete-desc-template-btn a svg {}
