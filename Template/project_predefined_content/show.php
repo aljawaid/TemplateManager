@@ -52,6 +52,9 @@
         <?= t('Content templates are useful for repetitive content. Templates listed here apply to this project only. Each section describes how users should use the saved templates.') ?>
     </p>
     <fieldset class="task-desc-section">
+        <?php if (! empty($predefined_task_descriptions)): ?>
+            <span class="count-badge"><?= count($predefined_task_descriptions) ?></span>
+        <?php endif ?>
         <legend class="">
             <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
@@ -126,6 +129,9 @@
     </fieldset>
 
     <fieldset class="task-comments-section">
+        <?php if (! empty($saved_comment_templates)): ?>
+            <span class="count-badge"><?= count($saved_comment_templates) ?></span>
+        <?php endif ?>
         <legend class="">
             <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>

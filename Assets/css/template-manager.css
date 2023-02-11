@@ -122,6 +122,7 @@ tr:last-child > td.table-corner-br:last-child {
 fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subject-section {
     border: 2px outset var(--pp-green);
     border-radius: var(--border-radius-t-manager);
+    position: relative;
 }
 
 .task-desc-section legend, .task-comments-section legend, .email-subject-section legend {
@@ -134,6 +135,20 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     width: 30px;
     height: 30px;
     vertical-align: bottom;
+}
+
+fieldset span.count-badge {
+    position: absolute;
+    right: 22px;
+    top: -29px;
+    padding: 0 5px 0 4px;
+    margin: 0px;
+    background: var(--pp-green);
+    border: 2px outset var(--pp-green);
+    font-size: 1.3em;
+    font-weight: 700;
+    border-radius: var(--border-radius-t-manager);
+    color: var(--pp-white);
 }
 
 .task-desc-section .section-intro, .task-comments-section .section-intro {
