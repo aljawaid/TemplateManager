@@ -50,8 +50,8 @@ class Plugin extends Base
     {
         return [
             'Plugin\TemplateManager\Model' => [
-                'TaskCommentTemplateModel',
-            ]
+                'TaskCommentTemplateModel', 'GlobalCommentTemplateModel',
+            ],
         ];
     }
 
