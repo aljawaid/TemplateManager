@@ -77,28 +77,20 @@
             <table class="template-table">
                 <thead>
                     <tr class="">
-                        <th class="template-header column-2"><?= t('ID') ?></th>
-                        <th class="template-header column-42"><?= t('Title') ?></th>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <th class="template-header"><?= t('CSS Styling Class') ?></th>
-                            <th class="template-header"><?= t('CSS Reference') ?></th>
-                        <?php endif ?>
-                        <th class="template-header column-20">Actions</th>
+                        <th class="template-header column-3 text-center pl-3 table-corner-tl"><?= t('ID') ?></th>
+                        <th class="template-header"><?= t('Title') ?></th>
+                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($predefined_task_descriptions as $template): ?>
                     <tr class="">
-                        <td class="template-row"><?= $this->text->e($template['id']) ?></td>
+                        <td class="template-row pl-3 text-center table-corner-bl"><?= $this->text->e($template['id']) ?></td>
                         <td class="template-row">
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
                         </td>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <td class="template-row"><code>id="TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
-                            <td class="template-row"><code>#TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
-                        <?php endif ?>
-                        <td class="template-row">
+                        <td class="template-row table-corner-br">
                             <div class="btn edit-desc-template-btn">
                                 <a id="<?= t('EditDescTemplate') ?>" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id']), false, '', false) ?>" class="js-modal-medium" title="<?=t('Edit Template') ?>">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -154,30 +146,22 @@
             <table class="template-table">
                 <thead>
                     <tr class="">
-                        <th class="template-header column-2"><?= t('ID') ?></th>
-                        <th class="template-header column-42"><?= t('Title') ?></th>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <th class="template-header"><?= t('CSS Styling Class') ?></th>
-                            <th class="template-header"><?= t('CSS Reference') ?></th>
-                        <?php endif ?>
-                        <th class="template-header column-20">Actions</th>
+                        <th class="template-header column-3 pl-3 text-center table-corner-tl"><?= t('ID') ?></th>
+                        <th class="template-header"><?= t('Title') ?></th>
                         <th class="template-header column-20"><?= t('Topic') ?></th>
+                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
-                        <td class="template-row"><?= $this->text->e($commentTemplate['id']) ?></td>
+                        <td class="template-row pl-3 text-center table-corner-bl"><?= $this->text->e($commentTemplate['id']) ?></td>
                         <td class="template-row">
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <td class="template-row"><code>id="TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
-                            <td class="template-row"><code>#TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
-                        <?php endif ?>
-                        <td class="template-row">
                         <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
+                        <td class="template-row table-corner-br">
                             <div class="btn edit-comment-template-btn">
                                 <a id="<?= t('EditCommentTemplate') ?>" href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Edit Template') ?>">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
