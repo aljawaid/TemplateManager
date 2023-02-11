@@ -55,7 +55,7 @@
         <?php if (! empty($predefined_task_descriptions)): ?>
             <span class="count-badge"><?= count($predefined_task_descriptions) ?></span>
         <?php endif ?>
-        <legend class="">
+        <legend id="TaskDescTemplates" class="">
             <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +132,7 @@
         <?php if (! empty($saved_comment_templates)): ?>
             <span class="count-badge"><?= count($saved_comment_templates) ?></span>
         <?php endif ?>
-        <legend class="">
+        <legend id="CommentTemplates" class="">
             <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -203,7 +203,7 @@
     </fieldset>
 
     <fieldset class="email-subject-section">
-        <legend class="">
+        <legend id="EmailSubjectTemplates" class="">
             <svg width="20px" height="20px" class="mail-plus-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>
