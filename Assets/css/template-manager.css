@@ -194,7 +194,9 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
 
 .edit-desc-template-btn, .delete-desc-template-btn {}
 
-.edit-desc-template-btn a svg, .delete-desc-template-btn a svg {}
+#EditDescTemplate, #DeleteDescTemplate, #EditCommentTemplate, #DeleteCommentTemplate {
+    text-decoration: none !important;
+}
 
 .email-form-wrapper {
     display: inline-block;
