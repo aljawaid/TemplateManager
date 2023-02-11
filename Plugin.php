@@ -27,6 +27,7 @@ class Plugin extends Base
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
+        $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');

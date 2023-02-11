@@ -35,6 +35,11 @@ Features
   - Label common templates into topics to help group them together
 - Templates and topics are saved in the database
 
+**NEW Global Templates**
+- Show generic templates common to you personal or organisation workflow to your users
+- These templates are visible to all user roles and are not restricted by project
+- Global templates are shown in each task above the comments section
+
 **Task Comments**
 - Show total number of comments created
 - Saved comment templates can be selected from each task through a `Favourites` bar
