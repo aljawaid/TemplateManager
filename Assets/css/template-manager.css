@@ -47,6 +47,24 @@
 
 .relative { position: relative; }
 
+.pl-3 { padding-left: 3px; }
+
+tr > th.table-corner-tl {
+    border-top-left-radius: var(--border-radius-t-manager);
+}
+
+tr:last-child > td.table-corner-bl:first-child {
+    border-bottom-left-radius: var(--border-radius-t-manager);
+}
+
+tr > th.table-corner-tr {
+    border-top-right-radius: var(--border-radius-t-manager);
+}
+
+tr:last-child > td.table-corner-br:last-child {
+    border-bottom-right-radius: var(--border-radius-t-manager);
+}
+
 .template-manager-page-margin {
     margin: var(--page-margin-t-manager);
 }
@@ -128,8 +146,9 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     margin: 10px auto 10px auto;
 }
 
-.template-table {
+table.template-table {
     margin-block: 10px;
+    border-collapse: inherit;
 }
 
 .template-row span.tooltip {
