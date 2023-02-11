@@ -49,6 +49,8 @@
 
 .pl-3 { padding-left: 3px; }
 
+.pt-5 { padding-top: 5px; }
+
 tr > th.table-corner-tl {
     border-top-left-radius: var(--border-radius-t-manager);
 }
@@ -178,6 +180,7 @@ table.template-table thead tr th.template-header {
 
 table.template-table tbody tr td.template-row {
     border: 1px solid var(--pp-grey);
+    vertical-align: middle;
 }
 
 table.template-table > thead > tr > th.template-header:not(:first-child) {
