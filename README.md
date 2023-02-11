@@ -31,7 +31,9 @@ Features
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repeatedly in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
-- Templates are saved in the database
+- NEW **Topics** for Comment Templates
+  - Label common templates into topics to help group them together
+- Templates and topics are saved in the database
 
 **Task Comments**
 - Show total number of comments created
@@ -78,7 +80,9 @@ Compatibility
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
 #### Core Files & Templates
 - `04` Template overrides
-- `01` New database table created as `comment_templates`
+- Database Changes:
+  - `01` New database table created as `comment_templates`
+  - `01` New column added to `predefined_task_descriptions` as `topic`
 
 
 Changelog

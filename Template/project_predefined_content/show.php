@@ -148,7 +148,7 @@
             </svg> <?= t('Task Comment Templates') ?>
         </legend>
         <p class="section-intro">
-            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task.') ?>
+            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
         </p>
         <?php if (! empty($saved_comment_templates)): ?>
             <table class="template-table">
@@ -161,6 +161,7 @@
                             <th class="template-header"><?= t('CSS Reference') ?></th>
                         <?php endif ?>
                         <th class="template-header column-20">Actions</th>
+                        <th class="template-header column-20"><?= t('Topic') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -176,6 +177,7 @@
                             <td class="template-row"><code>#TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
                         <?php endif ?>
                         <td class="template-row">
+                        <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
                             <div class="btn edit-comment-template-btn">
                                 <a id="<?= t('EditCommentTemplate') ?>" href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Edit Template') ?>">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

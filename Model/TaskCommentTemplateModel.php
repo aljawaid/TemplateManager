@@ -40,20 +40,22 @@ class TaskCommentTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->findOneColumn('description');
     }
 
-    public function createCommentTemplate($projectId, $title, $description)
+    public function createCommentTemplate($projectId, $title, $description, $topic)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'project_id' => $projectId,
             'title' => $title,
             'description' => $description,
+            'topic' => $topic,
         ));
     }
 
-    public function updateCommentTemplate($projectId, $id, $title, $description)
+    public function updateCommentTemplate($projectId, $id, $title, $description, $topic)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
+            'topic' => $topic,
         ));
     }
 
