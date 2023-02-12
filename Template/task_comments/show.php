@@ -43,7 +43,7 @@
                 </div>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <div class="quick-templates-label">
-                        <div class="quick-templates-title"><?= $commentTemplate['title'] ?></div>
+                        <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= $commentTemplate['description'] ?>"><?= $commentTemplate['title'] ?></div>
                         <div class="quick-template-content"><?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?></div>
                     </div>
                 <?php endforeach ?>
