@@ -360,7 +360,11 @@ span.example-detail code, .example-steps code {
     border-radius: var(--border-radius-t-manager);
 }
 
-.comment-template-content {
+
+.quick-template-content .tooltip .fa-info-circle, .template-row .tooltip .fa-info-circle {
+color: rgba(5, 93, 32, .8);
+font-size: 1.3em !important;
+vertical-align: middle !important;
 }
 
 .templates-menu-count {
