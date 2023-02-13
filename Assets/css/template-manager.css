@@ -518,4 +518,5 @@ vertical-align: middle !important;
 
 .no-templates {
     font-style: italic;
+    color: var(--pp-grey);
 }
