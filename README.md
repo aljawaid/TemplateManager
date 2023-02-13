@@ -8,7 +8,7 @@ Features
 -------------
 
 - Revised `predefined contents` as `Task Description Templates`
-- Improved layout
+- Improved layout, modal and form designs
 - Renamed the `predefined contents` section to `Template Manager`
 - Show total template count in project dropdown with a link to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
@@ -61,6 +61,9 @@ Screenshots
 
 ![Template Manager](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
 
+**Comment Templates** - Create  
+
+![Template Manager](../master/Screenshots/screenshot-create-comment-template.png "Create Comment Template")
 
 Usage
 -------------
