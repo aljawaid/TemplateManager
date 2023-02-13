@@ -32,7 +32,7 @@ class GlobalTemplateModel extends Base
 
     public function getById($id, $id)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->eq('id', $id)->findOne();
+        return $this->db->table(self::TABLE)->eq('id', $id)->findOne();
     }
 
     public function getDescriptionById($id, $id)
@@ -51,7 +51,7 @@ class GlobalTemplateModel extends Base
 
     public function updateGlobalTemplate($id, $title, $description, $topic)
     {
-        return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
+        return $this->db->table(self::TABLE)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
@@ -60,6 +60,6 @@ class GlobalTemplateModel extends Base
 
     public function deleteGlobalTemplate($id)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->eq('id', $id)->remove();
+        return $this->db->table(self::TABLE)->eq('id', $id)->remove();
     }
 }
