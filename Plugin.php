@@ -15,6 +15,9 @@ class Plugin extends Base
         $this->template->setTemplateOverride('project/sidebar', 'templateManager:project/sidebar');
         $this->template->setTemplateOverride('task_comments/show', 'templateManager:task_comments/show');
         $this->template->setTemplateOverride('task/show', 'templateManager:task/show');
+        $this->template->setTemplateOverride('predefined_task_description/create', 'templateManager:predefined_task_description/create');
+        $this->template->setTemplateOverride('predefined_task_description/edit', 'templateManager:predefined_task_description/edit');
+        $this->template->setTemplateOverride('predefined_task_description/remove', 'templateManager:predefined_task_description/remove');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
