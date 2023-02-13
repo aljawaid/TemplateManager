@@ -64,6 +64,12 @@ Screenshots
 **Comment Templates** - Edit  
 
 ![Template Manager](../master/Screenshots/screenshot-edit-comment-template.png "Edit Comment Template")
+
+**Comment Templates** - Delete  
+
+![Template Manager](../master/Screenshots/screenshot-delete-comment-template.png "Delete Comment Template")
+
+
 Usage
 -------------
 
