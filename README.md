@@ -57,14 +57,13 @@ Features
 Screenshots
 ----------
 
-**Template Manager**  
-
-![Template Manager](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
-
 **Comment Templates** - Create  
 
 ![Template Manager](../master/Screenshots/screenshot-create-comment-template.png "Create Comment Template")
 
+**Comment Templates** - Edit  
+
+![Template Manager](../master/Screenshots/screenshot-edit-comment-template.png "Edit Comment Template")
 Usage
 -------------
 
