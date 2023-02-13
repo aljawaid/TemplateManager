@@ -93,7 +93,7 @@ tr:last-child > td.table-corner-br:last-child {
     margin: auto 20px 0 0;
 }
 
-.add-desc-template-btn, .add-comment-template-btn, .add-desc-template-btn:visited, .add-comment-template-btn:visited {
+.add-desc-template-btn, .add-comment-template-btn, .add-global-template-btn, .add-desc-template-btn:visited, .add-comment-template-btn:visited, .add-global-template-btn:visited {
     font-size: 1em;
     border: 2px solid var(--pp-black);
     border-radius: var(--border-radius-t-manager);
@@ -101,19 +101,19 @@ tr:last-child > td.table-corner-br:last-child {
     background: var(--pp-white);
 }
 
-.add-desc-template-btn a, .add-comment-template-btn a {
+.add-desc-template-btn a, .add-comment-template-btn a, .add-global-template-btn a {
     text-decoration: none;
 }
 
-.add-desc-template-btn a svg, .add-comment-template-btn a svg {
+.add-desc-template-btn a svg, .add-comment-template-btn a svg, .add-global-template-btn a svg {
     vertical-align: bottom;
 }
 
-.add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus {
+.add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus, .add-global-template-btn:hover, .add-global-template-btn:focus {
     border-color: var(--pp-green);
 }
 
-.add-desc-template-btn:hover a, .add-comment-template-btn:hover a, .add-desc-template-btn:focus a, .add-comment-template-btn:focus a {
+.add-desc-template-btn:hover a, .add-comment-template-btn:hover a, .add-desc-template-btn:focus a, .add-comment-template-btn:focus a, .add-global-template-btn:hover a, .add-global-template-btn:focus a {
     color: var(--pp-black);
     text-decoration: none;
 }
