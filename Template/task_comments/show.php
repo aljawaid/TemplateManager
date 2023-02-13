@@ -43,7 +43,7 @@
                 </div>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <div class="quick-templates-label">
-                        <span class="fixed-title"><?= $commentTemplate['title'] ?></span>
+                        <span class="fixed-title" title="<?= $commentTemplate['topic'] ?>" <?php if (!empty($commentTemplate['topic'])): ?>style="cursor: help;"<?php endif ?>><?= $commentTemplate['title'] ?></span>
                         <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= $commentTemplate['description'] ?>" title="<?= t('Copy to clipboard') ?>">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </div>
