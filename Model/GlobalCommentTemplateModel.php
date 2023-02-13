@@ -10,7 +10,7 @@ use Kanboard\Core\Base;
  * @author aljawaid
  */
 
-class GlobalCommentTemplateModel extends Base
+class GlobalTemplateModel extends Base
 {
     /**
      * SQL table name for comment templates
