@@ -135,7 +135,7 @@ tr:last-child > td.table-corner-br:last-child {
     border: 1px outset var(--pp-green);
 }
 
-#TemplateForm .form-actions {
+#TemplateForm .form-actions, #DeleteModal .form-actions {
     text-align: right;
 }
 
@@ -157,6 +157,46 @@ tr:last-child > td.table-corner-br:last-child {
 #TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
     margin-right: 5px;
     margin-left: 5px;
+}
+
+.confirm-notice {
+    margin-block: 15px;
+}
+
+#DeleteModal .confirm .template-contents {
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: .4;
+    box-shadow: 0px 0px 10px 3px #000;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: small;
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions {
+    color: var(--pp-white);
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions button {
+    border-radius: var(--border-radius-t-manager);
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions a {
+    font-size: 1.2em;
+    padding: 3px 10px;
+    transition: var(--transition-t-manager);
+    background: var(--pp-white);
+    border: 1px solid var(--pp-grey);
+    border-radius: var(--border-radius-t-manager);
+}
+
+.template-contents .template-title {
+    font-weight: bold;
+    margin-block: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: initial;
 }
 
 .add-templates-bar {
