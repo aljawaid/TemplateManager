@@ -22,6 +22,9 @@ class Plugin extends Base
 
         // JS - Asset Hook
         //  - Keep filename lowercase
+        if (!file_exists('plugins/Glancer')) {
+            $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/clipboard-v2.0.11.min.js'));
+        }
         $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/template-manager.js'));
 
         // Views - Add Menu Item - Template Hook
