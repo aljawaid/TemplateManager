@@ -24,6 +24,7 @@
     --border-radius-t-manager: 3px;
     --panel-background-t-manager: #EEEEEE;
     --transition-t-manager: ease-in-out all .3s;
+    --modal-page-header: 10px 5px 10px 5px;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -81,6 +82,81 @@ tr:last-child > td.table-corner-br:last-child {
     vertical-align: bottom;
     width: 28px;
     height: 28px;
+}
+
+.modal-page-header {
+    margin: var(--modal-page-header);
+    margin-bottom: 0;
+}
+
+.modal-page-header h2 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.modal-page-header h2 svg {
+    vertical-align: sub;
+}
+
+.modal-contents {
+    margin: var(--modal-page-header);
+}
+
+.modal-contents h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.template-form-section {
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 40px;
+}
+
+#TemplateForm label {
+    display: inline-block;
+}
+
+#TemplateForm label:last-of-type {
+    display: block;
+}
+
+#TemplateForm textarea::placeholder {
+    color: #4D4D4D;
+}
+
+#TemplateForm textarea {
+    width: 100%;
+}
+
+#TemplateForm input, #TemplateForm textarea {
+    border: 1px outset var(--pp-green);
+}
+
+#TemplateForm .form-actions {
+    text-align: right;
+}
+
+#TemplateForm .form-actions .create-btn, #TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
+    font-size: 1em;
+    border: 1px outset var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
+}
+
+#TemplateForm .form-actions .create-btn {
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+#TemplateForm .form-actions .create-btn svg {
+    vertical-align: text-top;
+}
+
+#TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .add-templates-bar {
