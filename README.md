@@ -78,8 +78,14 @@ Usage
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
 - Go to any `Project` &#10562; `Project Settings` &#10562; Template Manager
   - _To manage your templates_
+- Go to any `Project` &#10562; `Task` &#10562; Create Task
+  - _To use your task description templates_
 - Go to any `Project` &#10562; `Task` &#10562; Add Comment
   - _To use your comment templates_
+- Go to `Settings` &#10562; `Global Templates`
+  - _To manage your global templates_
+  - Go to any `Task` &#10562;
+  - _To view your global templates_
 
 
 Compatibility
