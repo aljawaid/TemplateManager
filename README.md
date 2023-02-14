@@ -2,13 +2,13 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Predefined Contents becomes the new Template Manager. A new interface allows you to create, update and delete new comment templates for each project. This new feature brings task description templates, predefined email subjects and the new comment templates together in one section for each project.
-
+Predefined Contents is replaced by the Template Manager. Save templates in this new interface improving consistency and content formatting of your project data. Project Editors can create, update and delete templates for each project. Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place. The Global Templates feature shows for every project and can be used as a way to guide and advise users within tasks.  Templates can also be useful in environments where auditing is required.
 
 Features
 -------------
 
 - Revised `predefined contents` as `Task Description Templates`
+- Improved layout, modal and form designs
 - Renamed the `predefined contents` section to `Template Manager`
 - Show total template count in project dropdown with a link to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
@@ -30,7 +30,14 @@ Features
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repeatedly in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
-- Templates are saved in the database
+- NEW **Topics** for Comment Templates
+  - Label common templates into topics to help group them together
+- Templates and topics are saved in the database
+
+**NEW Global Templates**
+- Show generic templates common to you personal or organisation workflow to your users
+- These templates are visible to all user roles and are not restricted by project
+- Global templates are shown in each task above the comments section
 
 **Task Comments**
 - Show total number of comments created
@@ -50,9 +57,17 @@ Features
 Screenshots
 ----------
 
-**Template Manager**  
+**Comment Templates** - Create  
 
-![Template Manager](../master/Screenshots/screenshot-name.png "Read Screenshot Name")
+![Template Manager](../master/Screenshots/screenshot-create-comment-template.png "Create Comment Template")
+
+**Comment Templates** - Edit  
+
+![Template Manager](../master/Screenshots/screenshot-edit-comment-template.png "Edit Comment Template")
+
+**Comment Templates** - Delete  
+
+![Template Manager](../master/Screenshots/screenshot-delete-comment-template.png "Delete Comment Template")
 
 
 Usage
@@ -63,8 +78,14 @@ Usage
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
 - Go to any `Project` &#10562; `Project Settings` &#10562; Template Manager
   - _To manage your templates_
+- Go to any `Project` &#10562; `Task` &#10562; Create Task
+  - _To use your task description templates_
 - Go to any `Project` &#10562; `Task` &#10562; Add Comment
   - _To use your comment templates_
+- Go to `Settings` &#10562; `Global Templates`
+  - _To manage your global templates_
+  - Go to any `Task` &#10562;
+  - _To view your global templates_
 
 
 Compatibility
@@ -74,10 +95,12 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding), [Glancer](https://github.com/aljawaid/Glancer)
 #### Core Files & Templates
-- `04` Template overrides
-- `01` New database table created as `comment_templates`
+- `07` Template overrides
+- Database Changes:
+  - `01` New database table created as `comment_templates`
+  - `01` New column added to `predefined_task_descriptions` as `topic`
 
 
 Changelog

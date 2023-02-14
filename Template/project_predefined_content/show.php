@@ -16,7 +16,7 @@
         <ul class="add-templates-bar">
             <li class="">
                 <div class="btn add-desc-template-btn">
-                    <a id="<?= t('AddDescTemplate') ?>" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'create', array('project_id' => $project['id']), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
+                    <a id="AddDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'create', array('project_id' => $project['id']), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
                         <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                             <g stroke-width="0"/>
                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,7 +32,7 @@
             </li>
             <li class="">
                 <div class="btn add-comment-template-btn">
-                    <a id="<?= t('AddCommentTemplate') ?>" href="<?= $this->url->href('CommentTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
+                    <a id="AddCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
                         <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                             <g stroke-width="0"/>
                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,13 +46,32 @@
                     </a>
                 </div>
             </li>
+            <li class="">
+                <div class="btn add-global-template-btn">
+                    <a id="AddGlobalTemplate" href="<?= $this->url->href('GlobalTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
+                        <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                            <g stroke-width="0"/>
+                            <g stroke-linecap="round" stroke-linejoin="round"/>
+                            <g>
+                                <g>
+                                    <polygon fill="#055D20" points="272,128 240,128 240,240 128,240 128,272 240,272 240,384 272,384 272,272 384,272 384,240 272,240 "/>
+                                    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                </g>
+                            </g>
+                        </svg> <?= t('Add Global Template') ?>
+                    </a>
+                </div>
+            </li>
         </ul>
     </div>
     <p class="page-intro">
         <?= t('Content templates are useful for repetitive content. Templates listed here apply to this project only. Each section describes how users should use the saved templates.') ?>
     </p>
     <fieldset class="task-desc-section">
-        <legend class="">
+        <?php if (! empty($predefined_task_descriptions)): ?>
+            <span class="count-badge"><?= count($predefined_task_descriptions) ?></span>
+        <?php endif ?>
+        <legend id="TaskDescTemplates" class="">
             <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,37 +96,45 @@
             <table class="template-table">
                 <thead>
                     <tr class="">
-                        <th class=""><?= t('Title') ?></th>
-                        <th class=""><?= t('ID') ?></th>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <th class=""><?= t('CSS Styling Class') ?></th>
-                            <th class=""><?= t('CSS Reference') ?></th>
-                        <?php endif ?>
+                        <th class="template-header column-3 text-center pl-3 table-corner-tl"><?= t('ID') ?></th>
+                        <th class="template-header"><?= t('Title') ?></th>
+                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($predefined_task_descriptions as $template): ?>
                     <tr class="">
-                        <td class="">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog"></i><i class="fa fa-caret-down"></i></a>
-                                <ul class="">
-                                    <li class="">
-                                        <?= $this->modal->medium('edit', t('Edit'), 'PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
-                                    </li>
-                                    <li class="">
-                                        <?= $this->modal->confirm('trash-o', t('Delete'), 'PredefinedTaskDescriptionController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'])) ?>
-                                    </li>
-                                </ul>
-                            </div>
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($template['id']) ?></td>
+                        <td class="template-row">
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
                         </td>
-                        <td class=""><?= $this->text->e($template['id']) ?></td>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <td class=""><code>id="TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
-                            <td class=""><code>#TaskTemplate-<?= $this->text->e($template['id']) ?></code></td>
-                        <?php endif ?>
+                        <td class="template-row table-corner-br">
+                            <div class="btn edit-desc-template-btn" title="<?=t('Edit Template') ?>">
+                                <a id="EditDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id']), false, '', false) ?>" class="js-modal-medium">
+                                    <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <path d="M12.5,10.2071068 L8,14.7071068 L8,16 L9.29289322,16 L13.7928932,11.5 L12.5,10.2071068 Z M13.2071068,9.5 L14.5,10.7928932 L15.7928932,9.5 L14.5,8.20710678 L13.2071068,9.5 Z M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z"/>
+                                            <path fill="none" stroke="#055D20" d=" M14.8535534,7.14644661 L16.8535534,9.14644661 C17.0488155,9.34170876 17.0488155,9.65829124 16.8535534,9.85355339 L9.85355339,16.8535534 C9.7597852,16.9473216 9.63260824,17 9.5,17 L7.5,17 C7.22385763,17 7,16.7761424 7,16.5 L7,14.5 C7,14.3673918 7.05267842,14.2402148 7.14644661,14.1464466 L14.1464466,7.14644661 C14.3417088,6.95118446 14.6582912,6.95118446 14.8535534,7.14644661 Z"/>
+                                        </g>
+                                    </svg> <?= t('Edit') ?>
+                                </a>
+                            </div>
+                            <div class="btn delete-desc-template-btn" title="<?=t('Delete Template') ?>">
+                                <a id="DeleteDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id']), false, '', false) ?>" class="js-modal-confirm">
+                                    <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
+                                            <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                        </g>
+                                    </svg> <?= t('Delete') ?>
+                                </a>
+                            </div>
+                        </td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>
@@ -118,7 +145,10 @@
     </fieldset>
 
     <fieldset class="task-comments-section">
-        <legend class="">
+        <?php if (! empty($saved_comment_templates)): ?>
+            <span class="count-badge"><?= count($saved_comment_templates) ?></span>
+        <?php endif ?>
+        <legend id="CommentTemplates" class="">
             <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,43 +162,53 @@
             </svg> <?= t('Task Comment Templates') ?>
         </legend>
         <p class="section-intro">
-            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task.') ?>
+            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
         </p>
         <?php if (! empty($saved_comment_templates)): ?>
             <table class="template-table">
                 <thead>
                     <tr class="">
-                        <th class=""><?= t('Title') ?></th>
-                        <th class=""><?= t('ID') ?></th>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <th class=""><?= t('CSS Styling Class') ?></th>
-                            <th class=""><?= t('CSS Reference') ?></th>
-                        <?php endif ?>
+                        <th class="template-header column-3 pl-3 text-center table-corner-tl"><?= t('ID') ?></th>
+                        <th class="template-header"><?= t('Title') ?></th>
+                        <th class="template-header column-20"><?= t('Topic') ?></th>
+                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
-                        <td class="">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog"></i><i class="fa fa-caret-down"></i></a>
-                                <ul class="">
-                                    <li class="">
-                                        <?= $this->modal->medium('edit', t('Edit'), 'CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager')) ?>
-                                    </li>
-                                    <li class="">
-                                        <?= $this->modal->confirm('trash-o', t('Delete'), 'CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager')) ?>
-                                    </li>
-                                </ul>
-                            </div>
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($commentTemplate['id']) ?></td>
+                        <td class="template-row">
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
-                        <td class=""><?= $this->text->e($commentTemplate['id']) ?></td>
-                        <?php if (file_exists('plugins/TemplateTitle')): ?>
-                            <td class=""><code>id="TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
-                            <td class=""><code>#TaskTemplate-<?= $this->text->e($commentTemplate['id']) ?></code></td>
-                        <?php endif ?>
+                        <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
+                        <td class="template-row table-corner-br">
+                            <div class="btn edit-comment-template-btn" title="<?=t('Edit Template') ?>">
+                                <a id="EditCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
+                                    <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <path d="M12.5,10.2071068 L8,14.7071068 L8,16 L9.29289322,16 L13.7928932,11.5 L12.5,10.2071068 Z M13.2071068,9.5 L14.5,10.7928932 L15.7928932,9.5 L14.5,8.20710678 L13.2071068,9.5 Z M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z"/>
+                                            <path fill="none" stroke="#055D20" d=" M14.8535534,7.14644661 L16.8535534,9.14644661 C17.0488155,9.34170876 17.0488155,9.65829124 16.8535534,9.85355339 L9.85355339,16.8535534 C9.7597852,16.9473216 9.63260824,17 9.5,17 L7.5,17 C7.22385763,17 7,16.7761424 7,16.5 L7,14.5 C7,14.3673918 7.05267842,14.2402148 7.14644661,14.1464466 L14.1464466,7.14644661 C14.3417088,6.95118446 14.6582912,6.95118446 14.8535534,7.14644661 Z"/>
+                                        </g>
+                                    </svg> <?= t('Edit') ?>
+                                </a>
+                            </div>
+                            <div class="btn delete-comment-template-btn" title="<?=t('Delete Template') ?>">
+                                <a id="DeleteCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
+                                    <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
+                                            <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                        </g>
+                                    </svg> <?= t('Delete') ?>
+                                </a>
+                            </div>
+                        </td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>
@@ -179,7 +219,7 @@
     </fieldset>
 
     <fieldset class="email-subject-section">
-        <legend class="">
+        <legend id="EmailSubjectTemplates" class="">
             <svg width="20px" height="20px" class="mail-plus-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
                 <g stroke-linecap="round" stroke-linejoin="round"/>

@@ -14,22 +14,22 @@
     </h2>
 </div>
 <div id="DeleteModal" class="modal-contents">
-    <h3 class=""><?= t('Delete Comment Template') ?></h3>
+    <h3 class=""><?= t('Delete Task Description Template') ?></h3>
     <div class="confirm">
         <p class="confirm-notice">
             <?= t('Click on the button to confirm you would like to remove the template from the database') ?>
             <div class="template-contents">
                 <div class="template-title">
-                    <?= $template['title'] ?> <?php if (!empty($template['topic'])): ?> (<?= $template['topic'] ?>) <?php endif ?>
+                    <?= $template['title'] ?>
                 </div>
                 <?= $this->text->markdown($template['description']) ?>
             </div>
         </p>
 
     <?= $this->modal->confirmButtons(
-        'CommentTemplateController',
+        'PredefinedTaskDescriptionController',
         'remove',
-        array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'),
+        array('project_id' => $project['id'], 'id' => $template['id']),
         t('Delete')
     ) ?>
     </div>

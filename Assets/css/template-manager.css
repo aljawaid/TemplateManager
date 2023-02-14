@@ -24,6 +24,7 @@
     --border-radius-t-manager: 3px;
     --panel-background-t-manager: #EEEEEE;
     --transition-t-manager: ease-in-out all .3s;
+    --modal-page-header: 10px 5px 10px 5px;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -47,6 +48,26 @@
 
 .relative { position: relative; }
 
+.pl-3 { padding-left: 3px; }
+
+.pt-5 { padding-top: 5px; }
+
+tr > th.table-corner-tl {
+    border-top-left-radius: var(--border-radius-t-manager);
+}
+
+tr:last-child > td.table-corner-bl:first-child {
+    border-bottom-left-radius: var(--border-radius-t-manager);
+}
+
+tr > th.table-corner-tr {
+    border-top-right-radius: var(--border-radius-t-manager);
+}
+
+tr:last-child > td.table-corner-br:last-child {
+    border-bottom-right-radius: var(--border-radius-t-manager);
+}
+
 .template-manager-page-margin {
     margin: var(--page-margin-t-manager);
 }
@@ -63,6 +84,121 @@
     height: 28px;
 }
 
+.modal-page-header {
+    margin: var(--modal-page-header);
+    margin-bottom: 0;
+}
+
+.modal-page-header h2 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.modal-page-header h2 svg {
+    vertical-align: sub;
+}
+
+.modal-contents {
+    margin: var(--modal-page-header);
+}
+
+.modal-contents h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.template-form-section {
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 40px;
+}
+
+#TemplateForm label {
+    display: inline-block;
+}
+
+#TemplateForm label:last-of-type {
+    display: block;
+}
+
+#TemplateForm textarea::placeholder {
+    color: #4D4D4D;
+}
+
+#TemplateForm textarea {
+    width: 100%;
+}
+
+#TemplateForm input, #TemplateForm textarea {
+    border: 1px outset var(--pp-green);
+}
+
+#TemplateForm .form-actions, #DeleteModal .form-actions {
+    text-align: right;
+}
+
+#TemplateForm .form-actions .create-btn, #TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
+    font-size: 1em;
+    border: 1px outset var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
+}
+
+#TemplateForm .form-actions .create-btn {
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+#TemplateForm .form-actions .create-btn svg {
+    vertical-align: text-top;
+}
+
+#TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.confirm-notice {
+    margin-block: 15px;
+}
+
+#DeleteModal .confirm .template-contents {
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: .4;
+    box-shadow: 0px 0px 10px 3px #000;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: small;
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions {
+    color: var(--pp-white);
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions button {
+    border-radius: var(--border-radius-t-manager);
+}
+
+#DeleteModal .confirm .js-confirm-buttons-rendered .form-actions a {
+    font-size: 1.2em;
+    padding: 3px 10px;
+    transition: var(--transition-t-manager);
+    background: var(--pp-white);
+    border: 1px solid var(--pp-grey);
+    border-radius: var(--border-radius-t-manager);
+}
+
+.template-contents .template-title {
+    font-weight: bold;
+    margin-block: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: initial;
+}
+
 .add-templates-bar {
     margin-bottom: 20px;
 }
@@ -73,26 +209,27 @@
     margin: auto 20px 0 0;
 }
 
-.add-desc-template-btn, .add-comment-template-btn, .add-desc-template-btn:visited, .add-comment-template-btn:visited {
+.add-desc-template-btn, .add-comment-template-btn, .add-global-template-btn, .add-desc-template-btn:visited, .add-comment-template-btn:visited, .add-global-template-btn:visited {
     font-size: 1em;
     border: 2px solid var(--pp-black);
     border-radius: var(--border-radius-t-manager);
     transition: var(--transition-t-manager);
+    background: var(--pp-white);
 }
 
-.add-desc-template-btn a, .add-comment-template-btn a {
+.add-desc-template-btn a, .add-comment-template-btn a, .add-global-template-btn a {
     text-decoration: none;
 }
 
-.add-desc-template-btn a svg, .add-comment-template-btn a svg {
+.add-desc-template-btn a svg, .add-comment-template-btn a svg, .add-global-template-btn a svg {
     vertical-align: bottom;
 }
 
-.add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus {
+.add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus, .add-global-template-btn:hover, .add-global-template-btn:focus {
     border-color: var(--pp-green);
 }
 
-.add-desc-template-btn:hover a, .add-comment-template-btn:hover a, .add-desc-template-btn:focus a, .add-comment-template-btn:focus a {
+.add-desc-template-btn:hover a, .add-comment-template-btn:hover a, .add-desc-template-btn:focus a, .add-comment-template-btn:focus a, .add-global-template-btn:hover a, .add-global-template-btn:focus a {
     color: var(--pp-black);
     text-decoration: none;
 }
@@ -102,8 +239,9 @@
 }
 
 fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subject-section {
-    border: 1px solid var(--blue-border-gradient-match);
+    border: 2px outset var(--pp-green);
     border-radius: var(--border-radius-t-manager);
+    position: relative;
 }
 
 .task-desc-section legend, .task-comments-section legend, .email-subject-section legend {
@@ -112,10 +250,24 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     padding-right: 5px;
 }
 
-.task-desc-section svg, .task-comments-section svg, .email-subject-section svg {
+.task-desc-section legend > svg, .task-comments-section legend > svg, .email-subject-section legend > svg {
     width: 30px;
     height: 30px;
     vertical-align: bottom;
+}
+
+fieldset span.count-badge {
+    position: absolute;
+    right: 22px;
+    top: -29px;
+    padding: 0 5px 0 4px;
+    margin: 0px;
+    background: var(--pp-green);
+    border: 2px outset var(--pp-green);
+    font-size: 1.3em;
+    font-weight: 700;
+    border-radius: var(--border-radius-t-manager);
+    color: var(--pp-white);
 }
 
 .task-desc-section .section-intro, .task-comments-section .section-intro {
@@ -128,8 +280,66 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     margin: 10px auto 10px auto;
 }
 
-.template-table {
+table.template-table {
     margin-block: 10px;
+    border-collapse: inherit;
+}
+
+.template-row span.tooltip {
+    float: right;
+    margin-right: 10px;
+}
+
+table.template-table thead tr th.template-header {
+    border: 1px solid var(--pp-grey);
+    border-bottom: 0;
+}
+
+table.template-table tbody tr td.template-row {
+    border: 1px solid var(--pp-grey);
+    vertical-align: middle;
+}
+
+table.template-table > thead > tr > th.template-header:not(:first-child) {
+    border-left: 0;
+}
+
+table.template-table > tbody > tr > td.template-row:not(:first-child) {
+    border-left: 0;
+}
+
+table.template-table > tbody > tr:not(:last-child) > td.template-row {
+    border-bottom: 0;
+}
+
+.edit-desc-template-btn, .delete-desc-template-btn, .edit-comment-template-btn, .delete-comment-template-btn {
+    font-size: 1em;
+    padding: 3px 6px;
+    border-color: var(--pp-black);
+    transition: var(--transition-t-manager);
+    background: var(--pp-white);
+}
+
+.edit-desc-template-btn:hover, .delete-desc-template-btn:hover, .edit-comment-template-btn:hover, .delete-comment-template-btn:hover {
+    border-color: var(--pp-green);
+    background: rgba(46, 160, 46, .4);
+}
+
+.edit-desc-template-btn:hover a, .delete-desc-template-btn:hover a, .edit-comment-template-btn:hover a, .delete-comment-template-btn:hover a {
+    color: var(--pp-black) !important;
+}
+
+.delete-desc-template-btn:hover, .delete-comment-template-btn:hover {
+    border-color: var(--pp-red-alt-2);
+    background: rgba(174, 0, 61, .4);
+}
+
+#EditDescTemplate, #DeleteDescTemplate, #EditCommentTemplate, #DeleteCommentTemplate {
+    text-decoration: none !important;
+}
+
+.edit-desc-template-btn a svg, .delete-desc-template-btn a svg, .edit-comment-template-btn a svg, .delete-comment-template-btn a svg {
+    vertical-align: bottom;
 }
 
 .email-form-wrapper {
@@ -252,21 +462,80 @@ span.example-detail code, .example-steps code {
     margin-top: 10px;
 }
 
-.quick-templates-bar {
+#commentsEditor {
+    margin-bottom: 10px;
 }
 
-.quick-templates-title {
+.quick-templates-header {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 1em;
+}
+
+.quick-templates-header svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.quick-templates-bar {
 }
 
 .quick-templates-label {
     display: inline-block;
-    margin-left: 1em;
-    border: 1px solid var(--pp-border-red-alt-2);
-    padding: .3em;
+    margin-right: 1em;
+    border: 1px outset var(--pp-green);
+    padding: .2em .3em .3em .3em;
     border-radius: var(--border-radius-t-manager);
+    margin-bottom: 5px;
 }
 
-.comment-template-content {
+.quick-templates-title .fa-clipboard {
+    font-size: 20px;
+    vertical-align: middle;
+    color: var(--pp-light-grey);
+}
+
+.quick-templates-title strong {
+    font-size: 20px;
+    vertical-align: sub;
+    display: inline-block;
+}
+
+.quick-templates-title .copied {
+    color: var(--pp-green);
+}
+
+.fixed-title {
+    width: 110px;
+    margin-top: 3px;
+    font-size: .8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: text-top;
+}
+
+.quick-templates-title {
+    margin: 0 10px 0 5px;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.quick-templates-title:hover .fa-clipboard, .quick-templates-title:hover strong {
+    color: var(--pp-green);
+}
+
+.fixed-title, .quick-templates-title, .quick-template-content {
+    display: inline-block;
+}
+
+.quick-template-content .tooltip .fa-info-circle, .template-row .tooltip .fa-info-circle {
+color: rgba(5, 93, 32, .8);
+font-size: 1.3em !important;
+vertical-align: middle !important;
 }
 
 .templates-menu-count {
@@ -289,4 +558,5 @@ span.example-detail code, .example-steps code {
 
 .no-templates {
     font-style: italic;
+    color: var(--pp-grey);
 }
