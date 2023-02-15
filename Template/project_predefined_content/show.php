@@ -48,7 +48,7 @@
             </li>
             <li class="">
                 <div class="btn add-global-template-btn">
-                    <a id="AddGlobalTemplate" href="<?= $this->url->href('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager'), false, '', false) ?>" class="">
+                    <a id="ViewGlobalTemplates" href="<?= $this->url->href('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager'), false, '', false) ?>" class="">
                         <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                             <g stroke-width="0"/>
                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,7 +60,7 @@
                                     <path d="M160,224c17.656,0,32-14.344,32-32s-14.344-32-32-32s-32,14.344-32,32S142.344,224,160,224z M160,176 c8.812,0,16,7.188,16,16s-7.188,16-16,16s-16-7.188-16-16S151.188,176,160,176z"/>
                                 </g>
                             </g>
-                        </svg> <?= t('Global Templates') ?>
+                        </svg> <?= t('View Global Templates') ?>
                     </a>
                 </div>
             </li>
