@@ -1,10 +1,16 @@
 <?php
 
-namespace Kanboard\Model;
+namespace Kanboard\Plugin\TemplateManager\Model;
 
 use Kanboard\Core\Base;
 
-class PredefinedTaskDescriptionModel extends Base
+/**
+ * Class Kanboard\Plugin\TemplateManager\Model;
+ *
+ * Duplicates and extends PredefinedTaskDescriptionModel to include topics feature
+ */
+
+class TaskDescriptionTemplateModel extends Base
 {
     const TABLE = 'predefined_task_descriptions';
 
@@ -15,7 +21,7 @@ class PredefinedTaskDescriptionModel extends Base
 
     public function getList($projectId)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic');
     }
 
     public function getById($projectId, $id)
@@ -28,20 +34,22 @@ class PredefinedTaskDescriptionModel extends Base
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->findOneColumn('description');
     }
 
-    public function create($projectId, $title, $description)
+    public function create($projectId, $title, $description, $topic)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'project_id' => $projectId,
             'title' => $title,
             'description' => $description,
+            'topic' => $topic,
         ));
     }
 
-    public function update($projectId, $id, $title, $description)
+    public function update($projectId, $id, $title, $description, $topic)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
+            'topic' => $topic,
         ));
     }
 
