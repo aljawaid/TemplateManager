@@ -34,3 +34,76 @@
                 </div>
             </li>
 </div>
+<fieldset class="global-comments-section">
+        <?php if (! empty($saved_global_templates)): ?>
+            <span class="count-badge"><?= count($saved_global_templates) ?></span>
+        <?php endif ?>
+        <legend id="GlobalTemplates" class="">
+            <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                    <g>
+                        <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                        <path fill="#808080" d="M310.875,254.734c-40.438,0-73.172,22.078-73.172,49.234c0,12.094,10.172,25.875,20.922,34.469L248.188,368l31.703-19.469 c9.453,2.969,19.891,4.656,30.984,4.656c40.391,0,73.125-22,73.125-49.219C384,276.812,351.266,254.734,310.875,254.734z"/>
+                        <path fill="#055D20" d="M256,144c-70.688,0-128,40.234-128,89.891c0,22.062,17.781,47.234,36.562,62.922l-18.266,53.969l55.547-35.562 c7.25,2.375,14.938,4.25,22.844,5.656c-3.234-6.344-5.25-12.938-5.25-19.125c0-35.484,40.938-64.219,91.438-64.219 c27.062,0,51.188,8.422,67.938,21.578c3.312-8,5.188-16.469,5.188-25.219C384,184.234,326.688,144,256,144z"/>
+                    </g>
+                </g>
+            </svg> <?= t('Global Templates') ?>
+        </legend>
+        <p class="section-intro">
+            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
+        </p>
+        <?php if (! empty($saved_global_templates)): ?>
+            <table class="template-table">
+                <thead>
+                    <tr class="">
+                        <th class="template-header column-3 pl-3 text-center table-corner-tl"><?= t('ID') ?></th>
+                        <th class="template-header"><?= t('Title') ?></th>
+                        <th class="template-header column-20"><?= t('Topic') ?></th>
+                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($saved_global_templates as $globalTemplate): ?>
+                    <tr class="">
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($globalTemplate['id']) ?></td>
+                        <td class="template-row">
+                            <?= $this->text->e($globalTemplate['title']) ?>
+                            <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
+                        </td>
+                        <td class="template-row"><?= $this->text->e($globalTemplate['topic']) ?></td>
+                        <td class="template-row table-corner-br">
+                            <div class="btn edit-comment-template-btn" title="<?=t('Edit Template') ?>">
+                                <a id="EditCommentTemplate" href="<?= $this->url->href('GlobalContentController', 'edit', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
+                                    <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <path d="M12.5,10.2071068 L8,14.7071068 L8,16 L9.29289322,16 L13.7928932,11.5 L12.5,10.2071068 Z M13.2071068,9.5 L14.5,10.7928932 L15.7928932,9.5 L14.5,8.20710678 L13.2071068,9.5 Z M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z"/>
+                                            <path fill="none" stroke="#055D20" d=" M14.8535534,7.14644661 L16.8535534,9.14644661 C17.0488155,9.34170876 17.0488155,9.65829124 16.8535534,9.85355339 L9.85355339,16.8535534 C9.7597852,16.9473216 9.63260824,17 9.5,17 L7.5,17 C7.22385763,17 7,16.7761424 7,16.5 L7,14.5 C7,14.3673918 7.05267842,14.2402148 7.14644661,14.1464466 L14.1464466,7.14644661 C14.3417088,6.95118446 14.6582912,6.95118446 14.8535534,7.14644661 Z"/>
+                                        </g>
+                                    </svg> <?= t('Edit') ?>
+                                </a>
+                            </div>
+                            <div class="btn delete-comment-template-btn" title="<?=t('Delete Template') ?>">
+                                <a id="DeleteCommentTemplate" href="<?= $this->url->href('GlobalContentController', 'confirm', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
+                                    <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g stroke-width="0"/>
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g>
+                                            <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
+                                            <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                        </g>
+                                    </svg> <?= t('Delete') ?>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <span class="no-templates"><?= t('No templates') ?></span>
+        <?php endif ?>
+    </fieldset>
