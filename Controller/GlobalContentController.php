@@ -82,4 +82,29 @@ class GlobalContentController extends BaseController
             'template' => $template,
         )));
     }
+
+    public function remove()
+    {
+        $this->checkCSRFParam();
+        $template = $this->getTemplate();
+
+        if ($this->globalTemplateModel->deleteGlobalTemplate($template['id'])) {
+            $this->flash->success(t('Template removed successfully.'));
+        } else {
+            $this->flash->failure(t('Unable to remove this template.'));
+        }
+
+        $this->response->redirect($this->helper->url->to('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager')), true);
+    }
+
+    protected function getTemplate()
+    {
+        $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+
+        if (empty($template)) {
+            throw new PageNotFoundException();
+        }
+
+        return $template;
+    }
 }
