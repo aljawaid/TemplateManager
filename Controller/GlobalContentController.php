@@ -55,8 +55,6 @@ class GlobalContentController extends BaseController
     public function update()
     {
         $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
-        //$global_template = $global_template['id'];
-        //$template = $this->getTemplate($global_template);
         $values = $this->request->getValues();
 
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
