@@ -76,7 +76,7 @@ class GlobalContentController extends BaseController
 
     public function confirm()
     {
-        $template = $this->getTemplate($global_template);
+        $template = $this->getTemplate();
 
         $this->response->html($this->template->render('templateManager:global_template/remove', array(
             'template' => $template,
