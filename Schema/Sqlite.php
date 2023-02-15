@@ -27,4 +27,6 @@ function version_1(PDO $pdo)
         PRIMARY KEY(id)
         )
     ');
+
+    $pdo->exec("ALTER TABLE `predefined_task_descriptions` ADD COLUMN `topic` TEXT");
 }
