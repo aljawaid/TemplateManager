@@ -20,9 +20,9 @@ class GlobalTemplateModel extends Base
 
     const TABLE = 'global_templates';
 
-    public function getAll($id)
+    public function getAll()
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->findAll();
+        return $this->db->table(self::TABLE)->findAll();
     }
 
     public function getList($id)
