@@ -40,4 +40,46 @@ class GlobalContentController extends BaseController
             $this->create($values, $errors);
         }
     }
+
+    public function edit(array $values = array(), array $errors = array())
+    {
+        $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+
+        $this->response->html($this->template->render('templateManager:global_template/edit', array(
+            'values' => empty($values) ? $template : $values,
+            'template' => $template,
+            'errors' => $errors,
+        )));
+    }
+
+    public function update()
+    {
+        $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+        //$global_template = $global_template['id'];
+        //$template = $this->getTemplate($global_template);
+        $values = $this->request->getValues();
+
+        list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
+
+        if ($valid) {
+            if ($this->globalTemplateModel->updateGlobalTemplate($template['id'], $values['title'], $values['description'], $values['topic']) !== false) {
+                $this->flash->success(t('Template updated successfully.'));
+            } else {
+                $this->flash->failure(t('Unable to update this template.'));
+            }
+
+            $this->response->redirect($this->helper->url->to('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager')), true);
+        } else {
+            $this->edit($values, $errors);
+        }
+    }
+
+    public function confirm()
+    {
+        $template = $this->getTemplate($global_template);
+
+        $this->response->html($this->template->render('templateManager:global_template/remove', array(
+            'template' => $template,
+        )));
+    }
 }
