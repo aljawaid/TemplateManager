@@ -25,19 +25,19 @@ class GlobalTemplateModel extends Base
         return $this->db->table(self::TABLE)->findAll();
     }
 
-    public function getList($id)
+    public function getList($global_template)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $id)->getAll('id', 'title');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $global_template)->getAll('id', 'title');
     }
 
-    public function getById($id, $id)
+    public function getById($global_template)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->findOne();
+        return $this->db->table(self::TABLE)->eq('id', $global_template)->findOne();
     }
 
-    public function getDescriptionById($id, $id)
+    public function getDescriptionById($global_template)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->eq('id', $id)->findOneColumn('description');
+        return $this->db->table(self::TABLE)->eq('id', $global_template)->eq('id', $global_template)->findOneColumn('description');
     }
 
     public function createGlobalTemplate($title, $description, $topic)
@@ -49,17 +49,17 @@ class GlobalTemplateModel extends Base
         ));
     }
 
-    public function updateGlobalTemplate($id, $title, $description, $topic)
+    public function updateGlobalTemplate($global_template, $title, $description, $topic)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->update(array(
+        return $this->db->table(self::TABLE)->eq('id', $global_template)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
         ));
     }
 
-    public function deleteGlobalTemplate($id)
+    public function deleteGlobalTemplate($global_template)
     {
-        return $this->db->table(self::TABLE)->eq('id', $id)->remove();
+        return $this->db->table(self::TABLE)->eq('id', $global_template)->remove();
     }
 }
