@@ -47,6 +47,9 @@ class Plugin extends Base
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/delete/:id', 'CommentTemplateController', 'confirm', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates', 'GlobalTemplateController', 'show', 'TemplateManager');
+        $this->route->addRoute('/settings/global-templates/add', 'GlobalContentController', 'create', 'TemplateManager');
+        $this->route->addRoute('/settings/global-templates/edit/:id', 'GlobalContentController', 'edit', 'TemplateManager');
+        $this->route->addRoute('/settings/global-templates/delete/:id', 'GlobalContentController', 'confirm', 'TemplateManager');
     }
 
     public function onStartup()
