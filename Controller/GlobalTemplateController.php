@@ -23,10 +23,15 @@ class GlobalTemplateController extends \Kanboard\Controller\ConfigController
      * @access public
      */
 
-    public function show()
+    public function show(array $values = array(), array $errors = array())
     {
+        $global_template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+
         $this->response->html($this->helper->layout->config('templateManager:config/global-templates', array(
             'title' => t('Settings') .' &#10562; '.t('Template Manager'),
+            'values' => empty($values) ? $global_template : $values,
+            'errors' => $errors,
+            'saved_global_templates' => $this->globalTemplateModel->getAll(),
         )));
     }
 }
