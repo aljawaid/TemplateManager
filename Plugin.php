@@ -34,6 +34,7 @@ class Plugin extends Base
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
         $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
+        $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
@@ -45,6 +46,7 @@ class Plugin extends Base
         $this->route->addRoute('project/:project_id/templates/comments/add', 'CommentTemplateController', 'create', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/delete/:id', 'CommentTemplateController', 'confirm', 'TemplateManager');
+        $this->route->addRoute('/settings/global-templates', 'GlobalTemplateController', 'show', 'TemplateManager');
     }
 
     public function onStartup()
