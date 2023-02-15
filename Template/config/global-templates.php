@@ -19,7 +19,7 @@
         <li class="">
             <li class="">
                 <div class="btn add-comment-template-btn">
-                    <a id="AddGlobalTemplate" href="<?= $this->url->href('GlobalContentController', 'create', array('global_template' => $global_template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
+                    <a id="AddGlobalTemplate" href="<?= $this->url->href('GlobalContentController', 'create', array('plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
                         <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                             <g stroke-width="0"/>
                             <g stroke-linecap="round" stroke-linejoin="round"/>
