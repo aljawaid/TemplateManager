@@ -76,6 +76,7 @@ tr:last-child > td.table-corner-br:last-child {
     margin-top: 0;
     font-weight: 600;
     border-bottom: 2px outset var(--button-blue-border-gradient-match);
+    padding-bottom: 2px;
 }
 
 .template-manager-page-header h2 svg {
