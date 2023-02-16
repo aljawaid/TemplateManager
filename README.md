@@ -35,7 +35,7 @@ Features
 - Templates and topics are saved in the database
 
 **NEW Global Templates**
-- Show generic templates common to you personal or organisation workflow to your users
+- Show generic templates common to your personal or organisation workflow to your users
 - These templates are visible to all user roles and are not restricted by project
 - Global templates are shown in each task above the comments section
 
@@ -100,6 +100,7 @@ Compatibility
 - `04` Template overrides
 - Database Changes:
   - `01` New database table created as `comment_templates`
+  - `01` New database table created as `global_templates`
   - `01` New column added to `predefined_task_descriptions` as `topic`
 
 
