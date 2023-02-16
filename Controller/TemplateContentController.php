@@ -21,7 +21,7 @@ class TemplateContentController extends BaseController
             'values' => empty($values) ? $project : $values,
             'errors' => $errors,
             'project' => $project,
-            'predefined_task_descriptions' => $this->predefinedTaskDescriptionModel->getAll($project['id']),
+            'predefined_task_descriptions' => $this->taskDescriptionTemplateModel->getAll($project['id']),
             'saved_comment_templates' => $this->taskCommentTemplateModel->getAll($project['id']),
             'title' => t('Template Manager'),
         )));
