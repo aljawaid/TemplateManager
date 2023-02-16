@@ -20,7 +20,7 @@
             <?= t('Click on the button to confirm you would like to remove the template from the database') ?>
             <div class="template-contents">
                 <div class="template-title">
-                    <?= $template['title'] ?>
+                    <?= $template['title'] ?> <?php if (!empty($template['topic'])): ?> (<?= $template['topic'] ?>) <?php endif ?>
                 </div>
                 <?= $this->text->markdown($template['description']) ?>
             </div>
