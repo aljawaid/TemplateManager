@@ -97,7 +97,7 @@ Compatibility
 - _No known issues_
 - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding), [Glancer](https://github.com/aljawaid/Glancer)
 #### Core Files & Templates
-- `07` Template overrides
+- `04` Template overrides
 - Database Changes:
   - `01` New database table created as `comment_templates`
   - `01` New column added to `predefined_task_descriptions` as `topic`

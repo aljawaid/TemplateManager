@@ -18,7 +18,7 @@ class TaskDescriptionTemplateController extends BaseController
     {
         $project = $this->getProject();
 
-        $this->response->html($this->template->render('predefined_task_description/create', array(
+        $this->response->html($this->template->render('templateManager:predefined_task_description/create', array(
             'values' => $values,
             'errors' => $errors,
             'project' => $project,
@@ -50,7 +50,7 @@ class TaskDescriptionTemplateController extends BaseController
         $project = $this->getProject();
         $template = $this->taskDescriptionTemplateModel->getById($project['id'], $this->request->getIntegerParam('id'));
 
-        $this->response->html($this->template->render('predefined_task_description/edit', array(
+        $this->response->html($this->template->render('templateManager:predefined_task_description/edit', array(
             'values' => empty($values) ? $template : $values,
             'template' => $template,
             'errors' => $errors,
@@ -84,7 +84,7 @@ class TaskDescriptionTemplateController extends BaseController
         $project = $this->getProject();
         $template = $this->getTemplate($project);
 
-        $this->response->html($this->template->render('predefined_task_description/remove', array(
+        $this->response->html($this->template->render('templateManager:predefined_task_description/remove', array(
             'template' => $template,
             'project' => $project,
         )));
