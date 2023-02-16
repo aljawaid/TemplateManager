@@ -23,6 +23,12 @@
             <?= $this->form->text('title', $values, $errors, array('autofocus', 'required', 'tabindex="1"')) ?>
         </span>
 
+        <span class="template-form-section">
+            <?= $this->form->label(t('Topic'), 'topic') ?>
+            <?= $this->form->text('topic', $values, array(), array('tabindex="2"')) ?>
+            <p class="form-help"><?= t('Topics can help group and label similar templates') ?></p>
+        </span>
+
         <?= $this->form->label(t('Template Content'), 'description') ?>
         <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 3)) ?>
 
