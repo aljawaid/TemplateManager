@@ -40,8 +40,8 @@ class Plugin extends Base
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('project/:project_id/templates', 'TemplateContentController', 'show', 'TemplateManager');
-        $this->route->addRoute('project/:project_id/templates/tasks/add', 'PredefinedTaskDescriptionController', 'create');
-        $this->route->addRoute('project/:project_id/templates/tasks/edit/:id', 'PredefinedTaskDescriptionController', 'edit');
+        $this->route->addRoute('project/:project_id/templates/tasks/add', 'TaskDescriptionTemplateController', 'create', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/tasks/edit/:id', 'TaskDescriptionTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/delete/:id', 'PredefinedTaskDescriptionController', 'confirm');
         $this->route->addRoute('project/:project_id/templates/comments/add', 'CommentTemplateController', 'create', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
