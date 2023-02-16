@@ -15,7 +15,7 @@
 </div>
 <div class="modal-contents">
     <h3 class=""><?= t('Update Task Description Template') ?></h3>
-    <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('PredefinedTaskDescriptionController', 'update', array('project_id' => $project['id'], 'id' => $template['id'])) ?>" autocomplete="on">
+    <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('TaskDescriptionTemplateController', 'update', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager')) ?>" autocomplete="on">
         <?= $this->form->csrf() ?>
 
         <span class="template-form-section">

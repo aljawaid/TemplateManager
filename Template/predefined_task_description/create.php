@@ -15,7 +15,7 @@
 </div>
 <div class="modal-contents">
     <h3 class=""><?= t('Create Task Description Template') ?></h3>
-    <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('PredefinedTaskDescriptionController', 'save', array('project_id' => $project['id'])) ?>" autocomplete="on">
+    <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('TaskDescriptionTemplateController', 'save', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')) ?>" autocomplete="on">
         <?= $this->form->csrf() ?>
 
         <span class="template-form-section">
