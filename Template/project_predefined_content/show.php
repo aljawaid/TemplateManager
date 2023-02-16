@@ -16,7 +16,7 @@
         <ul class="add-templates-bar">
             <li class="">
                 <div class="btn add-desc-template-btn">
-                    <a id="AddDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'create', array('project_id' => $project['id']), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
+                    <a id="AddDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium" title="<?=t('Add Template') ?>">
                         <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                             <g stroke-width="0"/>
                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -116,6 +116,7 @@
                     <tr class="">
                         <th class="template-header column-3 text-center pl-3 table-corner-tl"><?= t('ID') ?></th>
                         <th class="template-header"><?= t('Title') ?></th>
+                        <th class="template-header column-20"><?= t('Topic') ?></th>
                         <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
@@ -127,9 +128,10 @@
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
                         </td>
+                        <td class="template-row"><?= $this->text->e($template['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn edit-desc-template-btn" title="<?=t('Edit Template') ?>">
-                                <a id="EditDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'edit', array('project_id' => $project['id'], 'id' => $template['id']), false, '', false) ?>" class="js-modal-medium">
+                                <a id="EditDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -141,7 +143,7 @@
                                 </a>
                             </div>
                             <div class="btn delete-desc-template-btn" title="<?=t('Delete Template') ?>">
-                                <a id="DeleteDescTemplate" href="<?= $this->url->href('PredefinedTaskDescriptionController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id']), false, '', false) ?>" class="js-modal-confirm">
+                                <a id="DeleteDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
                                     <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
