@@ -29,7 +29,7 @@ class GlobalContentController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->globalTemplateModel->createGlobalTemplate($values['title'], $values['description'], $values['topic']) !== false) {
+            if ($this->globalTemplateModel->createGlobalTemplate($values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
                 $this->flash->success(t('Template created successfully'));
             } else {
                 $this->flash->failure(t('Unable to create this template'));
@@ -60,7 +60,7 @@ class GlobalContentController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->globalTemplateModel->updateGlobalTemplate($template['id'], $values['title'], $values['description'], $values['topic']) !== false) {
+            if ($this->globalTemplateModel->updateGlobalTemplate($template['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
                 $this->flash->success(t('Template updated successfully.'));
             } else {
                 $this->flash->failure(t('Unable to update this template.'));

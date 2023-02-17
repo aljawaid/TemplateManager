@@ -67,7 +67,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description'], $values['topic']) !== false) {
+            if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
                 $this->flash->success(t('Template updated successfully.'));
             } else {
                 $this->flash->failure(t('Unable to update this template.'));
