@@ -20,7 +20,7 @@
 
         <span class="template-form-section">
             <?= $this->form->label(t('Title'), 'title') ?>
-            <?= $this->form->text('title', $values, $errors, array('autofocus', 'required', 'tabindex="1"')) ?>
+            <?= $this->form->text('title', $values, $errors, array('autofocus', 'required', 'tabindex="1"', 'placeholder="'. t('My Template Title') .'"')) ?>
         </span>
 
         <span class="template-form-section">
