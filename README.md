@@ -8,9 +8,9 @@ Features
 -------------
 
 - Revised `predefined contents` as `Task Description Templates`
-- Improved layout, modal and form designs
+- Improved and extended the layout, modal and form designs for the `predefined contents` section
 - Renamed the `predefined contents` section to `Template Manager`
-- Show total template count in project dropdown with a link to the Template Manager
+- Show the total template count in project dropdown directly linking to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total number of templates are shown in the Admin Dashboard
 - Add pretty URLs _(if globally configured)_
@@ -28,29 +28,36 @@ Features
   - Added user instructions related to tasks and automatic actions
 
 **NEW Comment Templates**
-- Add, update or delete templates for your regular comments which can be used repeatedly in any task
+- Add, update or delete templates for your regular comments which can be used repetitively in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
-- NEW **Topics** for Comment Templates
+- **Topics** for Comment Templates
   - Label common templates into topics to help group them together
-- Templates and topics are saved in the database
+- **Notes** for Comment Templates
+  - Add a short note to describe each template
+- Templates, topics and notes are saved in the database
 
 **NEW Global Templates**
-- Show generic templates common to your personal or organisation workflow to your users
+- Show generic templates common to your personal or organisation workflow (to your end users)
 - These templates are visible to all user roles and are not restricted by project
-- Global templates are shown in each task above the comments section
+- **Topics** for Global Templates
+  - Label common templates into topics to help group them together
+- **Notes** for Global Templates
+  - Add a short note to describe each template
+- Templates, topics and notes are saved in the database
 
 **Task Comments**
 - Show total number of comments created
 - Saved comment templates can be selected from each task through a `Favourites` bar
+- Global templates are shown in each task above the comments section
 
 **Revised Project Sidebar**
-- Replaced default code to extend the functionality of the project sidebar menu
+- Replaced the default code to extend the functionality of the project sidebar menu
   - Moved the core hook `'template:project:sidebar'`
     - _Now shows before the Close Project menu link to show content to **all users**_
-  - Changed sort order of menu for faster access to project configuration sections
-- Add new hook `'template:project:sidebar:top'`
+  - Changed the sort order of the sidebar menu for faster access to project configuration sections
+- Add a new hook `'template:project:sidebar:top'`
   - _Shows after the Summary menu link to show content to **all users**_
-- Add new hook `'template:project:sidebar:bottom'`
+- Add a new hook `'template:project:sidebar:bottom'`
   - _Shows after the Delete Project menu link to show content to **all users**_
 
 
