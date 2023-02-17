@@ -25,7 +25,7 @@
 
         <span class="template-form-section">
             <?= $this->form->label(t('Topic'), 'topic') ?>
-            <?= $this->form->text('topic', $values, array(), array('tabindex="2"')) ?>
+            <?= $this->form->text('topic', $values, array(), array('tabindex="2"', 'placeholder="'. t('e.g. General') .'"')) ?>
             <p class="form-help"><?= t('Topics can help group and label similar templates') ?></p>
         </span>
 
