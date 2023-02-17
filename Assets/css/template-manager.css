@@ -136,6 +136,10 @@ tr:last-child > td.table-corner-br:last-child {
     border: 1px outset var(--pp-green);
 }
 
+#form-note {
+    width: 500px;
+}
+
 #TemplateForm .form-actions, #DeleteModal .form-actions {
     text-align: right;
 }
