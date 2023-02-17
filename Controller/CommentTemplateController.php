@@ -33,7 +33,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->createCommentTemplate($project['id'], $values['title'], $values['description'], $values['topic']) !== false) {
+            if ($this->taskCommentTemplateModel->createCommentTemplate($project['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
                 $this->flash->success(t('Template created successfully'));
             } else {
                 $this->flash->failure(t('Unable to create this template'));
