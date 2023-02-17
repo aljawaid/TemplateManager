@@ -29,7 +29,7 @@
     <?= $this->modal->confirmButtons(
         'TaskDescriptionTemplateController',
         'remove',
-        array('plugin' => 'templateManager', 'project_id' => $project['id'], 'id' => $template['id']),
+        array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'),
         t('Delete')
     ) ?>
     </div>
