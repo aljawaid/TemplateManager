@@ -10,7 +10,7 @@ function version_1(PDO $pdo)
 {
     $pdo->exec('CREATE TABLE IF NOT EXISTS comment_templates (
         id INTEGER PRIMARY KEY,
-        project_id INT NOT NULL,
+        project_id INTEGER NOT NULL,
         title TEXT NOT NULL,
         topic TEXT,
         description TEXT NOT NULL,
