@@ -51,12 +51,13 @@ class TaskCommentTemplateModel extends Base
         ));
     }
 
-    public function updateCommentTemplate($projectId, $id, $title, $description, $topic)
+    public function updateCommentTemplate($projectId, $id, $title, $description, $topic, $note)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
+            'note' => $note,
         ));
     }
 

@@ -40,21 +40,23 @@ class GlobalTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('id', $global_template)->eq('id', $global_template)->findOneColumn('description');
     }
 
-    public function createGlobalTemplate($title, $description, $topic)
+    public function createGlobalTemplate($title, $description, $topic, $note)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
+            'note' => $note,
         ));
     }
 
-    public function updateGlobalTemplate($global_template, $title, $description, $topic)
+    public function updateGlobalTemplate($global_template, $title, $description, $topic, $note)
     {
         return $this->db->table(self::TABLE)->eq('id', $global_template)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
+            'note' => $note,
         ));
     }
 
