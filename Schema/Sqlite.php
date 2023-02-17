@@ -14,6 +14,7 @@ function version_1(PDO $pdo)
         title TEXT NOT NULL,
         topic TEXT,
         description TEXT NOT NULL,
+        note TEXT NOT NULL,
         FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE,
         PRIMARY KEY(id)
         )
@@ -24,6 +25,7 @@ function version_1(PDO $pdo)
         title TEXT NOT NULL,
         topic TEXT,
         description TEXT NOT NULL,
+        note TEXT NOT NULL,
         PRIMARY KEY(id)
         )
     ');
