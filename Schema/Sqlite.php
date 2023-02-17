@@ -9,24 +9,22 @@ const VERSION = 1;
 function version_1(PDO $pdo)
 {
     $pdo->exec('CREATE TABLE IF NOT EXISTS comment_templates (
-        id INT NOT NULL AUTO_INCREMENT,
+        id INTEGER PRIMARY KEY,
         project_id INT NOT NULL,
         title TEXT NOT NULL,
         topic TEXT,
         description TEXT NOT NULL,
         note TEXT NOT NULL,
-        FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE,
-        PRIMARY KEY(id)
+        FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
         )
     ');
 
     $pdo->exec('CREATE TABLE IF NOT EXISTS global_templates (
-        id INT NOT NULL AUTO_INCREMENT,
+        id INTEGER PRIMARY KEY,
         title TEXT NOT NULL,
         topic TEXT,
         description TEXT NOT NULL,
-        note TEXT NOT NULL,
-        PRIMARY KEY(id)
+        note TEXT NOT NULL
         )
     ');
 
