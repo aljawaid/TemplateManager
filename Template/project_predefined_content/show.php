@@ -123,7 +123,7 @@
                 <tbody>
                 <?php foreach ($predefined_task_descriptions as $template): ?>
                     <tr class="">
-                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($template['id']) ?></td>
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($template['id']) ?></td>
                         <td class="template-row">
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
@@ -200,7 +200,7 @@
                 <tbody>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
-                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($commentTemplate['id']) ?></td>
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($commentTemplate['id']) ?></td>
                         <td class="template-row">
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
