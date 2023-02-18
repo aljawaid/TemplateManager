@@ -194,6 +194,7 @@
                         <th class="template-header"><?= t('Title') ?></th>
                         <th class="template-header column-20"><?= t('Topic') ?></th>
                         <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
+                        <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -204,6 +205,7 @@
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
+                        <td class="template-row"><?= $this->text->e($commentTemplate['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
