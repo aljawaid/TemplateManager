@@ -60,6 +60,11 @@
                         <div class="quick-template-content">
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </div>
+                        <div class="quick-templates-info">
+                            <?php if (!empty($commentTemplate['topic'])): ?>
+                                <span class="template-topic"><?= ($commentTemplate['topic']) ?></span>
+                            <?php endif ?>
+                        </div>
                     </div>
                 <?php endforeach ?>
             </div>

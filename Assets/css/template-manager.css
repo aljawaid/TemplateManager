@@ -543,6 +543,20 @@ font-size: 1.3em !important;
 vertical-align: middle !important;
 }
 
+.quick-templates-info {
+    display: block;
+}
+
+.template-topic {
+    font-size: .8em;
+    text-transform: uppercase;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin-top: 3px;
+}
 .templates-menu-count {
     margin-left: 5px;
     font-size: .8em;
