@@ -302,6 +302,11 @@ table.template-table {
     margin-right: 10px;
 }
 
+.btn-wrapper {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
 table.template-table thead tr th.template-header {
     border: 1px solid var(--pp-grey);
     border-bottom: 0;
