@@ -48,7 +48,11 @@
                     <?php endif ?>
                 </div>
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
-                    <div class="quick-templates-label">
+                    <?php if (!empty($commentTemplate['note'])): ?>
+                        <div class="quick-templates-label relative template-note" data-tooltip="<?= $this->text->e($commentTemplate['note']) ?>">
+                    <?php else: ?>
+                        <div class="quick-templates-label relative">
+                    <?php endif ?>
                         <span class="fixed-title" title="<?= $commentTemplate['title'] ?>"><?= $commentTemplate['title'] ?></span>
                         <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Copy to clipboard') ?>">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
