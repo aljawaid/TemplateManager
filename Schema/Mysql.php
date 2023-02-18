@@ -29,5 +29,5 @@ function version_1(PDO $pdo)
     ) COMMENT "Template Manager plugin table" ENGINE = InnoDB CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;');
 
     // IF THE PLUGIN IS NOT INSTALLING, DELETE IF THIS COLUMN EXISTS
-    $pdo->exec("ALTER TABLE `predefined_task_descriptions` ADD COLUMN `topic` TEXT");
+    $pdo->exec("ALTER TABLE `predefined_task_descriptions` ADD COLUMN `topic` TEXT, ADD COLUMN `note` TEXT");
 }
