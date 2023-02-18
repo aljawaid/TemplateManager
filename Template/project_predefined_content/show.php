@@ -184,7 +184,7 @@
             </svg> <?= t('Task Comment Templates') ?>
         </legend>
         <p class="section-intro">
-            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
+            <?= t('These templates are available as comments for any task in a project. In the comments section of a task, select your template from the associated comment templates. Topics can help group and label similar templates. Notes are used to describe the template.') ?>
         </p>
         <?php if (! empty($saved_comment_templates)): ?>
             <table class="template-table">
