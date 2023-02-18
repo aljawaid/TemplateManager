@@ -52,6 +52,8 @@
 
 .pt-5 { padding-top: 5px; }
 
+.pl-10 { padding-left: 10px; }
+
 tr > th.table-corner-tl {
     border-top-left-radius: var(--border-radius-t-manager);
 }
