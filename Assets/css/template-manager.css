@@ -607,3 +607,9 @@ vertical-align: middle !important;
     font-style: italic;
     color: var(--pp-grey);
 }
+
+@media screen and (max-width: 1482px) {
+    .btn-wrapper .btn:not(:first-child) {
+        margin-top: 5px;
+    }
+}
