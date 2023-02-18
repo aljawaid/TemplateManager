@@ -34,22 +34,24 @@ class TaskDescriptionTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->findOneColumn('description');
     }
 
-    public function create($projectId, $title, $description, $topic)
+    public function create($projectId, $title, $description, $topic, $note)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'project_id' => $projectId,
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
+            'note' => $note,
         ));
     }
 
-    public function update($projectId, $id, $title, $description, $topic)
+    public function update($projectId, $id, $title, $description, $topic, $note)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
+            'note' => $note,
         ));
     }
 
