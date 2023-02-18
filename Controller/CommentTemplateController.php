@@ -68,9 +68,9 @@ class CommentTemplateController extends BaseController
 
         if ($valid) {
             if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
-                $this->flash->success(t('Template updated successfully.'));
+                $this->flash->success(t('Template updated successfully'));
             } else {
-                $this->flash->failure(t('Unable to update this template.'));
+                $this->flash->failure(t('Unable to update this template'));
             }
 
             $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
@@ -97,9 +97,9 @@ class CommentTemplateController extends BaseController
         $template = $this->getTemplate($project);
 
         if ($this->taskCommentTemplateModel->deleteCommentTemplate($project['id'], $template['id'])) {
-            $this->flash->success(t('Template removed successfully.'));
+            $this->flash->success(t('Template removed successfully'));
         } else {
-            $this->flash->failure(t('Unable to remove this template.'));
+            $this->flash->failure(t('Unable to remove this template'));
         }
 
         $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);

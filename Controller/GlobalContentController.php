@@ -61,9 +61,9 @@ class GlobalContentController extends BaseController
 
         if ($valid) {
             if ($this->globalTemplateModel->updateGlobalTemplate($template['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
-                $this->flash->success(t('Template updated successfully.'));
+                $this->flash->success(t('Template updated successfully'));
             } else {
-                $this->flash->failure(t('Unable to update this template.'));
+                $this->flash->failure(t('Unable to update this template'));
             }
 
             $this->response->redirect($this->helper->url->to('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager')), true);
@@ -87,9 +87,9 @@ class GlobalContentController extends BaseController
         $template = $this->getTemplate();
 
         if ($this->globalTemplateModel->deleteGlobalTemplate($template['id'])) {
-            $this->flash->success(t('Template removed successfully.'));
+            $this->flash->success(t('Template removed successfully'));
         } else {
-            $this->flash->failure(t('Unable to remove this template.'));
+            $this->flash->failure(t('Unable to remove this template'));
         }
 
         $this->response->redirect($this->helper->url->to('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager')), true);

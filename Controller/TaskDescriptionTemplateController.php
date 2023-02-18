@@ -34,9 +34,9 @@ class TaskDescriptionTemplateController extends BaseController
 
         if ($valid) {
             if ($this->taskDescriptionTemplateModel->create($project['id'], $values['title'], $values['description'], $values['topic']) !== false) {
-                $this->flash->success(t('Template created successfully.'));
+                $this->flash->success(t('Template created successfully'));
             } else {
-                $this->flash->failure(t('Unable to create this template.'));
+                $this->flash->failure(t('Unable to create this template'));
             }
 
             $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
@@ -68,9 +68,9 @@ class TaskDescriptionTemplateController extends BaseController
 
         if ($valid) {
             if ($this->taskDescriptionTemplateModel->update($project['id'], $template['id'], $values['title'], $values['description'], $values['topic']) !== false) {
-                $this->flash->success(t('Template updated successfully.'));
+                $this->flash->success(t('Template updated successfully'));
             } else {
-                $this->flash->failure(t('Unable to update this template.'));
+                $this->flash->failure(t('Unable to update this template'));
             }
 
             $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
@@ -97,9 +97,9 @@ class TaskDescriptionTemplateController extends BaseController
         $template = $this->getTemplate($project);
 
         if ($this->taskDescriptionTemplateModel->remove($project['id'], $template['id'])) {
-            $this->flash->success(t('Template removed successfully.'));
+            $this->flash->success(t('Template removed successfully'));
         } else {
-            $this->flash->failure(t('Unable to remove this template.'));
+            $this->flash->failure(t('Unable to remove this template'));
         }
 
         $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
