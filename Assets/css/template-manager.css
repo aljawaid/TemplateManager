@@ -83,6 +83,7 @@ tr:last-child > td.table-corner-br:last-child {
     vertical-align: bottom;
     width: 28px;
     height: 28px;
+    pointer-events: none;
 }
 
 .modal-page-header {
@@ -97,6 +98,7 @@ tr:last-child > td.table-corner-br:last-child {
 
 .modal-page-header h2 svg {
     vertical-align: sub;
+    pointer-events: none;
 }
 
 .modal-contents {
@@ -157,6 +159,7 @@ tr:last-child > td.table-corner-br:last-child {
 
 #TemplateForm .form-actions .create-btn svg {
     vertical-align: text-top;
+    pointer-events: none;
 }
 
 #TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
@@ -228,6 +231,7 @@ tr:last-child > td.table-corner-br:last-child {
 
 .add-desc-template-btn a svg, .add-comment-template-btn a svg, .add-global-template-btn a svg {
     vertical-align: bottom;
+    pointer-events: none;
 }
 
 .add-desc-template-btn:hover, .add-comment-template-btn:hover, .add-desc-template-btn:focus, .add-comment-template-btn:focus, .add-global-template-btn:hover, .add-global-template-btn:focus {
@@ -259,6 +263,7 @@ fieldset.task-desc-section, fieldset.task-comments-section, fieldset.email-subje
     width: 30px;
     height: 30px;
     vertical-align: bottom;
+    pointer-events: none;
 }
 
 fieldset span.count-badge {
@@ -345,6 +350,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
 
 .edit-desc-template-btn a svg, .delete-desc-template-btn a svg, .edit-comment-template-btn a svg, .delete-comment-template-btn a svg {
     vertical-align: bottom;
+    pointer-events: none;
 }
 
 .email-form-wrapper {
@@ -483,6 +489,7 @@ span.example-detail code, .example-steps code {
     width: 30px;
     height: 30px;
     vertical-align: middle;
+    pointer-events: none;
 }
 
 .quick-templates-bar {
@@ -576,6 +583,7 @@ vertical-align: middle !important;
 .template-manager-menu svg {
     vertical-align: bottom;
     margin-right: 4px;
+    pointer-events: none;
 }
 
 .no-templates {
