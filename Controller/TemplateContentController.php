@@ -42,10 +42,10 @@ class TemplateContentController extends BaseController
 
         if ($valid) {
             if ($this->projectModel->update($values)) {
-                $this->flash->success(t('Project updated successfully.'));
+                $this->flash->success(t('Email subject templates updated successfully'));
                 return $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);
             } else {
-                $this->flash->failure(t('Unable to update this project.'));
+                $this->flash->failure(t('Unable to update email subject templates'));
             }
         }
 
