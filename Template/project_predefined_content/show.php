@@ -205,7 +205,7 @@
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
-                        <td class="template-row"><?= $this->text->e($commentTemplate['note']) ?></td>
+                        <td class="template-row template-note"><?= $this->text->e($commentTemplate['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">

@@ -608,6 +608,10 @@ vertical-align: middle !important;
     color: var(--pp-grey);
 }
 
+.template-row.template-note {
+    font-size: .9em;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
