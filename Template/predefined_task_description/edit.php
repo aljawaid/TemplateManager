@@ -29,6 +29,12 @@
             <p class="form-help"><?= t('Topics can help group and label similar templates') ?></p>
         </span>
 
+        <span class="template-form-section">
+            <?= $this->form->label(t('Note'), 'note') ?>
+            <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="'. t('My note for this template') .'"')) ?>
+            <p class="form-help"><?= t('Add a short note to describe what this template is about') ?></p>
+        </span>
+
         <?= $this->form->label(t('Template Content'), 'description') ?>
         <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 3)) ?>
 
