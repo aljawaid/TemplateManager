@@ -266,7 +266,7 @@
             <?= t('Subjects for emails are used both by tasks and automatic actions which can help in creating automated emails (as confirmations, reports or for auditing activity).') ?>
         </p>
         <div class="email-form-wrapper" style="width: 30%;">
-            <form method="post" class="email-subject-form" action="<?= $this->url->href('ProjectPredefinedContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit')) ?>" autocomplete="off">
+            <form method="post" class="email-subject-form" action="<?= $this->url->href('TemplateContentController', 'update', array('project_id' => $project['id'], 'redirect' => 'edit', 'plugin' => 'TemplateManager')) ?>" autocomplete="off">
                 <?= $this->form->csrf() ?>
 
                 <?= $this->form->textarea('predefined_email_subjects', $values, $errors, array('tabindex="1"')) ?>
