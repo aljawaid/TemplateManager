@@ -476,6 +476,7 @@ span.example-detail code, .example-steps code {
     display: inline-block;
     margin-bottom: 5px;
     margin-right: 1em;
+    vertical-align: text-bottom;
 }
 
 .quick-templates-header svg {
@@ -494,6 +495,8 @@ span.example-detail code, .example-steps code {
     padding: .2em .3em .3em .3em;
     border-radius: var(--border-radius-t-manager);
     margin-bottom: 5px;
+    height: 40px;
+    width: 168px;
 }
 
 .quick-templates-title .fa-clipboard {
