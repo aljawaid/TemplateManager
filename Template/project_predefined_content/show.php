@@ -191,10 +191,10 @@
                 <thead>
                     <tr class="">
                         <th class="template-header column-3 pl-3 text-center table-corner-tl"><?= t('ID') ?></th>
-                        <th class="template-header"><?= t('Title') ?></th>
-                        <th class="template-header column-20"><?= t('Topic') ?></th>
-                        <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
+                        <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
+                        <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
+                        <th class="template-header column-13 table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
