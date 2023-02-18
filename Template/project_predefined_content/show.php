@@ -116,6 +116,7 @@
                     <tr class="">
                         <th class="template-header column-3 text-center pl-3 table-corner-tl"><?= t('ID') ?></th>
                         <th class="template-header pl-10"><?= t('Title') ?></th>
+                        <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
                         <th class="template-header column-13 table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
@@ -128,6 +129,7 @@
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
                         </td>
+                        <td class="template-row template-note"><?= $this->text->e($template['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($template['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
