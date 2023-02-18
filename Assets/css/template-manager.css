@@ -307,6 +307,15 @@ table.template-table {
     display: block;
     text-align: center;
 }
+
+table.template-table > tbody > tr > td.template-row:not(:first-child) {
+    padding-left: 10px;
+}
+
+table.template-table tbody tr td.template-row:last-child {
+    padding: .5em 3px;
+}
+
 table.template-table thead tr th.template-header {
     border: 1px solid var(--pp-grey);
     border-bottom: 0;
@@ -335,6 +344,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
     border-color: var(--pp-black);
     transition: var(--transition-t-manager);
     background: var(--pp-white);
+    display: inline-block;
 }
 
 .edit-desc-template-btn:hover, .delete-desc-template-btn:hover, .edit-comment-template-btn:hover, .delete-comment-template-btn:hover {
