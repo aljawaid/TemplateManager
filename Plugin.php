@@ -19,6 +19,7 @@ class Plugin extends Base
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/TemplateManager/Assets/css/template-manager.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/TemplateManager/Assets/css/tooltips.css'));
 
         // JS - Asset Hook
         //  - Keep filename lowercase
