@@ -7,10 +7,9 @@ Predefined Contents is replaced by the Template Manager. Improve consistency of 
 Features
 -------------
 
-- Revised `predefined contents` as `Task Description Templates`
 - Improved and extended the layout, modal and form designs for the `predefined contents` section
 - Renamed the `predefined contents` section to `Template Manager`
-- Show the total template count in project dropdown directly linking to the Template Manager
+- Show the total template count in the project dropdown menu directly linking to the Template Manager
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total number of templates are shown in the Admin Dashboard
 - Add pretty URLs _(if globally configured)_
@@ -27,6 +26,14 @@ Features
 - Revised Email Subject Templates
   - Added user instructions related to tasks and automatic actions
 
+**Task Description Templates**
+- Revised `predefined contents` as `Task Description Templates`
+- **Topics** for Comment Templates
+  - Label common templates into topics to help group them together
+- **Notes** for Comment Templates
+  - Add a short note to describe each template
+- Templates, topics and notes are saved in the database
+
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repetitively in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
@@ -37,7 +44,7 @@ Features
 - Templates, topics and notes are saved in the database
 
 **NEW Global Templates**
-- Show generic templates common to your personal or organisation workflow (to your end users)
+- Show generic templates common to your personal or organisational workflow (to your end users)
 - These templates are visible to all user roles and are not restricted by project
 - **Topics** for Global Templates
   - Label common templates into topics to help group them together
@@ -47,7 +54,7 @@ Features
 
 **Task Comments**
 - Show total number of comments created
-- Saved comment templates can be selected from each task through a `Favourites` bar
+- Saved comment templates can be quickly copied from each task
 - Global templates are shown in each task above the comments section
 
 **Revised Project Sidebar**
