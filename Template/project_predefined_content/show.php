@@ -145,18 +145,20 @@
                                         </svg> <?= t('Edit') ?>
                                     </a>
                                 </div>
-                                <div class="btn delete-desc-template-btn" title="<?=t('Delete Template') ?>">
-                                    <a id="DeleteDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
-                                        <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-                                            <g stroke-width="0"/>
-                                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                                            <g>
-                                                <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
-                                                <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
-                                            </g>
-                                        </svg> <?= t('Delete') ?>
-                                    </a>
-                                </div>
+                                <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
+                                    <div class="btn delete-desc-template-btn" title="<?=t('Delete Template') ?>">
+                                        <a id="DeleteDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
+                                            <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                                <g stroke-width="0"/>
+                                                <g stroke-linecap="round" stroke-linejoin="round"/>
+                                                <g>
+                                                    <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
+                                                    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                                </g>
+                                            </svg> <?= t('Delete') ?>
+                                        </a>
+                                    </div>
+                                <?php endif ?>
                             </div>
                         </td>
                     </tr>
@@ -223,18 +225,20 @@
                                         </svg> <?= t('Edit') ?>
                                     </a>
                                 </div>
-                                <div class="btn delete-comment-template-btn" title="<?=t('Delete Template') ?>">
-                                    <a id="DeleteCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
-                                        <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
+                                    <div class="btn delete-comment-template-btn" title="<?=t('Delete Template') ?>">
+                                        <a id="DeleteCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-confirm">
+                                            <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                             <g stroke-width="0"/>
                                             <g stroke-linecap="round" stroke-linejoin="round"/>
                                             <g>
                                                 <polygon fill="#055D20" points="335.188,154.188 256,233.375 176.812,154.188 154.188,176.812 233.375,256 154.188,335.188 176.812,357.812 256,278.625 335.188,357.812 357.812,335.188 278.625,256 357.812,176.812 "/>
                                                 <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
                                             </g>
-                                        </svg> <?= t('Delete') ?>
-                                    </a>
-                                </div>
+                                            </svg> <?= t('Delete') ?>
+                                        </a>
+                                    </div>
+                                <?php endif ?>
                             </div>
                         </td>
                     </tr>
