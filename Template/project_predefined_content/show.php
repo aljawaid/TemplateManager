@@ -3,7 +3,8 @@ $taskTemplatesCount =  $this->task->predefinedTaskDescriptionModel->getAll($proj
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
-$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
+$emailSubjectsCount = count(explode("\r\n", trim($project['predefined_email_subjects'])));
+$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
 ?>
 <div class="template-manager-page-margin">
     <div class="template-manager-page-header">
@@ -263,6 +264,9 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
     </fieldset>
 
     <fieldset class="email-subject-section">
+        <?php if (! empty($project['predefined_email_subjects'])): ?>
+            <span class="count-badge"><?= count(explode("\r\n", trim($project['predefined_email_subjects']))) ?></span>
+        <?php endif ?>
         <legend id="EmailSubjectTemplates" class="">
             <svg width="20px" height="20px" class="mail-plus-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
