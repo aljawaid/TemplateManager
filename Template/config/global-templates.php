@@ -61,6 +61,7 @@
                         <th class="template-header column-3 pl-3 text-center table-corner-tl"><?= t('ID') ?></th>
                         <th class="template-header"><?= t('Title') ?></th>
                         <th class="template-header column-20"><?= t('Topic') ?></th>
+                        <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-20 table-corner-tr"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
@@ -72,6 +73,7 @@
                             <?= $this->text->e($globalTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
                         </td>
+                        <td class="template-row template-note"><?= $this->text->e($globalTemplate['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($globalTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn edit-comment-template-btn" title="<?=t('Edit Template') ?>">
