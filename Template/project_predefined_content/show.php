@@ -120,7 +120,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
             </svg> <?= t('Task Description Templates') ?>
         </legend>
         <p class="section-intro">
-            <?= t('These templates are used as descriptions for tasks in projects. When you create a task, you can choose from a list of these templates in the task creation form (below the description editor box).') ?>
+            <?= t('These templates are used as descriptions for tasks in projects. When you create a task, you can choose from a list of these templates in the task creation form. Topics can help group and label similar templates. Notes are used to describe the template.') ?>
         </p>
         <?php if (! empty($predefined_task_descriptions)): ?>
             <table class="template-table">
