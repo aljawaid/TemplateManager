@@ -13,6 +13,9 @@
                     </g>
                 </g>
             </svg> <?= t('Global Templates') ?>
+            <?php if (! empty($saved_global_templates)): ?>
+                <span class="templates-menu-count"><?= count($saved_global_templates) ?></span>
+            <?php endif ?>
         </h2>
     </div>
     <ul class="add-templates-bar">
@@ -34,12 +37,6 @@
                 </div>
             </li>
         </ul>
-
-
-        <?php if (! empty($saved_global_templates)): ?>
-            <span class="count-badge"><?= count($saved_global_templates) ?></span>
-        <?php endif ?>
-
         <p class="section-intro">
             <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
         </p>
