@@ -498,7 +498,6 @@ span.example-detail code, .example-steps code {
     font-weight: 600;
     display: inline-block;
     margin-bottom: 5px;
-    margin-right: 1em;
     vertical-align: text-bottom;
 }
 
@@ -509,7 +508,13 @@ span.example-detail code, .example-steps code {
     pointer-events: none;
 }
 
-.quick-templates-bar {
+.comments-header-title {
+    word-wrap: break-word;
+    word-break: break-word;
+    width: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 .quick-templates-label {
