@@ -85,6 +85,10 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
                                 </g>
                             </g>
                         </svg> <?= t('View Global Templates') ?>
+                        <?php
+                        $globalTemplatesCount = $this->task->globalTemplateModel->getAll();
+                        ?>
+                        <span class="templates-menu-count"><?= count($globalTemplatesCount) ?></span>
                     </a>
                 </div>
             </li>
