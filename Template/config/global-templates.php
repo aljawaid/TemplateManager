@@ -57,7 +57,7 @@
                 <tbody>
                 <?php foreach ($saved_global_templates as $globalTemplate): ?>
                     <tr class="">
-                        <td class="template-row pt-5 pl-3 text-center table-corner-bl"><?= $this->text->e($globalTemplate['id']) ?></td>
+                        <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($globalTemplate['id']) ?></td>
                         <td class="template-row">
                             <?= $this->text->e($globalTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
