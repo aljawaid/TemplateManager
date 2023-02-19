@@ -36,7 +36,7 @@
         </span>
 
         <?= $this->form->label(t('Template Content'), 'description') ?>
-        <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 3)) ?>
+        <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 4)) ?>
 
         <div class="form-actions">
             <button type="submit" class="btn create-btn" title="<?= t('Saves any changes made on this page') ?>">
