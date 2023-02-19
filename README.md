@@ -71,6 +71,10 @@ Features
 Screenshots
 ----------
 
+**Task Description Templates** - Create  
+
+![Template Manager](../master/Screenshots/screenshot-create-task-description-template.png "Create Task Description Template")
+
 **Comment Templates** - Create  
 
 ![Template Manager](../master/Screenshots/screenshot-create-comment-template.png "Create Comment Template")
