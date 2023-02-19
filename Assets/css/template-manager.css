@@ -511,7 +511,7 @@ span.example-detail code, .example-steps code {
 .comments-header-title {
     word-wrap: break-word;
     word-break: break-word;
-    width: 90px;
+    width: 80px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
@@ -519,7 +519,7 @@ span.example-detail code, .example-steps code {
 
 .quick-templates-label {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 5px;
     border: 1px outset var(--pp-green);
     padding: .2em .3em .3em .3em;
     border-radius: var(--border-radius-t-manager);
@@ -552,6 +552,7 @@ span.example-detail code, .example-steps code {
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: text-top;
+    font-weight: 600;
 }
 
 .quick-templates-title {
@@ -588,6 +589,7 @@ vertical-align: middle !important;
     text-overflow: ellipsis;
     display: inline-block;
     margin-top: 3px;
+    color: var(--pp-grey);
 }
 .templates-menu-count {
     margin-left: 5px;
