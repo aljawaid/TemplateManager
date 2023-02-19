@@ -40,7 +40,7 @@ class Plugin extends Base
         $this->route->addRoute('project/:project_id/templates', 'TemplateContentController', 'show', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/add', 'TaskDescriptionTemplateController', 'create', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/edit/:id', 'TaskDescriptionTemplateController', 'edit', 'TemplateManager');
-        $this->route->addRoute('project/:project_id/templates/tasks/delete/:id', 'PredefinedTaskDescriptionController', 'confirm');
+        $this->route->addRoute('project/:project_id/templates/tasks/delete/:id', 'TaskDescriptionTemplateController', 'confirm', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/add', 'CommentTemplateController', 'create', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/delete/:id', 'CommentTemplateController', 'confirm', 'TemplateManager');
