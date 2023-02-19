@@ -600,6 +600,17 @@ vertical-align: middle !important;
     vertical-align: super;
 }
 
+h2 span.templates-menu-count {
+    margin-left: 5px;
+    font-size: .7em;
+    border: 1px solid var(--blue-border-gradient-match);
+    padding: 1px 3px 1px 3px;
+    border-radius: var(--border-radius-t-manager);
+    vertical-align: super;
+    line-height: 1;
+    display: inline-block;
+}
+
 .dropdown-submenu-open li:not(.no-hover):hover .templates-menu-count {
     border-color: var(--pp-white);
 }

@@ -1,3 +1,10 @@
+<?php
+$taskTemplatesCount =  $this->task->predefinedTaskDescriptionModel->getAll($project['id']);
+$taskTemplatesCountTotal = count($taskTemplatesCount);
+$commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
+$commentTemplatesCountTotal = count($commentTemplatesCount);
+$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
+?>
 <div class="template-manager-page-margin">
     <div class="template-manager-page-header">
         <h2 class="">
@@ -12,6 +19,7 @@
                     <path d="M21 19H13V21H21V19Z" fill="#0DB388"/>
                 </g>
             </svg> <?= t('Content Templates') ?>
+            <span class="templates-menu-count"><?= $allTemplatesCount ?></span>
         </h2>
         <ul class="add-templates-bar">
             <li class="">
