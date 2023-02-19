@@ -3,7 +3,8 @@ $taskTemplatesCount =  $this->task->predefinedTaskDescriptionModel->getAll($proj
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
-$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal);
+$emailSubjectsCount = count(explode("\r\n", trim($project['predefined_email_subjects'])));
+$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
 ?>
 <li <?= $this->app->checkMenuSelection('TemplateContentController') ?>>
     <?= $this->url->link('
