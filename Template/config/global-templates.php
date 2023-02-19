@@ -38,7 +38,7 @@
             </li>
         </ul>
         <p class="section-intro">
-            <?= t('These templates are used as comments for each task in each project. In the comments section of each task, a templates bar will show listing all the associated comment templates which are available to the task. Topics can help group and label similar templates.') ?>
+            <?= t('These templates are used to guide users in their workflow. Global templates are available throughout the application. Templates are shown above the comments section of each task. Use topics to group and label similar templates. Use notes to describe the template.') ?>
         </p>
         <?php if (! empty($saved_global_templates)): ?>
             <table class="template-table">
