@@ -143,19 +143,25 @@ tr:last-child > td.table-corner-br:last-child {
 }
 
 label[for="form-instructions"] {
-    position: absolute;
-    right: 11px;
     font-weight: 600;
     margin: 0;
     font-size: 1.1em;
+    float: left;
 }
 
 label[for="form-description"] {
-    position: absolute;
-    right: 11px;
     font-weight: 600;
     margin: 0;
     font-size: 1.1em;
+    float: left;
+}
+
+.text-editor-wrapper .text-editor-write-mode .text-editor-toolbar, .text-editor-wrapper .text-editor-view-mode .text-editor-toolbar {
+    float: right;
+}
+
+.text-editor-wrapper .text-editor .text-editor-preview-area {
+    width: 100%;
 }
 
 #TemplateForm label:last-of-type {
@@ -170,7 +176,7 @@ label[for="form-description"] {
     width: 100%;
 }
 
-#TemplateForm input, #TemplateForm textarea {
+#TemplateForm input, #TemplateForm textarea, .text-editor-wrapper .text-editor .text-editor-preview-area {
     border: 1px outset var(--pp-green);
 }
 

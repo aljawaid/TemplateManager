@@ -35,13 +35,13 @@
             <p class="form-help note-help"><?= t('Add a short note to describe this template') ?></p>
         </span>
 
-        <div class="relative">
+        <div class="text-editor-wrapper relative">
             <?= $this->form->label(t('Instructions'), 'instructions') ?>
             <?= $this->form->textEditor('instructions', $values, array(), array('tabindex' => 4)) ?>
             <p class="form-help"><?= t('Add some useful instructions on how to use this template') ?></p>
         </div>
 
-        <div class="relative">
+        <div class="text-editor-wrapper relative">
             <?= $this->form->label(t('Template Content'), 'description') ?>
             <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 5)) ?>
         </div>
