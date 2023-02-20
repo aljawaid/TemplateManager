@@ -26,13 +26,13 @@
         <span class="template-form-section">
             <?= $this->form->label(t('Topic'), 'topic') ?>
             <?= $this->form->text('topic', $values, array(), array('tabindex="2"')) ?>
-            <p class="form-help"><?= t('Topics can help group and label similar templates') ?></p>
+            <p class="form-help topic-help"><?= t('Topics can help group and label similar templates') ?></p>
         </span>
 
         <span class="template-form-section">
             <?= $this->form->label(t('Note'), 'note') ?>
             <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="'. t('My note for this template') .'"')) ?>
-            <p class="form-help"><?= t('Add a short note to describe what this template is about') ?></p>
+            <p class="form-help note-help"><?= t('Add a short note to describe this template') ?></p>
         </span>
 
         <?= $this->form->label(t('Template Content'), 'description') ?>

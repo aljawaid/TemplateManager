@@ -122,6 +122,12 @@ tr:last-child > td.table-corner-br:last-child {
 
 #TemplateForm label {
     display: inline-block;
+
+.topic-help, .note-help {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 2px;
+}
 }
 
 #TemplateForm label:last-of-type {
