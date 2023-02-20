@@ -27,7 +27,7 @@ class GlobalTemplateModel extends Base
 
     public function getList($global_template)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $global_template)->getAll('id', 'title');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $global_template)->getAll('id', 'title', 'topic', 'note');
     }
 
     public function getById($global_template)
