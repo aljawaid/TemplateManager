@@ -138,14 +138,12 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 <?php foreach ($predefined_task_descriptions as $template): ?>
                     <tr class="">
                         <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($template['id']) ?></td>
-                        <td class="template-row template-title">
-                            <?= $this->text->e($template['title']) ?>
-                            <?= $this->app->tooltipMarkdown($template['description']) ?>
-                        </td>
+                        <td class="template-row template-title"><?= $this->text->e($template['title']) ?></td>
                         <td class="template-row template-note"><?= $this->text->e($template['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($template['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
+                                <?= $this->app->tooltipMarkdown($template['description']) ?>
                                 <div class="btn view-desc-template-btn" title="<?=t('View Template') ?>">
                                     <a id="ViewDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                         <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -238,14 +236,12 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
                         <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($commentTemplate['id']) ?></td>
-                        <td class="template-row template-title">
-                            <?= $this->text->e($commentTemplate['title']) ?>
-                            <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
-                        </td>
+                        <td class="template-row template-title"><?= $this->text->e($commentTemplate['title']) ?></td>
                         <td class="template-row template-note"><?= $this->text->e($commentTemplate['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
+                                <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                                 <div class="btn view-comment-template-btn" title="<?=t('View Template') ?>">
                                     <a id="ViewDescTemplate" href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                         <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
