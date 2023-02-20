@@ -27,7 +27,7 @@ class TaskCommentTemplateModel extends Base
 
     public function getList($projectId)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic', 'note');
     }
 
     public function getByProjectId($projectId, $id)
