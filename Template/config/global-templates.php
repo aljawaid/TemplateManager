@@ -48,21 +48,19 @@
                         <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
-                        <th class="template-header column-20 table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        <th class="template-header column-25 table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($saved_global_templates as $globalTemplate): ?>
                     <tr class="">
                         <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($globalTemplate['id']) ?></td>
-                        <td class="template-row template-title">
-                            <?= $this->text->e($globalTemplate['title']) ?>
-                            <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
-                        </td>
+                        <td class="template-row template-title"><?= $this->text->e($globalTemplate['title']) ?></td>
                         <td class="template-row template-note"><?= $this->text->e($globalTemplate['note']) ?></td>
                         <td class="template-row"><?= $this->text->e($globalTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
+                                <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
                                 <div class="btn view-comment-template-btn" title="<?=t('View Template') ?>">
                                     <a id="ViewDescTemplate" href="<?= $this->url->href('GlobalContentController', 'viewTemplate', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                         <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
