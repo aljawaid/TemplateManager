@@ -39,13 +39,16 @@ class Plugin extends Base
         //  - Must have the corresponding action in the matching controller
         $this->route->addRoute('project/:project_id/templates', 'TemplateContentController', 'show', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/add', 'TaskDescriptionTemplateController', 'create', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/tasks/view/:id', 'TaskDescriptionTemplateController', 'viewTemplate', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/edit/:id', 'TaskDescriptionTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/tasks/delete/:id', 'TaskDescriptionTemplateController', 'confirm', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/add', 'CommentTemplateController', 'create', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/comments/view/:id', 'CommentTemplateController', 'viewTemplate', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/delete/:id', 'CommentTemplateController', 'confirm', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates', 'GlobalTemplateController', 'show', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/add', 'GlobalContentController', 'create', 'TemplateManager');
+        $this->route->addRoute('/settings/global-templates/view/:id', 'GlobalContentController', 'viewTemplate', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/edit/:id', 'GlobalContentController', 'edit', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/delete/:id', 'GlobalContentController', 'confirm', 'TemplateManager');
     }
