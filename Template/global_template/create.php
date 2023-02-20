@@ -1,5 +1,5 @@
 <div class="modal-page-header">
-    <h2 class="">
+    <h2 class="relative">
         <svg width="24px" height="24px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g stroke-width="0"/>
             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -11,10 +11,10 @@
                 <path d="M21 19H13V21H21V19Z" fill="#0DB388"/>
             </g>
         </svg><?= t('Template Manager') ?>
+        <span class="modal-title"><?= t('Create Global Template') ?></span>
     </h2>
 </div>
 <div class="modal-contents">
-    <h3 class=""><?= t('Create Global Template') ?></h3>
     <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('GlobalContentController', 'save', array('plugin' => 'TemplateManager')) ?>" autocomplete="on">
         <?= $this->form->csrf() ?>
 
