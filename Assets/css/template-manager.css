@@ -297,6 +297,10 @@ table.template-table {
     border-collapse: inherit;
 }
 
+.template-row.template-title:not(span) {
+    font-weight: 600;
+}
+
 .template-row span.tooltip {
     float: right;
     margin-right: 10px;
