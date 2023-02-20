@@ -338,6 +338,10 @@ table.template-table {
     border-collapse: inherit;
 }
 
+.template-row {
+    font-size: .9em;
+}
+
 .template-row.template-title:not(span) {
     font-weight: 600;
 }
