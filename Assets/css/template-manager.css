@@ -154,7 +154,7 @@ label[for="form-instructions"] {
 label[for="form-description"] {
     font-weight: 600;
     margin: 0;
-    font-size: 1.1em;
+    font-size: .95em;
     float: left;
 }
 
