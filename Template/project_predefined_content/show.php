@@ -131,7 +131,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
-                        <th class="template-header column-13 table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        <th class="template-header column-20 table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,6 +146,26 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <td class="template-row"><?= $this->text->e($template['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
+                                <div class="btn view-desc-template-btn" title="<?=t('View Template') ?>">
+                                    <a id="ViewDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
+                                        <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                            <g stroke-width="0"/>
+                                            <g stroke-linecap="round" stroke-linejoin="round"/>
+                                            <g>
+                                                <g>
+                                                    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                                    <path fill="#055D20" d="M320,128H160v256h192V164.578L320,128z M176,368V144h128v32h32v192H176z"/>
+                                                    <rect fill="#055D20" x="192" y="272" width="128" height="16"/>
+                                                    <rect fill="#055D20" x="192" y="240" width="128" height="16"/>
+                                                    <rect fill="#055D20" x="192" y="192" width="64" height="16"/>
+                                                    <rect fill="#055D20" x="192" y="160" width="32" height="16"/>
+                                                    <rect fill="#055D20" x="192" y="304" width="128" height="16"/>
+                                                    <rect fill="#055D20" x="192" y="336" width="128" height="16"/>
+                                                </g>
+                                            </g>
+                                        </svg> <?= t('View') ?>
+                                    </a>
+                                </div>
                                 <div class="btn edit-desc-template-btn" title="<?=t('Edit Template') ?>">
                                     <a id="EditDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                         <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +231,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
-                        <th class="template-header column-13 table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        <th class="template-header column-20 table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -226,6 +246,21 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <td class="template-row"><?= $this->text->e($commentTemplate['topic']) ?></td>
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
+                                <div class="btn view-comment-template-btn" title="<?=t('View Template') ?>">
+                                    <a id="ViewDescTemplate" href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
+                                        <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                            <g stroke-width="0"/>
+                                            <g stroke-linecap="round" stroke-linejoin="round"/>
+                                            <g>
+                                                <g>
+                                                    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
+                                                    <path fill="#808080" d="M310.875,254.734c-40.438,0-73.172,22.078-73.172,49.234c0,12.094,10.172,25.875,20.922,34.469L248.188,368l31.703-19.469 c9.453,2.969,19.891,4.656,30.984,4.656c40.391,0,73.125-22,73.125-49.219C384,276.812,351.266,254.734,310.875,254.734z"/>
+                                                    <path fill="#055D20" d="M256,144c-70.688,0-128,40.234-128,89.891c0,22.062,17.781,47.234,36.562,62.922l-18.266,53.969l55.547-35.562 c7.25,2.375,14.938,4.25,22.844,5.656c-3.234-6.344-5.25-12.938-5.25-19.125c0-35.484,40.938-64.219,91.438-64.219 c27.062,0,51.188,8.422,67.938,21.578c3.312-8,5.188-16.469,5.188-25.219C384,184.234,326.688,144,256,144z"/>
+                                                </g>
+                                            </g>
+                                        </svg> <?= t('View') ?>
+                                    </a>
+                                </div>
                                 <div class="btn edit-comment-template-btn" title="<?=t('Edit Template') ?>">
                                     <a id="EditCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="js-modal-medium">
                                         <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
