@@ -33,7 +33,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->createCommentTemplate($project['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
+            if ($this->taskCommentTemplateModel->createCommentTemplate($project['id'], $values['title'], $values['description'], $values['topic'], $values['note'], $values['instructions']) !== false) {
                 $this->flash->success(t('Template created successfully'));
             } else {
                 $this->flash->failure(t('Unable to create this template'));
@@ -67,7 +67,7 @@ class CommentTemplateController extends BaseController
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
 
         if ($valid) {
-            if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description'], $values['topic'], $values['note']) !== false) {
+            if ($this->taskCommentTemplateModel->updateCommentTemplate($project['id'], $template['id'], $values['title'], $values['description'], $values['topic'], $values['note'], $values['instructions']) !== false) {
                 $this->flash->success(t('Template updated successfully'));
             } else {
                 $this->flash->failure(t('Unable to update this template'));
