@@ -108,7 +108,7 @@ class GlobalContentController extends BaseController
 
     public function viewTemplate()
     {
-        $template = $this->getTemplate($project);
+        $template = $this->getTemplate();
 
         $this->response->html($this->template->render('templateManager:global_template/show', array(
             'template' => $template,
