@@ -115,4 +115,15 @@ class TaskDescriptionTemplateController extends BaseController
 
         return $template;
     }
+
+    public function viewTemplate()
+    {
+        $project = $this->getProject();
+        $template = $this->getTemplate($project);
+
+        $this->response->html($this->template->render('templateManager:predefined_task_description/show', array(
+            'template' => $template,
+            'project' => $project,
+        )));
+    }
 }

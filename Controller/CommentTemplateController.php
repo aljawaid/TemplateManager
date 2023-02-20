@@ -115,4 +115,15 @@ class CommentTemplateController extends BaseController
 
         return $template;
     }
+
+    public function viewTemplate()
+    {
+        $project = $this->getProject();
+        $template = $this->getTemplate($project);
+
+        $this->response->html($this->template->render('templateManager:comment_template/show', array(
+            'template' => $template,
+            'project' => $project,
+        )));
+    }
 }
