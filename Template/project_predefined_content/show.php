@@ -138,7 +138,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 <?php foreach ($predefined_task_descriptions as $template): ?>
                     <tr class="">
                         <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($template['id']) ?></td>
-                        <td class="template-row">
+                        <td class="template-row template-title">
                             <?= $this->text->e($template['title']) ?>
                             <?= $this->app->tooltipMarkdown($template['description']) ?>
                         </td>
@@ -238,7 +238,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 <?php foreach ($saved_comment_templates as $commentTemplate): ?>
                     <tr class="">
                         <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($commentTemplate['id']) ?></td>
-                        <td class="template-row">
+                        <td class="template-row template-title">
                             <?= $this->text->e($commentTemplate['title']) ?>
                             <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                         </td>
