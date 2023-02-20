@@ -10,7 +10,7 @@
                 <path d="M13 15H21V17H13V15Z" fill="#0DB388"/>
                 <path d="M21 19H13V21H21V19Z" fill="#0DB388"/>
             </g>
-        </svg><?= t('Template Manager') ?>
+        </svg> <?= t('Template Manager') ?>
         <span class="modal-title"><?= t('Create Global Template') ?></span>
     </h2>
 </div>
