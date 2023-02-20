@@ -14,7 +14,7 @@
     </h2>
 </div>
 <div class="modal-contents">
-    <h3 class=""><?= t('Update Comment Template') ?></h3>
+    <h3 class=""><?= t('Update Global Template') ?></h3>
     <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('GlobalContentController', 'update', array('id' => $template['id'], 'plugin' => 'TemplateManager')) ?>" autocomplete="on">
         <?= $this->form->csrf() ?>
 

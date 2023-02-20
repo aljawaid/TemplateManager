@@ -14,7 +14,7 @@
     </h2>
 </div>
 <div id="DeleteModal" class="modal-contents">
-    <h3 class=""><?= t('Delete Comment Template') ?></h3>
+    <h3 class=""><?= t('Delete Global Template') ?></h3>
     <div class="confirm">
         <p class="confirm-notice">
             <?= t('Click on the button to confirm you would like to remove the template from the database') ?>
