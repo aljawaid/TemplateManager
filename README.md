@@ -125,7 +125,7 @@ Compatibility
 - Database Changes:
   - `01` New database table created as `comment_templates`
   - `01` New database table created as `global_templates`
-  - `01` New column added to `predefined_task_descriptions` as `topic`
+  - `03` New columns added to the `predefined_task_descriptions` table as `topic` `note` `instructions`
 
 
 Changelog
