@@ -72,6 +72,7 @@ tr:last-child > td.table-corner-br:last-child {
 
 .template-manager-page-margin {
     margin: var(--page-margin-t-manager);
+    width: 100%;
 }
 
 .template-manager-page-header h2 {
