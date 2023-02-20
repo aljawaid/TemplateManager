@@ -15,15 +15,24 @@ Features
   - Total number of templates are shown in the Admin Dashboard
 - Add pretty URLs _[(if globally configured)](https://docs.kanboard.org/v1/admin/url-rewriting/ "URL Rewrtiting must be configured for this feature to work")_
   - `https://mydomain.com/project/[project_id]/templates`
-     - _Links to the relevant project's Template Manager section_
+    - _Links to the relevant project's Template Manager section_
+  - `https://mydomain.com/global-templates`
+    - _Links to the Global Templates section_
   - _Tasks:_
     - `https://mydomain.com/project/[project_id]/templates/tasks/add`
+    - `https://mydomain.com/project/[project_id]/templates/tasks/view/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/tasks/edit/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/tasks/delete/[template_id]`
   - _Comments:_
     - `https://mydomain.com/project/[project_id]/templates/comments/add`
+    - `https://mydomain.com/project/[project_id]/templates/comments/view/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/comments/edit/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/comments/delete/[template_id]`
+  - _Global Templates:_
+    - `https://mydomain.com/global-templates/add`
+    - `https://mydomain.com/global-templates/view/[template_id]`
+    - `https://mydomain.com/global-templates/edit/[template_id]`
+    - `https://mydomain.com/global-templates/delete/[template_id]`    
 - Revised Email Subject Templates
   - Added user instructions related to tasks and automatic actions
 - All data is saved in the database
@@ -43,6 +52,7 @@ Features
 
 **NEW Global Templates**
 - Show generic templates common to your personal or organisational workflow (to your end users)
+- Inside tasks, global templates are shown under a new **Templates & Actions** accordion section
 - These templates are visible to all user roles and are not restricted by project
 - **Topics** - Label common templates into topics to help group them together
 - **Notes** - Add a short note to describe each template
