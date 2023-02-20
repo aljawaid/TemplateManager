@@ -343,8 +343,8 @@ table.template-table {
 }
 
 .template-row span.tooltip {
-    float: right;
-    margin-right: 10px;
+    /*float: right;*/
+    /*margin-right: 10px;*/
 }
 
 .btn-wrapper {
@@ -511,7 +511,7 @@ span.example-detail code, .example-steps code {
 }
 
 .example-detail span {
-    width: 160px;
+    width: 180px;
     font-weight: 600;
     color: var(--pp-green-dark);
     display: inline-block;
