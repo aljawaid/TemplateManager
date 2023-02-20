@@ -22,7 +22,7 @@ class TaskCommentTemplateModel extends Base
 
     public function getAll($projectId)
     {
-        return $this->db->table(self::TABLE)->eq('project_id', $projectId)->findAll();
+        return $this->db->table(self::TABLE)->eq('project_id', $projectId)->asc('title')->findAll();
     }
 
     public function getList($projectId)

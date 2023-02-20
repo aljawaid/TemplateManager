@@ -22,7 +22,7 @@ class GlobalTemplateModel extends Base
 
     public function getAll()
     {
-        return $this->db->table(self::TABLE)->findAll();
+        return $this->db->table(self::TABLE)->asc('title')->findAll();
     }
 
     public function getList($global_template)
