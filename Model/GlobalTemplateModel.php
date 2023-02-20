@@ -27,7 +27,7 @@ class GlobalTemplateModel extends Base
 
     public function getList($global_template)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $global_template)->getAll('id', 'title', 'topic', 'note');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('id', $global_template)->getAll('id', 'title', 'topic', 'note', 'instructions');
     }
 
     public function getById($global_template)
@@ -40,23 +40,25 @@ class GlobalTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('id', $global_template)->eq('id', $global_template)->findOneColumn('description');
     }
 
-    public function createGlobalTemplate($title, $description, $topic, $note)
+    public function createGlobalTemplate($title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 
-    public function updateGlobalTemplate($global_template, $title, $description, $topic, $note)
+    public function updateGlobalTemplate($global_template, $title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->eq('id', $global_template)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 

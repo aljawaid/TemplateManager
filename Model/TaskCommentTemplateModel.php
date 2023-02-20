@@ -27,7 +27,7 @@ class TaskCommentTemplateModel extends Base
 
     public function getList($projectId)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic', 'note');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic', 'note', 'instructions');
     }
 
     public function getByProjectId($projectId, $id)
@@ -40,7 +40,7 @@ class TaskCommentTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->findOneColumn('description');
     }
 
-    public function createCommentTemplate($projectId, $title, $description, $topic, $note)
+    public function createCommentTemplate($projectId, $title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'project_id' => $projectId,
@@ -48,16 +48,18 @@ class TaskCommentTemplateModel extends Base
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 
-    public function updateCommentTemplate($projectId, $id, $title, $description, $topic, $note)
+    public function updateCommentTemplate($projectId, $id, $title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 

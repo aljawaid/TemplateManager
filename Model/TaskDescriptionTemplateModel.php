@@ -21,7 +21,7 @@ class TaskDescriptionTemplateModel extends Base
 
     public function getList($projectId)
     {
-        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic', 'note');
+        return array('' => t('None')) + $this->db->hashtable(self::TABLE)->eq('project_id', $projectId)->getAll('id', 'title', 'topic', 'note', 'instructions');
     }
 
     public function getById($projectId, $id)
@@ -34,7 +34,7 @@ class TaskDescriptionTemplateModel extends Base
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->findOneColumn('description');
     }
 
-    public function create($projectId, $title, $description, $topic, $note)
+    public function create($projectId, $title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->persist(array(
             'project_id' => $projectId,
@@ -42,16 +42,18 @@ class TaskDescriptionTemplateModel extends Base
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 
-    public function update($projectId, $id, $title, $description, $topic, $note)
+    public function update($projectId, $id, $title, $description, $topic, $note, $instructions)
     {
         return $this->db->table(self::TABLE)->eq('project_id', $projectId)->eq('id', $id)->update(array(
             'title' => $title,
             'description' => $description,
             'topic' => $topic,
             'note' => $note,
+            'instructions' => $instructions,
         ));
     }
 
