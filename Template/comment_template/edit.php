@@ -35,8 +35,16 @@
             <p class="form-help note-help"><?= t('Add a short note to describe this template') ?></p>
         </span>
 
-        <?= $this->form->label(t('Template Content'), 'description') ?>
-        <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 4)) ?>
+        <div class="relative">
+            <?= $this->form->label(t('Instructions'), 'instructions') ?>
+            <?= $this->form->textEditor('instructions', $values, array(), array('tabindex' => 4)) ?>
+            <p class="form-help"><?= t('Add some useful instructions on how to use this template') ?></p>
+        </div>
+
+        <div class="relative">
+            <?= $this->form->label(t('Template Content'), 'description') ?>
+            <?= $this->form->textEditor('description', $values, $errors, array('tabindex' => 5)) ?>
+        </div>
 
         <div class="form-actions">
             <button type="submit" class="btn create-btn" title="<?= t('Saves any changes made on this page') ?>">

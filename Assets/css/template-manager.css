@@ -120,14 +120,42 @@ tr:last-child > td.table-corner-br:last-child {
     margin-right: 40px;
 }
 
-#TemplateForm label {
+.template-form-section label {
+    font-weight: 600;
+}
+
+/*#TemplateForm label {
     display: inline-block;
+}*/
+
+.text-editor textarea[name="instructions"] {
+    height: 100px;
+}
+
+.text-editor textarea[name="description"] {
+    height: 150px;
+}
 
 .topic-help, .note-help {
     display: inline-block;
     vertical-align: text-top;
     margin-top: 2px;
 }
+
+label[for="form-instructions"] {
+    position: absolute;
+    right: 11px;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+label[for="form-description"] {
+    position: absolute;
+    right: 11px;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1em;
 }
 
 #TemplateForm label:last-of-type {
