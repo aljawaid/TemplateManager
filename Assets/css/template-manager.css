@@ -348,8 +348,9 @@ table.template-table {
 }
 
 .template-row span.tooltip {
-    /*float: right;*/
-    /*margin-right: 10px;*/
+    margin-right: 10px;
+    vertical-align: text-top;
+    line-height: 1;
 }
 
 .btn-wrapper {
