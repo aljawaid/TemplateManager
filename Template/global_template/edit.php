@@ -11,7 +11,9 @@
                 <path d="M21 19H13V21H21V19Z" fill="#0DB388"/>
             </g>
         </svg><?= t('Template Manager') ?>
-        <span class="modal-title"><?= t('Edit Global Template') ?></h3>
+        <span class="modal-title">
+            <?= t('Edit Global Template') ?> <span class="modal-template-id">#<?= $template['id'] ?></span>
+        </span>
     </h2>
 </div>
 <div class="modal-contents">

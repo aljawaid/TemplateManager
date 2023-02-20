@@ -114,6 +114,11 @@ tr:last-child > td.table-corner-br:last-child {
     font-weight: 700;
 }
 
+.modal-template-id {
+    font-weight: 400;
+    color: var(--pp-grey);
+}
+
 .template-form-section {
     display: inline-block;
     height: 70px;
