@@ -52,7 +52,7 @@ Features
 
 **NEW Global Templates**
 - Show generic templates common to your personal or organisational workflow (to your end users)
-- Inside tasks, global templates are shown under a new **Templates & Actions** accordion section
+- Inside tasks, global templates are shown under a new **General Templates & Actions** accordion section
 - These templates are visible to all user roles and are not restricted by project
 - **Topics** - Label common templates into topics to help group them together
 - **Notes** - Add a short note to describe each template
@@ -98,7 +98,7 @@ Usage
 -------------
 
 - Go to `Settings` &#10562; About 
-  - _To view your global totals for your saved templates_
+  - _To view global totals for your saved templates_
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
 - Go to any `Project` &#10562; `Project Settings` &#10562; Template Manager
   - _To manage your templates_
@@ -108,8 +108,8 @@ Usage
   - _To use your comment templates_
 - Go to `Settings` &#10562; `Global Templates`
   - _To manage your global templates_
-  - Go to any `Task` &#10562;
-  - _To view your global templates_
+  - Go to any `Task` &#10562; General Templates & Actions
+  - _To use your global templates_
 
 
 Compatibility
