@@ -15,6 +15,7 @@ function version_1(PDO $pdo)
         topic TEXT,
         description TEXT NOT NULL,
         note TEXT NOT NULL,
+        instructions TEXT NOT NULL,
         FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE,
         PRIMARY KEY(id)
     ) COMMENT "Template Manager plugin table" ENGINE = InnoDB CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;');
@@ -25,6 +26,7 @@ function version_1(PDO $pdo)
         topic TEXT,
         description TEXT NOT NULL,
         note TEXT NOT NULL,
+        instructions TEXT NOT NULL,
         PRIMARY KEY(id)
     ) COMMENT "Template Manager plugin table" ENGINE = InnoDB CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;');
 
