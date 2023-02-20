@@ -15,17 +15,33 @@
 </div>
 <div class="modal-contents">
     <h3 class=""><?= t('Global Template') ?></h3>
-    <div id="TemplateView" class="template-view">
-        <div class="template-title">
-            <?= $template['title'] ?> <?php if (!empty($template['topic'])): ?> (<?= $template['topic'] ?>) <?php endif ?>
-        </div>
-
-        <?= t('Template Content') ?>
-        <?= $this->text->markdown($template['description']) ?>
+    <fieldset id="TemplateView" class="template-view">
+        <?php if (!empty($template['topic'])): ?>
+            <legend class="template-view-topic"><?= $template['topic'] ?></legend>
+        <?php endif ?>
+        <h3 class="template-view-title">
+            <?= $template['title'] ?>
+        </h3>
+        <?php if (!empty($template['note'])): ?>
+            <fieldset class="template-view-note">
+                <legend><?= t('Note') ?></legend>
+                <?= $this->text->markdown($template['note']) ?>
+            </fieldset>
+        <?php endif ?>
+        <?php if (!empty($template['instructions'])): ?>
+            <fieldset class="template-view-instructions">
+                <legend><?= t('Instructions') ?></legend>
+                <?= $this->text->markdown($template['instructions']) ?>
+            </fieldset>
+        <?php endif ?>
+        <fieldset class="template-view-description">
+            <legend><?= t('Template') ?></legend>
+            <?= $this->text->markdown($template['description']) ?>
+        </fieldset>
         <form id="TemplateForm" class="template-form">
             <div class="form-actions">
                 <a class="btn cancel-btn js-modal-close" href="#"><?= t('Close') ?></a>
             </div>
         </form>
-    </div>
+    </fieldset>
 </div>
