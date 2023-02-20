@@ -131,7 +131,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
-                        <th class="template-header column-25 table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        <th class="template-header actions-column table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -229,7 +229,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <th class="template-header pl-10"><?= t('Title') ?></th>
                         <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
                         <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
-                        <th class="template-header column-25 table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        <th class="template-header actions-column table-corner-tr pl-10"><?= t('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
