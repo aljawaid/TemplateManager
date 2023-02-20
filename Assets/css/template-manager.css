@@ -118,11 +118,12 @@ tr:last-child > td.table-corner-br:last-child {
     display: inline-block;
     height: 70px;
     vertical-align: middle;
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .template-form-section label {
     font-weight: 600;
+    font-size: .95em;
 }
 
 /*#TemplateForm label {
@@ -146,7 +147,7 @@ tr:last-child > td.table-corner-br:last-child {
 label[for="form-instructions"] {
     font-weight: 600;
     margin: 0;
-    font-size: 1.1em;
+    font-size: .95em;
     float: left;
 }
 
@@ -182,7 +183,7 @@ label[for="form-description"] {
 }
 
 #form-note {
-    width: 682px;
+    width: 653px;
 }
 
 #TemplateForm .form-actions, #DeleteModal .form-actions {
