@@ -197,7 +197,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 </tbody>
             </table>
         <?php else: ?>
-            <span class="no-templates"><?= t('No templates') ?></span>
+            <span class="no-templates"><?= t('Add a template to get started') ?></span>
         <?php endif ?>
     </fieldset>
 
@@ -290,7 +290,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 </tbody>
             </table>
         <?php else: ?>
-            <span class="no-templates"><?= t('No templates') ?></span>
+            <span class="no-templates"><?= t('Add a template to get started') ?></span>
         <?php endif ?>
     </fieldset>
 

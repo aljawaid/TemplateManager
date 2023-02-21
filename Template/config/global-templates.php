@@ -108,6 +108,6 @@
                 </tbody>
             </table>
         <?php else: ?>
-            <span class="no-templates"><?= t('No templates') ?></span>
+            <span class="no-templates global-none"><?= t('Add a template to get started') ?></span>
         <?php endif ?>
 </div>

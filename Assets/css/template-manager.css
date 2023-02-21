@@ -721,6 +721,12 @@ h2 span.templates-menu-count {
     color: var(--pp-grey);
 }
 
+.global-none {
+    margin: 10px;
+    padding: 10px;
+    display: block;
+}
+
 .template-row.template-note {
     font-size: .9em;
 }
