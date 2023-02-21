@@ -1,5 +1,5 @@
 <div class="modal-page-header">
-    <h2 class="">
+    <h2 class="relative">
         <svg width="24px" height="24px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g stroke-width="0"/>
             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -10,11 +10,13 @@
                 <path d="M13 15H21V17H13V15Z" fill="#0DB388"/>
                 <path d="M21 19H13V21H21V19Z" fill="#0DB388"/>
             </g>
-        </svg><?= t('Template Manager') ?>
+        </svg> <?= t('Template Manager') ?>
+        <span class="modal-title">
+            <?= t('Delete Task Description Template') ?> <span class="modal-template-id">#<?= $template['id'] ?></span>
+        </span>
     </h2>
 </div>
 <div id="DeleteModal" class="modal-contents">
-    <h3 class=""><?= t('Delete Task Description Template') ?></h3>
     <div class="confirm">
         <p class="confirm-notice">
             <?= t('Click on the button to confirm you would like to remove the template from the database') ?>
