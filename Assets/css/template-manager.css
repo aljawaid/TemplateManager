@@ -153,11 +153,11 @@ tr:last-child > td.table-corner-br:last-child {
     margin-top: 5px;
 }
 
-#TemplateView fieldset ul {
+#TemplateView fieldset ul, #TemplateView fieldset ol {
     padding: inherit;
 }
 
-#TemplateView fieldset ul li ul {
+#TemplateView fieldset ul li ul, #TemplateView fieldset ol li ul {
     padding: revert;
 }
 
@@ -217,8 +217,13 @@ label[for="form-description"] {
     width: 653px;
 }
 
-#TemplateForm .form-actions, #DeleteModal .form-actions {
+#DeleteModal .form-actions {
     text-align: right;
+}
+
+#TemplateForm .form-actions {
+    text-align: right;
+    padding-top: 10px;
 }
 
 #TemplateForm .form-actions .create-btn, #TemplateForm .form-actions .cancel-btn, #TemplateForm .form-actions .reset-btn {
