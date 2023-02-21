@@ -131,9 +131,35 @@ tr:last-child > td.table-corner-br:last-child {
     font-size: .95em;
 }
 
-/*#TemplateForm label {
-    display: inline-block;
-}*/
+#TemplateView {
+    border: 2px outset var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
+}
+
+#TemplateView fieldset {
+    border: 1px outset var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
+}
+
+#TemplateView legend {
+    font-size: .9em;
+    padding: 0 5px 0 4px;
+    font-weight: 600;
+}
+
+#TemplateView .template-view-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#TemplateView fieldset ul {
+    padding: inherit;
+}
+
+#TemplateView fieldset ul li ul {
+    padding: revert;
+}
 
 .text-editor textarea[name="instructions"] {
     height: 100px;
