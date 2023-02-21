@@ -44,7 +44,7 @@
 
         <span class="template-form-section">
             <?= $this->form->label(t('Note'), 'note') ?>
-            <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="'. t('My note for this template') .'"')) ?>
+            <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="'. t('This note has specific instructions') .'"')) ?>
             <p class="form-help note-help"><?= t('Add a short note to describe this template') ?></p>
         </span>
 
