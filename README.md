@@ -108,7 +108,7 @@ Usage
   - _To use your comment templates_
 - Go to `Settings` &#10562; `Global Templates`
   - _To manage your global templates_
-  - Go to any `Task` &#10562; General Templates & Actions
+- Go to any `Task` &#10562; General Templates & Actions
   - _To use your global templates_
 
 
