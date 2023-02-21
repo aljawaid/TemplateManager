@@ -1,5 +1,5 @@
 <?php
-$taskTemplatesCount =  $this->task->predefinedTaskDescriptionModel->getAll($project['id']);
+$taskTemplatesCount =  $this->task->taskDescriptionTemplateModel->getAll($project['id']);
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
