@@ -3,9 +3,10 @@ $taskTemplatesCount =  $this->task->taskDescriptionTemplateModel->getAll($projec
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
-$emailSubjectsCount = (!empty($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
+$emailSubjectsCount = (!empty($project['predefined_email_subjects']) && !is_null($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
 $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
 ?>
+
 <li <?= $this->app->checkMenuSelection('TemplateContentController') ?>>
     <?= $this->url->link('
         <svg width="20px" height="20px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

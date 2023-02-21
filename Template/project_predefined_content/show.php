@@ -3,9 +3,10 @@ $taskTemplatesCount =  $this->task->taskDescriptionTemplateModel->getAll($projec
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
-$emailSubjectsCount = (!empty($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
+$emailSubjectsCount = (!empty($project['predefined_email_subjects']) && !is_null($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
 $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
 ?>
+
 <div class="template-manager-page-margin">
     <div class="template-manager-page-header">
         <h2 class="">
