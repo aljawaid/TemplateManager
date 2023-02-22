@@ -2,7 +2,7 @@
 $saved_global_templates = $this->model->globalTemplateModel->getAll();
 ?>
 <?php if (! empty($saved_global_templates)): ?>
-    <details class="accordion-section">
+    <details id="GlobalTemplatesViewAccordion" class="accordion-section">
         <summary class="accordion-title acc-templates-title">
             <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
