@@ -807,7 +807,7 @@ a.top-btn, a.top-btn:visited {
     background-color: var(--pp-green);
 }
 
-.global-template-content .template-view {
+.global-template-content .template-view, .template-view-description {
     border: 1px outset var(--pp-green);
     border-radius: var(--border-radius-t-manager);
 }
@@ -819,7 +819,7 @@ a.top-btn, a.top-btn:visited {
     font-weight: 600;
 }
 
-.template-view-note, .template-view-instructions, .template-view-description {
+.template-view-note, .template-view-instructions {
     border-radius: var(--border-radius-t-manager);
     border-color: var(--pp-grey);
 }
