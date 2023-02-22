@@ -760,6 +760,11 @@ h2 span.templates-menu-count {
     font-weight: 600;
 }
 
+.global-template-section .global-template-content {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
