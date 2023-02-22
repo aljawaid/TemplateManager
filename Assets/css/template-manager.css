@@ -698,21 +698,25 @@ span.example-detail code, .example-steps code {
 .templates-menu-count {
     margin-left: 5px;
     font-size: .8em;
-    border: 1px solid var(--blue-border-gradient-match);
+    border: 1px solid var(--pp-green-dark);
     padding: 0px 3px;
     border-radius: var(--border-radius-t-manager);
     vertical-align: super;
+    background-color: var(--pp-green);
+    color: var(--pp-white);
 }
 
 h2 span.templates-menu-count {
     margin-left: 5px;
-    font-size: .7em;
-    border: 1px solid var(--blue-border-gradient-match);
+    font-size: .6em;
+    border: 1px solid var(--pp-green-dark);
     padding: 1px 3px 1px 3px;
     border-radius: var(--border-radius-t-manager);
     vertical-align: super;
     line-height: 1;
     display: inline-block;
+    background-color: var(--pp-green);
+    color: var(--pp-white);
 }
 
 .dropdown-submenu-open li:not(.no-hover):hover .templates-menu-count {
