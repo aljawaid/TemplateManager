@@ -83,17 +83,17 @@ Screenshots
 
 ![Template Manager](../master/Screenshots/screenshot-template-manager.png "All templates in one place")
 
+**Comment Templates** - View  
+
+![Template Manager](../master/Screenshots/screenshot-view-comment-template.png "View Comment Template")
+
 **Task Description Templates** - Create  
 
 ![Template Manager](../master/Screenshots/screenshot-create-task-description-template.png "Create Task Description Template")
 
-**Comment Templates** - Create  
+**Global Templates** - Edit  
 
-![Template Manager](../master/Screenshots/screenshot-create-comment-template.png "Create Comment Template")
-
-**Comment Templates** - Edit  
-
-![Template Manager](../master/Screenshots/screenshot-edit-comment-template.png "Edit Comment Template")
+![Template Manager](../master/Screenshots/screenshot-edit-global-template.png "Edit Global Template")
 
 **Comment Templates** - Delete  
 
