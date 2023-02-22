@@ -818,6 +818,17 @@ a.top-btn, a.top-btn:visited {
     font-weight: 600;
 }
 
+.template-view-note, .template-view-instructions, .template-view-description {
+    border-radius: var(--border-radius-t-manager);
+    border-color: var(--pp-grey);
+}
+
+.template-view-note legend, .template-view-instructions legend {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
