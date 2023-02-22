@@ -54,6 +54,8 @@
 
 .pl-10 { padding-left: 10px; }
 
+.float-right { float: right; }
+
 tr > th.table-corner-tl {
     border-top-left-radius: var(--border-radius-t-manager);
 }
@@ -763,6 +765,23 @@ h2 span.templates-menu-count {
 .global-template-section .global-template-content {
     margin-left: 1.5em;
     margin-right: 1.5em;
+    font-weight: initial;
+}
+
+.top-btn-border-top {
+    border: 1px inset var(--pp-green);
+    margin-bottom: 0;
+}
+
+a.top-btn, a.top-btn:visited {
+    font-size: .9em;
+    text-transform: uppercase;
+    color: var(--pp-grey);
+}
+
+.top-btn-border-bottom {
+    border: 1px inset var(--pp-green);
+    margin-top: 0;
 }
 
 @media screen and (max-width: 1482px) {

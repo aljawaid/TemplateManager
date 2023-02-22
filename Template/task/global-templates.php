@@ -50,10 +50,14 @@ $saved_global_templates = $this->model->globalTemplateModel->getAll();
                                 <?= $this->text->markdown($template['description']) ?>
                             </fieldset>
                         </fieldset>
-                    <hr>
-                    <a class="top-btn" href="#GlobalTemplatesViewAccordion" title="<?= t('Go to the top of this section') ?>"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Section') ?></a>
-                    <a class="top-btn" href="#main" title="<?= t('Go to the top of the page') ?>"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Page') ?></a>
-                    <hr>
+                        <hr class="top-btn-border-top">
+                        <a class="top-btn" href="#GlobalTemplatesViewAccordion" title="<?= t('Go to the top of this section') ?>">
+                            <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Section') ?>
+                        </a>
+                        <a class="top-btn float-right" href="#main" title="<?= t('Go to the top of the page') ?>">
+                            <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Page') ?>
+                        </a>
+                        <hr class="top-btn-border-bottom">
                     </div>
                 </details>
             <?php endforeach ?>
