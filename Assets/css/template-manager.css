@@ -797,6 +797,27 @@ a.top-btn, a.top-btn:visited {
     padding: revert;
 }
 
+.copy-global-template {
+    cursor: pointer;
+    padding: 0 30px;
+    color: green;
+    border: 1px solid red;
+    box-sizing: content-box;
+    margin: 0 30px;
+}
+
+.global-template-content .template-view {
+    border: 1px outset var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
+}
+
+.template-view .template-view-topic {
+    padding: 0 5px;
+    font-size: 1em;
+    color: var(--pp-grey);
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
