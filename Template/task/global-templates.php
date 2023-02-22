@@ -31,9 +31,6 @@ $saved_global_templates = $this->model->globalTemplateModel->getAll();
                             <?php if (!empty($template['topic'])): ?>
                                 <legend class="template-view-topic"><?= $template['topic'] ?></legend>
                             <?php endif ?>
-                            <h3 class="template-view-title">
-                                <?= $template['title'] ?>
-                            </h3>
                             <?php if (!empty($template['note'])): ?>
                                 <fieldset class="template-view-note">
                                     <legend><?= t('Note') ?></legend>
