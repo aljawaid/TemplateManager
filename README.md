@@ -37,28 +37,23 @@ Features
     - `https://mydomain.com/global-templates/delete/[template_id]`    
 - Revised Email Subject Templates
   - Added user instructions related to tasks and automatic actions
+- **Template Previews** - Preview just the template without the instructions
+- **Topics** - Label common templates into topics to help group them together
+- **Notes** - Add a short note to describe each template (notes appear as tooltips)
+- **Instructions** - Add optional instructions for each template (instructions show in view mode only)
 - All data is saved in the database
 
 **Task Description Templates**
 - Revised `predefined contents` as `Task Description Templates`
-- **Topics** - Label common templates into topics to help group them together
-- **Notes** - Add a short note to describe each template
-- **Instructions** - Add optional instructions for each template
 
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repetitively in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
-- **Topics** - Label common templates into topics to help group them together
-- **Notes**  - Add a short note to describe each template
-- **Instructions** - Add optional instructions for each template
 
 **NEW Global Templates**
 - Show generic templates common to your personal or organisational workflow (to your end users)
 - Inside tasks, global templates are shown under a new **General Templates & Actions** accordion section
 - These templates are visible to all user roles and are not restricted by project
-- **Topics** - Label common templates into topics to help group them together
-- **Notes** - Add a short note to describe each template
-- **Instructions** - Add optional instructions for each template
 
 **Task Comments**
 - Show total number of comments created
@@ -71,9 +66,9 @@ Features
     - _Now shows before the Close Project menu link to show content to **all users**_
   - Changed the sort order of the sidebar menu for faster access to project configuration sections
 - Add a new hook `'template:project:sidebar:top'`
-  - _Shows after the Summary menu link to show content to **all users**_
+  - _Displays_ after the Summary menu link to show content to **all users**_
 - Add a new hook `'template:project:sidebar:bottom'`
-  - _Shows after the Delete Project menu link to show content to **all users**_
+  - _Displays_ after the Delete Project menu link to show content to **all users**_
 
 
 Screenshots
@@ -82,6 +77,16 @@ Screenshots
 **Template Manager** - Interface  
 
 ![Template Manager](../master/Screenshots/screenshot-template-manager.png "All templates in one place")
+
+![Template Manager](../master/Screenshots/screenshot-template-manager-global-templates.png "All templates in one place")
+
+**Comment Templates** - Frontend  
+
+![Template Manager](../master/Screenshots/screenshot-comments-bar-frontend.png "Comment Templates Quick Usage")
+
+**Global Templates** - Frontend  
+
+![Template Manager](../master/Screenshots/screenshot-global-comments-frontend.png "Global Templates Usage")
 
 **Comment Templates** - View  
 
