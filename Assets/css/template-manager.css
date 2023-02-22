@@ -797,13 +797,14 @@ a.top-btn, a.top-btn:visited {
     padding: revert;
 }
 
-.copy-global-template {
+.copy-global-template-button {
     cursor: pointer;
-    padding: 0 30px;
-    color: green;
-    border: 1px solid red;
-    box-sizing: content-box;
+    padding: 2px 10px;
+    color: white;
+    border: 1px solid var(--pp-green);
+    border-radius: var(--border-radius-t-manager);
     margin: 0 30px;
+    background-color: var(--pp-green);
 }
 
 .global-template-content .template-view {
