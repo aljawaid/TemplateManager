@@ -313,7 +313,7 @@ label[for="form-description"] {
     text-decoration: none;
 }
 
-.add-desc-template-btn a svg, .add-comment-template-btn a svg, .add-global-template-btn a svg {
+.add-desc-template-btn svg, .add-comment-template-btn svg, .add-global-template-btn svg {
     vertical-align: bottom;
     pointer-events: none;
 }
@@ -461,7 +461,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
     text-decoration: none !important;
 }
 
-.view-desc-template-btn a svg, .edit-desc-template-btn a svg, .delete-desc-template-btn a svg, .view-comment-template-btn a svg, .edit-comment-template-btn a svg, .delete-comment-template-btn a svg {
+.view-desc-template-btn svg, .edit-desc-template-btn svg, .delete-desc-template-btn svg, .view-comment-template-btn svg, .edit-comment-template-btn svg, .delete-comment-template-btn svg {
     vertical-align: bottom;
     pointer-events: none;
 }
