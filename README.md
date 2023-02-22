@@ -79,6 +79,10 @@ Features
 Screenshots
 ----------
 
+**Template Manager** - Interface  
+
+![Template Manager](../master/Screenshots/screenshot-template-manager.png "All templates in one place")
+
 **Task Description Templates** - Create  
 
 ![Template Manager](../master/Screenshots/screenshot-create-task-description-template.png "Create Task Description Template")
