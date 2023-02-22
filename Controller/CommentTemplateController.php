@@ -97,9 +97,9 @@ class CommentTemplateController extends BaseController
         $template = $this->getTemplate($project);
 
         if ($this->taskCommentTemplateModel->deleteCommentTemplate($project['id'], $template['id'])) {
-            $this->flash->success(t('Template removed successfully'));
+            $this->flash->success(t('Template deleted successfully'));
         } else {
-            $this->flash->failure(t('Unable to remove this template'));
+            $this->flash->failure(t('Unable to delete this template'));
         }
 
         $this->response->redirect($this->helper->url->to('TemplateContentController', 'show', array('project_id' => $project['id'], 'plugin' => 'TemplateManager')), true);

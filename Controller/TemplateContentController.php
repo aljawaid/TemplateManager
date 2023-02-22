@@ -23,7 +23,7 @@ class TemplateContentController extends BaseController
             'project' => $project,
             'predefined_task_descriptions' => $this->taskDescriptionTemplateModel->getAll($project['id']),
             'saved_comment_templates' => $this->taskCommentTemplateModel->getAll($project['id']),
-            'title' => t('Template Manager'),
+            'title' => 'Template Manager',
         )));
     }
 
