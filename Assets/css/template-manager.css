@@ -768,6 +768,8 @@ h2 span.templates-menu-count {
     margin-left: 1.5em;
     margin-right: 1.5em;
     font-weight: initial;
+    text-indent: initial;
+    font-size: initial;
 }
 
 .top-btn-border-top {
@@ -779,6 +781,7 @@ a.top-btn, a.top-btn:visited {
     font-size: .9em;
     text-transform: uppercase;
     color: var(--pp-grey);
+    margin-left: 10px;
 }
 
 .top-btn-border-bottom {
