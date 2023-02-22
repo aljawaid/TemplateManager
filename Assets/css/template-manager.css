@@ -743,6 +743,23 @@ h2 span.templates-menu-count {
     margin-left: 3px;
     margin-right: 10px;
 }
+
+.accordion-content .global-template-section-title {
+    cursor: pointer;
+}
+
+.accordion-content .global-template-section-title::marker {
+    text-indent: .5em;
+    font-size: 1.2em;
+    color: green;
+}
+
+.accordion-content .global-template-section {
+    text-indent: .5em;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
