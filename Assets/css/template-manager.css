@@ -56,6 +56,8 @@
 
 .float-right { float: right; }
 
+.mr-10 { margin-right: 10px; }
+
 tr > th.table-corner-tl {
     border-top-left-radius: var(--border-radius-t-manager);
 }
@@ -782,6 +784,14 @@ a.top-btn, a.top-btn:visited {
 .top-btn-border-bottom {
     border: 1px inset var(--pp-green);
     margin-top: 0;
+}
+
+.global-template-content fieldset ul, .global-template-content fieldset ol {
+    padding: inherit;
+}
+
+.global-template-content fieldset ul li ul, .global-template-content fieldset ol li ul {
+    padding: revert;
 }
 
 @media screen and (max-width: 1482px) {
