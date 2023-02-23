@@ -39,6 +39,8 @@ return array(
     'Delete' => '',
     'Template' => '',
     'Close' => '',
+    'View' => '',
+    'Edit' => '',
     //
     // comment_template/create.php
     //
