@@ -86,6 +86,10 @@ return array(
     'Edit Template' => '',
     'Delete Template' => '',
     'Add a template to get started' => '',
+    //
+    // global_template/create.php
+    //
+    'Create Global Template' => '',
     '' => '',
     '' => '',
     '' => '',
