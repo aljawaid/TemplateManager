@@ -94,6 +94,10 @@ return array(
     // global_template/edit.php
     //
     'Edit Global Template' => '',
+    //
+    // global_template/remove.php
+    //
+    'Delete Global Template' => '',
     '' => '',
     '' => '',
     '' => '',
