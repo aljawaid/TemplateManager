@@ -171,13 +171,14 @@ return array(
     'User that will receive the email:' => '',
     'User' => '',
     'Email Subject:' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+    //
+    // task/global-templates.php
+    //
+    'General Templates & Actions' => '',
+    'Copy to clipboard' => '',
+    'Copy' => '',
+    'Go to the top of this section' => '',
+    'Section' => '',
+    'Go to the top of this page' => '',
+    'Page' => '',
 );
