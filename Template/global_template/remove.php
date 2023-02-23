@@ -30,7 +30,7 @@
 <div id="DeleteModal" class="modal-contents">
     <div class="confirm">
         <p class="confirm-notice">
-            <?= t('Click on the button to confirm you would like to remove the template from the database') ?>
+            <?= t('Click on the button to confirm you would like to delete the template from the database') ?>
             <div class="template-contents">
                 <div class="template-title">
                     <?= $template['title'] ?> <?php if (!empty($template['topic'])): ?> (<?= $template['topic'] ?>) <?php endif ?>
