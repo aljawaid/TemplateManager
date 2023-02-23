@@ -62,6 +62,11 @@ return array(
     //
     'Edit Task Comment Template' => '',
     'Saves any changes made on this page' => '',
+    //
+    // comment_template/remove.php
+    //
+    'Delete Task Comment Template' => '',
+    'Click on the button to confirm you would like to delete the template from the database' => '',
     '' => '',
     '' => '',
     '' => '',
