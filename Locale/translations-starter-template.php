@@ -181,4 +181,13 @@ return array(
     'Section' => '',
     'Go to the top of this page' => '',
     'Page' => '',
+    //
+    // task_comments/show.php
+    //
+    'Comments' => '',
+    'No comments' => '',
+    'Change sorting' => '',
+    'Send by email' => '',
+    'Add a comment' => '',
+    'Comment Templates' => '',
 );
