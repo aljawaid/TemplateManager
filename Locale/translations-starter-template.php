@@ -90,6 +90,10 @@ return array(
     // global_template/create.php
     //
     'Create Global Template' => '',
+    //
+    // global_template/edit.php
+    //
+    'Edit Global Template' => '',
     '' => '',
     '' => '',
     '' => '',
