@@ -106,6 +106,10 @@ return array(
     // predefined_task_description/create.php
     //
     'Create Task Description Template' => '',
+    //
+    // predefined_task_description/edit.php
+    //
+    'Edit Task Description Template' => '',
     '' => '',
     '' => '',
     '' => '',
