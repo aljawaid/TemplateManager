@@ -25,7 +25,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
         </h2>
         <ul class="add-templates-bar">
             <li class="">
-                <a id="AddDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn add-desc-template-btn js-modal-medium" title="<?=t('Add Template') ?>">
+                <a id="AddDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn add-desc-template-btn js-modal-medium" title="<?= t('Add Template') ?>">
                     <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                         <g stroke-width="0"/>
                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -304,7 +304,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 <?= $this->form->csrf() ?>
 
                 <?= $this->form->textarea('predefined_email_subjects', $values, $errors, array('tabindex="1"')) ?>
-                <p class="form-help"><?= t('Write one subject per line') ?></p>
+                <p class="form-help"><?= t('One subject per line only') ?></p>
 
                 <?= $this->modal->submitButtons(array('tabindex' => 2)) ?>
             </form>

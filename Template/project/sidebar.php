@@ -61,7 +61,7 @@
 
         <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
             <?php if ($project['is_active']): ?>
-                <li class="project-close" title="<?= t('Closing this project will make it read-only') ?>">
+                <li class="project-close" title="<?= t('Closing this project will make it read only') ?>">
                     <?= $this->modal->confirmLink(t('Close Project'), 'ProjectStatusController', 'confirmDisable', array('project_id' => $project['id'])) ?>
                 </li>
             <?php else: ?>
