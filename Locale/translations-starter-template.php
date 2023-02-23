@@ -98,6 +98,10 @@ return array(
     // global_template/remove.php
     //
     'Delete Global Template' => '',
+    //
+    // global_template/show.php
+    //
+    'Global Template' => '',
     '' => '',
     '' => '',
     '' => '',
