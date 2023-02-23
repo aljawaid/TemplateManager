@@ -73,6 +73,19 @@ return array(
     // comment_template/show.php
     //
     'Task Comment Template' => '',
+    //
+    // config/global-templates.php
+    //
+    'Global Templates' => '',
+    'Add Template' => '',
+    'Add Global Template' => '',
+    'These templates are used to guide users in their workflow. Global templates are available throughout the application. Templates are shown above the comments section of each task. Use topics to group and label similar templates. Use notes to describe the template.' => '',
+    'ID' => '',
+    'Actions' => '',
+    'View Template' => '',
+    'Edit Template' => '',
+    'Delete Template' => '',
+    'Add a template to get started' => '',
     '' => '',
     '' => '',
     '' => '',
