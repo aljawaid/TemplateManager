@@ -54,7 +54,7 @@ $saved_global_templates = $this->model->globalTemplateModel->getAll();
                         <a class="top-btn" href="#GlobalTemplatesViewAccordion" title="<?= t('Go to the top of this section') ?>">
                             <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Section') ?>
                         </a>
-                        <a class="top-btn float-right mr-10" href="#main" title="<?= t('Go to the top of the page') ?>">
+                        <a class="top-btn float-right mr-10" href="#main" title="<?= t('Go to the top of this page') ?>">
                             <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Page') ?>
                         </a>
                         <hr class="top-btn-border-bottom">
