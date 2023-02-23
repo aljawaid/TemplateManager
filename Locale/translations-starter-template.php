@@ -102,6 +102,10 @@ return array(
     // global_template/show.php
     //
     'Global Template' => '',
+    //
+    // predefined_task_description/create.php
+    //
+    'Create Task Description Template' => '',
     '' => '',
     '' => '',
     '' => '',
