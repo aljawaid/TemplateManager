@@ -54,6 +54,11 @@ return array(
     'Template Content' => '',
     'Clear any changes made on this page' => '',
     'Reset' => '',
+    //
+    // comment_template/edit.php
+    //
+    'Edit Task Comment Template' => '',
+    'Saves any changes made on this page' => '',
     '' => '',
     '' => '',
     '' => '',
