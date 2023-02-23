@@ -114,6 +114,10 @@ return array(
     // predefined_task_description/remove.php
     //
     'Delete Task Description Template' => '',
+    //
+    // predefined_task_description/show.php
+    //
+    'Task Description Template' => '',
     '' => '',
     '' => '',
     '' => '',
