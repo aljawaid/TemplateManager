@@ -23,6 +23,12 @@ return array(
     'Unable to update this template' => '',
     'Template deleted successfully' => '',
     'Unable to delete this template' => '',
+    //
+    // Controller/TemplateContentController.php
+    //
+    'Email subject templates updated successfully' => '',
+    'Unable to update email subject templates' => '',
+    //
     // CORE OVERRIDES OR 3RD PARTY PLUGIN TRANSLATIONS AFFECTING THIS PLUGIN
     //
     '' => '',
