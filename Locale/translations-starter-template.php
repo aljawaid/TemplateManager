@@ -36,6 +36,9 @@ return array(
     'Create' => '',
     'Cancel' => '',
     'Save' => '',
+    'Delete' => '',
+    'Template' => '',
+    'Close' => '',
     //
     // comment_template/create.php
     //
