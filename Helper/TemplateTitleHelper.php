@@ -21,7 +21,7 @@ class TemplateTitleHelper extends TaskHelper
 
         if (! empty($templates)) {
             $html = '<div id="TaskDescDropdownWrapper" class="dropdown">';
-            $html .= '<a href="#"  id="TaskDescDropdown" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-floppy-o fa-fw" aria-hidden="true"></i>'.t('Use a task description template').' <i class="fa fa-caret-down" aria-hidden="true"></i></a>';
+            $html .= '<a href="#"  id="TaskDescDropdown" class="dropdown-menu dropdown-menu-link-icon" title="' .t('Use a task description template') .'"><i class="fa fa-floppy-o fa-fw" aria-hidden="true"></i> <i class="fa fa-caret-down" aria-hidden="true"></i></a>';
             $html .= '<ul class="task-desc-template-list">';
             $html .= '<span class="template-list-title">Available templates for this project</span>';
 
