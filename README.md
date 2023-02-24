@@ -41,10 +41,12 @@ Features
 - **Topics** - Label common templates into topics to help group them together
 - **Notes** - Add a short note to describe each template (notes appear as tooltips)
 - **Instructions** - Add optional instructions for each template (instructions show in view mode only)
+- **This plugin replicates and extends the features from [TemplateTitle](https://github.com/creecros/TemplateTitle). It is safe to uninstall _TemplateTitle_ after installing _TemplateManager_**
 - All data is saved in the database
 
 **Task Description Templates**
 - Revised `predefined contents` as `Task Description Templates`
+- Automatically populate the title of the template into the task title when creating or modifying tasks - imported [TemplateTitle](https://github.com/creecros/TemplateTitle) feature
 
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repetitively in any task
@@ -184,6 +186,7 @@ Authors & Contributors
 ----------------------
 
 - [@aljawaid](https://github.com/aljawaid) - Author
+- [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
 
