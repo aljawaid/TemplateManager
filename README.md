@@ -47,6 +47,7 @@ Features
 **Task Description Templates**
 - Revised `predefined contents` as `Task Description Templates`
 - Automatically populate the title of the template into the task title when creating or modifying tasks - imported [TemplateTitle](https://github.com/creecros/TemplateTitle) feature
+- Show the template notes to end users in a tooltip when selecting the task description
 
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repetitively in any task
@@ -61,6 +62,7 @@ Features
 - Show total number of comments created
 - Saved comment templates can be quickly copied from each task
 - Global templates are shown in each task above the comments section
+- Shows the template notes to end users in a tooltip
 
 **Revised Project Sidebar**
 - Replaced the default code to extend the functionality of the project sidebar menu
