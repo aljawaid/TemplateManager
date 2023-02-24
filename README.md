@@ -15,7 +15,7 @@ Features
 - Show individual counts for each template section
 - Compatibility with [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
   - Total number of templates are shown in the Admin Dashboard
-- Add pretty URLs _[(if globally configured)](https://docs.kanboard.org/v1/admin/url-rewriting/ "URL Rewrtiting must be configured for this feature to work")_
+- Add pretty URLs _[(if globally configured)](https://docs.kanboard.org/v1/admin/url-rewriting/ "URL Rewriting must be configured for this feature to work")_
   - `https://mydomain.com/project/[project_id]/templates`
     - _Links to the relevant project's Template Manager section_
   - `https://mydomain.com/global-templates`
