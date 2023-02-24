@@ -33,8 +33,13 @@ class Plugin extends Base
         $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
         $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
         $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
-        $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_creation/show');
-        $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_modification/show');
+        if (!file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
+            $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_creation/show');
+            $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_modification/show');
+        } elseif (file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
+            $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_creation/show');
+            $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_modification/show');
+        }
 
         // Extra Page - Routes
         //  - Example: $this->route->addRoute('/my/custom/route', 'MyController', 'show', 'PluginNameExampleStudlyCaps');
