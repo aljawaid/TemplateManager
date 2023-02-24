@@ -51,6 +51,11 @@ class Plugin extends Base
         $this->route->addRoute('/settings/global-templates/view/:id', 'GlobalContentController', 'viewTemplate', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/edit/:id', 'GlobalContentController', 'edit', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/delete/:id', 'GlobalContentController', 'confirm', 'TemplateManager');
+
+        // Helper
+        //  - Example: $this->helper->register('helperClassNameCamelCase', '\Kanboard\Plugin\PluginNameExampleStudlyCaps\Helper\HelperNameExampleStudlyCaps');
+        //  - Add each Helper in the 'use' section at the top of this file
+        $this->helper->register('templateTitleHelper ', '\Kanboard\Plugin\TemplateManager\Helper\TemplateTitleHelper');
     }
 
     public function onStartup()
