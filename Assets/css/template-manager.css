@@ -832,10 +832,20 @@ a.top-btn, a.top-btn:visited {
     padding: 0 5px;
 }
 
+#modal-content form .task-form-container .task-form-main-column {
+    position: relative;
+}
 
 #modal-content form .task-form-container .task-form-main-column .dropdown.dropdown-smaller {
     display: none;
 }
+
+#modal-content form .task-form-container .task-form-main-column #TaskDescDropdownWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
