@@ -3,10 +3,8 @@
 namespace Kanboard\Plugin\TemplateManager\Helper;
 
 use Kanboard\Helper\TaskHelper;
-//use Kanboard\Model\PredefinedTaskDescriptionModel;
 use Kanboard\Plugin\TemplateManager\Model;
 use Kanboard\Core\Base;
-use Kanboard\Controller\BaseController;
 
 /**
  * TemplateTitle Helper adjusted for TemplateManager
@@ -34,8 +32,6 @@ class TemplateTitleHelper extends TaskHelper
                     $html .= 'data-tooltip="'. $this->helper->text->e($template['note']) .'"';
                 };
                 $html .= '>';
-                //$html .= '<a href="#" data-template-target="textarea[name=description]" data-template="'.$this->helper->text->e($template['description']).'" class="js-template">';
-                //$html .= '<a href="#" data-template-target="input[name=title]" data-template="'.$this->helper->text->e($template['title']).'" class="js-template-title">';
                 $html .= $this->helper->text->e($template['title']);
                 $html .= '</a>';
                 $html .= '</li>';
