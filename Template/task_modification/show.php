@@ -1,1 +1,1 @@
-<?= $this->helper->templateTitleHelper->renderDescriptionAndTitleTemplateDropdown($project['id']) ?>
+<?= $this->helper->templateTitleHelper->renderDescriptionAndTitleTemplateDropdown() ?>
