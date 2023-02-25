@@ -138,7 +138,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding), [Glancer](https://github.com/aljawaid/Glancer)
+- Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding), [Glancer](https://github.com/aljawaid/Glancer), [Group_assign](https://github.com/creecros/Group_assign)
 #### Core Files & Templates
 - `04` Template overrides
 - Database Changes:
