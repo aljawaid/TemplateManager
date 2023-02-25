@@ -84,6 +84,10 @@ Screenshots
 
 ![Template Manager](../master/Screenshots/screenshot-template-manager-global-templates.png "All templates in one place")
 
+**Task Description Templates** - Frontend  
+
+![Template Manager](../master/Screenshots/screenshot-task-description-dropdown-frontend.png "Task Description Templates Dropdown")
+
 **Comment Templates** - Frontend  
 
 ![Template Manager](../master/Screenshots/screenshot-comments-bar-frontend.png "Comment Templates Quick Usage")
