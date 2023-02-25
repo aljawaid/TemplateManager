@@ -55,7 +55,7 @@
                         <div class="quick-templates-label relative">
                     <?php endif ?>
                         <span class="fixed-title" title="<?= $commentTemplate['title'] ?>"><?= $commentTemplate['title'] ?></span>
-                        <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Copy to clipboard') ?>">
+                        <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Copy to Clipboard') ?>">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </div>
                         <div class="quick-template-content">

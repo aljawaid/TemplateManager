@@ -44,7 +44,7 @@ $saved_global_templates = $this->model->globalTemplateModel->getAll();
                                 </fieldset>
                             <?php endif ?>
                             <fieldset class="template-view-description">
-                                <legend align="right" id="GlobalTemplateCopy<?= $template['id'] ?>" class="copy-global-template copy-global-template-button" data-clipboard-text="<?= htmlspecialchars($template['description']) ?>" title="<?= t('Copy to clipboard') ?>">
+                                <legend align="right" id="GlobalTemplateCopy<?= $template['id'] ?>" class="copy-global-template copy-global-template-button" data-clipboard-text="<?= htmlspecialchars($template['description']) ?>" title="<?= t('Copy to Clipboard') ?>">
                                     <i class="fa fa-clipboard" aria-hidden="true"></i> <?= t('Copy') ?>
                                 </legend>
                                 <?= $this->text->markdown($template['description']) ?>

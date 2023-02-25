@@ -179,7 +179,7 @@ return array(
     // task/global-templates.php
     //
     'General Templates & Actions' => '',
-    'Copy to clipboard' => '',
+    'Copy to Clipboard' => '',
     'Copy' => '',
     'Go to the top of this section' => '',
     'Section' => '',
