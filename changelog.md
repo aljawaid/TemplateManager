@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v2.0
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Add topic to tooltip in case of text overflow
+- NEW: Automatically Populate Comment Templates
+- FIX: Translation String
+- NEW: Show `note` as Tooltip for Task Descriptions - fixes #10 Merge Plugin Features: TemplateTitle
+- NEW: Style Task Description Template Dropdown - #10
+- FIX: Merge Duplicate Template Hooks - #11
+- FIX: Group_assign and TemplateTitle Compatibility - Fixes #11 - thanks @creecros
+- FIX: PHP Parse error:  syntax error - thanks @alfredbuehler
+- FIX: Remove Project Var usage for #10 - thanks @creecros
+
+
 ## v1.0
 
 ### What's Changed
