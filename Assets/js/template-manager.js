@@ -69,3 +69,14 @@ KB.onClick('.js-template-title', function (e) {
 
     _KB.controllers.Dropdown.close();
 });
+
+KB.onClick('.js-template-comment', function (e) {
+    var template = KB.dom(e.target).data('template');
+    var target = KB.dom(e.target).data('templateTarget');
+    var targetField = KB.find(target);
+
+    if (targetField) {
+        targetField.build().value = template;
+    }
+
+});

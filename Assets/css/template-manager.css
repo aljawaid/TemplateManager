@@ -623,7 +623,7 @@ span.example-detail code, .example-steps code {
 }
 
 .quick-templates-title .fa-clipboard {
-    font-size: 20px;
+    font-size: 1.1em;
     vertical-align: middle;
     color: var(--pp-light-grey);
 }
@@ -666,7 +666,7 @@ span.example-detail code, .example-steps code {
 
 .quick-template-content .tooltip .fa-info-circle, .template-row .tooltip .fa-info-circle {
     color: rgba(5, 93, 32, .8);
-    font-size: 1.3em !important;
+    font-size: 1.312em !important;
     vertical-align: middle !important;
 }
 
@@ -678,7 +678,7 @@ span.example-detail code, .example-steps code {
 .template-topic {
     font-size: .8em;
     text-transform: uppercase;
-    width: 80%;
+    width: 65%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -691,6 +691,10 @@ span.example-detail code, .example-steps code {
 
 .icon-btn {
     float: right;
+}
+
+#PasteDescTemplate {
+    margin-right: 10px;
 }
 
 .templates-menu-count {

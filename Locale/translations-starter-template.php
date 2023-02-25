@@ -194,4 +194,5 @@ return array(
     'Send by email' => '',
     'Add a comment' => '',
     'Comment Templates' => '',
+    'Paste to Text Editor' => '',
 );
