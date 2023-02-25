@@ -61,6 +61,10 @@ return array(
     'Duplicate Project' => '',
     'Delete Project' => '',
     //
+    // Helper/TemplateTitleHelper.php
+    //
+    'Templates available for this project' => '',
+    //
     // comment_template/create.php
     //
     'Template Manager' => '',
