@@ -63,7 +63,7 @@
                         </div>
                         <div class="quick-templates-info">
                             <?php if (!empty($commentTemplate['topic'])): ?>
-                                <span class="template-topic"><?= ($commentTemplate['topic']) ?></span>
+                                <span class="template-topic" title="<?= ($commentTemplate['topic']) ?>"><?= ($commentTemplate['topic']) ?></span>
                             <?php endif ?>
                             <a id="ViewDescTemplate" href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="icon-btn js-modal-medium" title="<?=t('View Template') ?>">
                                 <svg width="21px" height="21px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
