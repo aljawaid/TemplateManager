@@ -21,9 +21,10 @@ class TemplateTitleHelper extends TaskHelper
 
         if (! empty($templates)) {
             $html = '<div id="TaskDescDropdownWrapper" class="dropdown">';
-            $html .= '<a href="#"  id="TaskDescDropdown" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-floppy-o fa-fw" aria-hidden="true"></i>'.t('Use a task description template').' <i class="fa fa-caret-down" aria-hidden="true"></i></a>';
+            $html .= '<a href="#"  id="TaskDescDropdown" class="dropdown-menu dropdown-menu-link-icon" title="' .t('Use a task description template') .'"><span class="template-manager-icon-dropdown" aria-hidden="true"></span> <span class="caret-dropdown" aria-hidden="true"></span></a>';
             $html .= '<ul class="task-desc-template-list">';
-            $html .= '<span class="template-list-title">Available templates for this project</span>';
+            $html .= '<span class="template-list-title-tm"><span class="task-desc-icon-dropdown" aria-hidden="true"></span> '. t('Task Description Templates') .'</span>';
+            $html .= '<span class="template-list-title">'. t('Templates available for this project') .'</span>';
 
             foreach ($templates as  $template) {
                 $html .= '<li id="TaskTemplate-'. $this->helper->text->e($template['id']) .'" class="predefined-template-item">';
