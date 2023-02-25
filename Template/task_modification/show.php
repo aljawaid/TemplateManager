@@ -1,1 +1,0 @@
-<?= $this->helper->templateTitleHelper->renderDescriptionAndTitleTemplateDropdown() ?>
