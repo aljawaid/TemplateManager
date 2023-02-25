@@ -52,6 +52,7 @@ Features
 **NEW Comment Templates**
 - Add, update or delete templates for your regular comments which can be used repetitively in any task
 - Templates utilise the Markdown Editor to enable complete formatting of comments
+- Automatically populate the comment template to the text editor when creating comments
 
 **NEW Global Templates**
 - Show generic templates common to your personal or organisational workflow (to your end users)
