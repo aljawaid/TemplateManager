@@ -58,19 +58,19 @@
 
 .mr-10 { margin-right: 10px; }
 
-tr > th.table-corner-tl {
+.template-table > thead > tr > th.table-corner-tl {
     border-top-left-radius: var(--border-radius-t-manager);
 }
 
-tr:last-child > td.table-corner-bl:first-child {
+.template-table > tbody > tr:last-child > td.table-corner-bl:first-child {
     border-bottom-left-radius: var(--border-radius-t-manager);
 }
 
-tr > th.table-corner-tr {
+.template-table > thead > tr > th.table-corner-tr {
     border-top-right-radius: var(--border-radius-t-manager);
 }
 
-tr:last-child > td.table-corner-br:last-child {
+.template-table > tbody > tr:last-child > td.table-corner-br:last-child {
     border-bottom-right-radius: var(--border-radius-t-manager);
 }
 
