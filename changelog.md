@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v2.5
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- NEW: Allow Global Templates to be Disabled - #14
+- FIX: Target Table Corners Better
+
+
 ## v2.0
 
 ### What's Changed
