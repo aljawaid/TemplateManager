@@ -121,6 +121,8 @@ Usage
 - Go to `Settings` &#10562; About 
   - _To view global totals for your saved templates_
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
+- Go to `Settings` &#10562; `Application` &#10562; Template Manager
+  - _To manage settings_
 - Go to any `Project` &#10562; `Project Settings` &#10562; Template Manager
   - _To manage your templates_
 - Go to any `Project` &#10562; `Task` &#10562; Create Task
@@ -131,8 +133,6 @@ Usage
   - _To manage your global templates_
 - Go to any `Task` &#10562; General Templates & Actions
   - _To use your global templates_
-- Go to `Settings` &#10562; `Application` &#10562; Template Manager
-  - _To manage settings_
 
 
 Compatibility

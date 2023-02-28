@@ -895,6 +895,27 @@ a.top-btn, a.top-btn:visited {
 }
 /* END OF TEMPLATE TITLE FEATURE */
 
+#TemplateSettings h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+#TemplateSettings h3 svg {
+    vertical-align: bottom;
+    width: 28px;
+    height: 28px;
+    pointer-events: none;
+}
+
+.template-options-section-radios {
+    display: inline-block;
+}
+
+#TemplateSettings fieldset .template-options-section-radios .template-radio-options label, #TemplateSettings fieldset .template-options-section-radios .template-radio-options .form-help, #TemplateSettings fieldset button {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
