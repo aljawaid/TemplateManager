@@ -34,8 +34,10 @@ class Plugin extends Base
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
-        $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
-        $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
+        if ($this->configModel->get('global_templates', '') == 'enable') {
+            $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
+            $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
+        }
         if (!file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
             $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_creation_modification/show');
         } elseif (file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
