@@ -9,6 +9,9 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        // Layout - Template Hook - Override name should start lowercase e.g. pluginNameExampleCamelCase
+        $this->template->hook->attach('template:config:application', 'templateManager:config/settings');
+
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
         $this->template->setTemplateOverride('project_predefined_content/show', 'templateManager:project_predefined_content/show');
