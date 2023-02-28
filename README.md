@@ -84,6 +84,11 @@ Screenshots
 
 ![Template Manager](../master/Screenshots/screenshot-template-manager.png "All templates in one place")
 
+**Template Manager** - Settings  
+
+![Template Manager](../master/Screenshots/screenshot-template-manager-settings.png "Disable Global Templates")
+
+
 ![Template Manager](../master/Screenshots/screenshot-template-manager-global-templates.png "All templates in one place")
 
 **Task Description Templates** - Frontend  
