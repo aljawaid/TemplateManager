@@ -15,6 +15,19 @@
         </span>
         <?= t('Template Manager') ?>
     </h3>
+    <fieldset>
+        <legend><?= t('Global Templates') ?></legend>
+        <div class="template-options-section-radios">
+            <div class="template-radio-options">
+                <?= $this->form->radio('global_templates', t('Enable'), 'enable', true, isset($values['global_templates']) && $values['global_templates'] == 'enable') ?>
+                <?= $this->form->radio('global_templates', t('Disable'), 'disable', isset($values['global_templates']) && $values['global_templates'] == 'disable') ?>
+                <p class="form-help"><?= t('Existing templates are not deleted through this setting') ?></p>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-blue" title="<?= t('Saves any changes made on this page') ?>"><?= t('Save Settings') ?></button>
+        </div>
+    </fieldset>
 </fieldset>
 
 
