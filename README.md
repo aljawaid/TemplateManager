@@ -58,6 +58,7 @@ Features
 - Show generic templates common to your personal or organisational workflow (to your end users)
 - Inside tasks, global templates are shown under a new **General Templates & Actions** accordion section
 - These templates are visible to all user roles and are not restricted by project
+- Can be disabled through `Settings`
 
 **Task Comments**
 - Show total number of comments created
@@ -130,6 +131,8 @@ Usage
   - _To manage your global templates_
 - Go to any `Task` &#10562; General Templates & Actions
   - _To use your global templates_
+- Go to `Settings` &#10562; `Application` &#10562; Template Manager
+  - _To manage settings_
 
 
 Compatibility
