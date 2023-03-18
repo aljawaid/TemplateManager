@@ -697,7 +697,7 @@ span.example-detail code, .example-steps code {
     float: right;
 }
 
-#PasteDescTemplate {
+.mr-10 {
     margin-right: 10px;
 }
 

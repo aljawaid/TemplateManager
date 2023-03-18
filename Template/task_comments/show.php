@@ -65,7 +65,7 @@
                             <?php if (!empty($commentTemplate['topic'])): ?>
                                 <span class="template-topic" title="<?= ($commentTemplate['topic']) ?>"><?= ($commentTemplate['topic']) ?></span>
                             <?php endif ?>
-                            <a id="ViewDescTemplate" href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="icon-btn js-modal-medium" title="<?=t('View Template') ?>">
+                            <a href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="icon-btn js-modal-medium" title="<?=t('View Template') ?>">
                                 <svg width="21px" height="21px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <g stroke-width="0"/>
                                     <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +78,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a id="PasteDescTemplate" href="#" class="icon-btn js-template-comment" data-template-target="textarea[name=comment]" data-template="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Paste to Text Editor') ?>">
+                            <a href="#" class="mr-10 icon-btn js-template-comment" data-template-target="textarea[name=comment]" data-template="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Paste to Text Editor') ?>">
                                 <svg fill="currentColor" class="text-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="21px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <g stroke-width="0"/>
                                     <g stroke-linecap="round" stroke-linejoin="round"/>
