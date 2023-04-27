@@ -281,6 +281,7 @@ label[for="form-description"] {
     background: var(--pp-white);
     border: 1px solid var(--pp-grey);
     border-radius: var(--border-radius-t-manager);
+    text-decoration: none;
 }
 
 .template-contents .template-title {

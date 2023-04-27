@@ -1,6 +1,6 @@
 # TemplateManager
-
-#### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
+![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge "GitHub All Downloads")
+#### _Plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_
 
 Predefined Contents is replaced by the Template Manager. Improve consistency of your project data and save time for repetitive comments using saved templates. Project Editors can create, update and delete templates for each project including adding notes and instructions separate to the template content to help keep content neat. 
 
@@ -8,7 +8,6 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 Features
 -------------
-
 - Improved and extended the layout, modal and form designs for the `predefined contents` section
 - Renamed the `predefined contents` section to `Template Manager`
 - Show the total template count in the project dropdown menu directly linking to the Template Manager
@@ -122,7 +121,6 @@ Screenshots
 
 Usage
 -------------
-
 - Go to `Settings` &#10562; About 
   - _To view global totals for your saved templates_
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
@@ -142,8 +140,7 @@ Usage
 
 Compatibility
 -------------
-
-- Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 
 #### Other Plugins & Action Plugins
 - _No known issues_
@@ -158,7 +155,6 @@ Compatibility
 
 Changelog
 ---------
-
 Read the full [**Changelog**](../master/changelog.md "See changes")
  
 
@@ -169,13 +165,11 @@ Installation
 
 Translations
 ------------
-
-- _Contributors welcome_
 - _Starter template available_
+
 
 Authors & Contributors
 ----------------------
-
 - [@aljawaid](https://github.com/aljawaid) - Author
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_

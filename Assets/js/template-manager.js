@@ -78,5 +78,4 @@ KB.onClick('.js-template-comment', function (e) {
     if (targetField) {
         targetField.build().value = template;
     }
-
 });
