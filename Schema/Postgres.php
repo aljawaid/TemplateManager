@@ -30,5 +30,5 @@ function version_1(PDO $pdo)
         )
     ');
 
-    $pdo->exec("ALTER TABLE `predefined_task_descriptions` ADD COLUMN `topic` TEXT, ADD COLUMN `note` TEXT, ADD COLUMN `instructions` TEXT");
+    $pdo->exec("ALTER TABLE predefined_task_descriptions ADD COLUMN topic TEXT, ADD COLUMN note TEXT, ADD COLUMN instructions TEXT");
 }
