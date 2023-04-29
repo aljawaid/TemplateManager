@@ -1,5 +1,5 @@
 # TemplateManager
-![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge "GitHub All Downloads") - **_A Plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
+![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 Predefined Contents is replaced by the Template Manager. Improve consistency of your project data and save time for repetitive comments using saved templates. Project Editors can create, update and delete templates for each project including adding notes and instructions separate to the template content to help keep content neat. 
 
