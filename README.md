@@ -1,9 +1,12 @@
-# TemplateManager
+<h1 name="readme-top">TemplateManager</h1>
+
 ![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 Predefined Contents is replaced by the Template Manager. Improve consistency of your project data and save time for repetitive comments using saved templates. Project Editors can create, update and delete templates for each project including adding notes and instructions separate to the template content to help keep content neat. 
 
 Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place. The global templates feature shows for every project and can be used as a way to guide and advise users within tasks.  Templates can also be useful in environments where auditing is required.
+
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>]</p>
 
 ## Features
 
@@ -74,6 +77,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - Add a new hook `'template:project:sidebar:bottom'`
   - _Displays_ after the Delete Project menu link to show content to **all users**_
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Screenshots
 
@@ -116,6 +120,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 ![Template Manager](../master/Screenshots/screenshot-delete-comment-template.png "Delete Comment Template")
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Usage
 
@@ -135,6 +140,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - Go to any `Task` &#10562; General Templates & Actions
   - _To use your global templates_
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
 
@@ -167,6 +173,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 </details>
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Authors & Contributors
 
@@ -174,7 +181,11 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## License
 
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
+
+<a name="readme-bottom"></a>
+<p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
