@@ -17,7 +17,7 @@ Predefined Contents is replaced by the Template Manager. Improve consistency of 
 
 Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place. The global templates feature shows for every project and can be used as a way to guide and advise users within tasks.  Templates can also be useful in environments where auditing is required.
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Features
 
@@ -88,7 +88,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - Add a new hook `'template:project:sidebar:bottom'`
   - _Displays_ after the Delete Project menu link to show content to **all users**_
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Screenshots
 
@@ -131,7 +131,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 ![Template Manager](../master/Screenshots/screenshot-delete-comment-template.png "Delete Comment Template")
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#installation--compatibility">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Usage
 
@@ -151,7 +151,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - Go to any `Task` &#10562; General Templates & Actions
   - _To use your global templates_
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
 
@@ -184,7 +184,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 </details>
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#usage">&#8592; Previous</a>] [<a href="#license">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## Authors & Contributors
 
@@ -192,7 +192,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
 
 ## License
 
