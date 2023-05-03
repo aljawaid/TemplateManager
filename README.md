@@ -1,16 +1,34 @@
 <h1 name="readme-top">TemplateManager</h1>
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/aljawaid/TemplateManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
-    <img src="https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
-    <img src="https://img.shields.io/github/directory-file-count/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
-    <img src="https://img.shields.io/github/repo-size/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
-    <img src="https://img.shields.io/github/languages/code-size/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    <a href="https://github.com/aljawaid/TemplateManager/releases">
+        <img src="https://img.shields.io/github/v/release/aljawaid/TemplateManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/releases">
+        <img src="https://img.shields.io/github/downloads/aljawaid/TemplateManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/releases">
+        <img src="https://img.shields.io/github/directory-file-count/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/releases">
+        <img src="https://img.shields.io/github/repo-size/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/releases">
+        <img src="https://img.shields.io/github/languages/code-size/aljawaid/TemplateManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    </a>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/github/discussions/aljawaid/TemplateManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions">
-    <img src="https://img.shields.io/github/commits-since/aljawaid/TemplateManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
-    <img src="https://img.shields.io/github/commit-activity/m/aljawaid/TemplateManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
-    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software"><img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge" alt="Kanboard"></a>
+    <a href="https://github.com/aljawaid/TemplateManager/discussions">
+        <img src="https://img.shields.io/github/discussions/aljawaid/TemplateManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="Read Discussions">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/compare">
+        <img src="https://img.shields.io/github/commits-since/aljawaid/TemplateManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/compare">
+        <img src="https://img.shields.io/github/commit-activity/m/aljawaid/TemplateManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
+    </a>
+    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software">
+        <img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge&labelColor=000000" alt="Kanboard">
+    </a>
 </p>
 
 Predefined Contents is replaced by the Template Manager. Improve consistency of your project data and save time for repetitive comments using saved templates. Project Editors can create, update and delete templates for each project including adding notes and instructions separate to the template content to help keep content neat. 
@@ -198,5 +216,30 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
 
+---
+
+<h3 align="center">
+    <a href="https://github.com/aljawaid/TemplateManager/stargazers" title="View Stargazers">
+        <img src="https://img.shields.io/github/stars/aljawaid/TemplateManager?logo=github&style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/forks" title="See Forks">
+        <img src="https://img.shields.io/github/forks/aljawaid/TemplateManager?logo=github&style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/blob/master/LICENSE" title="Read License">
+        <img src="https://img.shields.io/github/license/aljawaid/TemplateManager?style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/issues" title="Open Issues">
+        <img src="https://img.shields.io/github/issues-raw/aljawaid/TemplateManager?style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
+        <img src="https://img.shields.io/github/issues-closed/aljawaid/TemplateManager?style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/discussions" title="Read Discussions">
+        <img src="https://img.shields.io/github/discussions/aljawaid/TemplateManager?style=flat-square" alt="TemplateManager">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/compare/" title="Latest Commits">
+        <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/TemplateManager/latest?style=flat-square">
+    </a>
+</h3>
 <a name="readme-bottom"></a>
 <p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
