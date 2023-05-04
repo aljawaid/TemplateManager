@@ -218,7 +218,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 ---
 
-<h3 align="center">
+<p align="center">
     <a href="https://github.com/aljawaid/TemplateManager/stargazers" title="View Stargazers">
         <img src="https://img.shields.io/github/stars/aljawaid/TemplateManager?logo=github&style=flat-square" alt="TemplateManager">
     </a>
@@ -240,6 +240,6 @@ Templates can be created for task descriptions (core feature), comments (new fea
     <a href="https://github.com/aljawaid/TemplateManager/compare/" title="Latest Commits">
         <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/TemplateManager/latest?style=flat-square">
     </a>
-</h3>
+</p>
 <a name="user-content-readme-bottom"></a>
 <p align="right">[<a href="#user-content-readme-top">&#8593; Top</a>]</p>
