@@ -31,7 +31,7 @@
     </a>
 </p>
 
-Speed through your tasks replacing Predefined Contents with the new Template Manager. Users can impove consistency of project data whilst saving time creating repetitive comments using saved templates. Project Editors can easily manage their template content for each project. 
+Speed through your tasks replacing Predefined Contents with the new Template Manager. Users can impove consistency of project data whilst saving time creating repetitive comments using saved templates. Project Editors can easily manage their template content for each project.
 
 Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place including adding notes and instructions separate to the template content to help keep content neat. The global templates feature displays for every project and can be used as a way to guide and advise users within tasks. Templates can also be useful in environments where auditing or standardization is required.
 
@@ -64,7 +64,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
     - `https://mydomain.com/global-templates/add`
     - `https://mydomain.com/global-templates/view/[template_id]`
     - `https://mydomain.com/global-templates/edit/[template_id]`
-    - `https://mydomain.com/global-templates/delete/[template_id]`    
+    - `https://mydomain.com/global-templates/delete/[template_id]`
 - Revised Email Subject Templates
   - Added user instructions related to tasks and automatic actions
 - **Template Previews** - Preview just the template without the instructions
@@ -153,7 +153,7 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 ## Usage
 
-- Go to `Settings` &#10562; About 
+- Go to `Settings` &#10562; About
   - _To view global totals for your saved templates_
   - _Requires [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding "Remove Kanboard brnading and whitelabel your application using this plugin")_
 - Go to `Settings` &#10562; `Application` &#10562; Template Manager
@@ -172,6 +172,21 @@ Templates can be created for task descriptions (core feature), comments (new fea
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
+
+<p align="left">
+    <a href="https://github.com/aljawaid/TemplateManager/actions/workflows/linter.yml">
+        <img src="https://github.com/aljawaid/TemplateManager/actions/workflows/linter.yml/badge.svg?branch=master&event=push" alt="Code Scanning" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-7.4.yaml">
+        <img src="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-7.4.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-8.0.yaml">
+        <img src="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-8.0.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-8.2.yaml">
+        <img src="https://github.com/aljawaid/TemplateManager/actions/workflows/php-compatibility-8.2.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+</p>
 
 <details>
     <summary><strong>Installation</strong></summary>
