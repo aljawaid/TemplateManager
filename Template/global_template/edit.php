@@ -33,18 +33,18 @@
 
         <span class="template-form-section">
             <?= $this->form->label(t('Title'), 'title') ?>
-            <?= $this->form->text('title', $values, $errors, array('autofocus', 'required', 'tabindex="1"', 'placeholder="'. t('My Template Title') .'"')) ?>
+            <?= $this->form->text('title', $values, $errors, array('autofocus', 'required', 'tabindex="1"', 'placeholder="' . t('My Template Title') . '"')) ?>
         </span>
 
         <span class="template-form-section">
             <?= $this->form->label(t('Topic'), 'topic') ?>
-            <?= $this->form->text('topic', $values, array(), array('tabindex="2"', 'placeholder="'. t('e.g. General') .'"')) ?>
+            <?= $this->form->text('topic', $values, array(), array('tabindex="2"', 'placeholder="' . t('e.g. General') . '"')) ?>
             <p class="form-help topic-help"><?= t('Topics can help group and label similar templates') ?></p>
         </span>
 
         <span class="template-form-section">
             <?= $this->form->label(t('Note'), 'note') ?>
-            <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="'. t('This note has specific instructions') .'"')) ?>
+            <?= $this->form->text('note', $values, array(), array('tabindex="3"', 'placeholder="' . t('This note has specific instructions') . '"')) ?>
             <p class="form-help note-help"><?= t('Add a short note to describe this template') ?></p>
         </span>
 

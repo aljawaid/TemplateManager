@@ -13,7 +13,7 @@
                     </g>
                 </g>
             </svg> <?= t('Global Templates') ?>
-            <?php if (! empty($saved_global_templates)): ?>
+            <?php if (!empty($saved_global_templates)): ?>
                 <span class="templates-menu-count"><?= count($saved_global_templates) ?></span>
             <?php endif ?>
         </h2>
@@ -37,7 +37,7 @@
     <p class="section-intro">
         <?= t('These templates are used to guide users in their workflow. Global templates are available throughout the application. Templates are shown above the comments section of each task. Use topics to group and label similar templates. Use notes to describe the template.') ?>
     </p>
-    <?php if (! empty($saved_global_templates)): ?>
+    <?php if (!empty($saved_global_templates)): ?>
         <table class="template-table">
             <thead>
                 <tr class="">

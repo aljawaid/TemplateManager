@@ -1,5 +1,5 @@
 <?php
-$taskTemplatesCount =  $this->task->taskDescriptionTemplateModel->getAll($project['id']);
+$taskTemplatesCount = $this->task->taskDescriptionTemplateModel->getAll($project['id']);
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
@@ -92,7 +92,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
         <?= t('Content templates are useful for repetitive content. Templates listed here apply to this project only. Each section describes how users should use the saved templates.') ?>
     </p>
     <fieldset class="task-desc-section">
-        <?php if (! empty($predefined_task_descriptions)): ?>
+        <?php if (!empty($predefined_task_descriptions)): ?>
             <span class="count-badge"><?= count($predefined_task_descriptions) ?></span>
         <?php endif ?>
         <legend id="TaskDescTemplates" class="">
@@ -116,7 +116,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
         <p class="section-intro">
             <?= t('These templates are used as descriptions for tasks in projects. When you create a task, you can choose from a list of these templates in the task creation form. Topics can help group and label similar templates. Notes are used to describe the template.') ?>
         </p>
-        <?php if (! empty($predefined_task_descriptions)): ?>
+        <?php if (!empty($predefined_task_descriptions)): ?>
             <table class="template-table">
                 <thead>
                     <tr class="">
@@ -189,7 +189,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
     </fieldset>
 
     <fieldset class="task-comments-section">
-        <?php if (! empty($saved_comment_templates)): ?>
+        <?php if (!empty($saved_comment_templates)): ?>
             <span class="count-badge"><?= count($saved_comment_templates) ?></span>
         <?php endif ?>
         <legend id="CommentTemplates" class="">
@@ -208,7 +208,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
         <p class="section-intro">
             <?= t('These templates are available as comments for any task in a project. In the comments section of a task, select your template from the associated comment templates. Topics can help group and label similar templates. Notes are used to describe the template.') ?>
         </p>
-        <?php if (! empty($saved_comment_templates)): ?>
+        <?php if (!empty($saved_comment_templates)): ?>
             <table class="template-table">
                 <thead>
                     <tr class="">
@@ -276,7 +276,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
     </fieldset>
 
     <fieldset class="email-subject-section">
-        <?php if (! empty($project['predefined_email_subjects'])): ?>
+        <?php if (!empty($project['predefined_email_subjects'])): ?>
             <span class="count-badge"><?= count(explode("\r\n", trim($project['predefined_email_subjects']))) ?></span>
         <?php endif ?>
         <legend id="EmailSubjectTemplates" class="">

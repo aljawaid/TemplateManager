@@ -1,7 +1,7 @@
 <details class="accordion-section" <?= empty($comments) ? '' : 'open' ?>>
     <summary class="accordion-title acc-comments-title">
         <i class="fa fa-comments-o"></i> <?= t('Comments') ?>
-        <?php if (! empty($comments)): ?>
+        <?php if (!empty($comments)): ?>
             <span class="">(<?= count($comments) ?>)</span>
         <?php endif ?>
     </summary>

@@ -4,7 +4,7 @@
 ## v2.6
 
 _(most recent changes are listed on top):_
-- FIX: ClipboardJS Dependency - Compatibility with PluginManager
+- FIX: ClipboardJS Dependency - compatibility with PluginManager
 - FIX: Do Not Show Empty Comment Quick Templates Bar
 - FIX: CSS IDs Are Not Unique
 - FIX: SVG Preventing Anchor Clicks
