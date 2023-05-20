@@ -14,13 +14,13 @@
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --blue-icon-dark: #034CA6;
-    --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
+    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
     --blue-border-gradient-match: #476E9E;
     --button-background-delete: #D05C84;
-    --link-color-primary: #36C;
+    --link-color-primary: #3366CC;
     --header-page-margin-t-manager: 5px 15px 10px 15px;
     --page-margin-t-manager: 5px 15px 10px 15px;
-    --title-margin-t-manager: 0px 15px 0px 15px;
+    --title-margin-t-manager: 0 15px 0 15px;
     --border-radius-t-manager: 3px;
     --panel-background-t-manager: #EEEEEE;
     --transition-t-manager: ease-in-out all .3s;
@@ -40,7 +40,7 @@
 .pp-dark-green { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-.display-none, .d-none { display: none !important; }
+.display-none, .d-none { display: none; }
 
 .font-weight-bold { font-weight: bold; }
 
@@ -115,11 +115,11 @@
 .modal-title {
     float: right;
     margin-right: 2em;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .modal-template-id {
-    font-weight: 400;
+    font-weight: normal;
     color: var(--pp-grey);
 }
 
@@ -152,7 +152,7 @@
 }
 
 #TemplateView .template-view-title {
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -260,7 +260,7 @@ label[for="form-description"] {
     overflow: hidden;
     text-overflow: ellipsis;
     opacity: .4;
-    box-shadow: 0 0 10px 3px #000;
+    box-shadow: 0 0 10px 3px #000000;
     padding: 5px;
     border-radius: 5px;
     font-size: small;
@@ -360,7 +360,7 @@ fieldset span.count-badge {
     background: var(--pp-green);
     border: 2px outset var(--pp-green);
     font-size: 1.3em;
-    font-weight: 700;
+    font-weight: bold;
     border-radius: var(--border-radius-t-manager);
     color: var(--pp-white);
 }
@@ -406,6 +406,7 @@ table.template-table {
 
 table.template-table > tbody > tr > td.template-row:not(:first-child) {
     padding-left: 10px;
+    border-left: 0;
 }
 
 table.template-table tbody tr td.template-row:last-child {
@@ -423,10 +424,6 @@ table.template-table tbody tr td.template-row {
 }
 
 table.template-table > thead > tr > th.template-header:not(:first-child) {
-    border-left: 0;
-}
-
-table.template-table > tbody > tr > td.template-row:not(:first-child) {
     border-left: 0;
 }
 
@@ -544,10 +541,10 @@ textarea#form-predefined_email_subjects {
 }
 
 span.example-detail code, .example-steps code {
-    background-color: rgba(27, 31, 35, 0.22);
+    background-color: rgba(27, 31, 35, .22);
     font-size: 1em;
-    font-family: Monospace;
-    letter-spacing: 0.08rem;
+    font-family: monospace;
+    letter-spacing: .08rem;
     color: #373737;
     margin: 0;
     padding: 1px 1px 2px 3px;
@@ -556,7 +553,7 @@ span.example-detail code, .example-steps code {
 
 .steps-list li code > strong > span {
     color: var(--pp-red-alt-2);
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .steps-list i, .steps-list code {
@@ -696,10 +693,6 @@ span.example-detail code, .example-steps code {
 
 .icon-btn {
     float: right;
-}
-
-.mr-10 {
-    margin-right: 10px;
 }
 
 .templates-menu-count {
@@ -898,6 +891,7 @@ a.top-btn, a.top-btn:visited {
     border-radius: var(--border-radius-t-manager);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .45);
 }
+
 /* END OF TEMPLATE TITLE FEATURE */
 
 #TemplateSettings h3 {
