@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v2.7
+
+_(most recent changes are listed on top):_
+- FIX: Code Syntax - `dropdown.php`
+- FIX: Code Syntax Fixes for `remove.php
+- FIX: Code Syntax Fixes
+- FIX: Code Syntax - `TemplateTitleHelper.php`
+- FIX: Code Syntax - `tooltips.css`
+- FIX: Code Syntax - `template-manager.css`
+- FIX: Code Syntax - `README.md`
+- FIX: Plugin Description - compatibility with PluginManager (Installed Plugins Update feature) - remove the word `update` to be excluded from standard search
+- FIX: README.md Anchor Link
+- FIX: Markdown Syntax
+- FIX: README Navigation Links for GitHub
+- FIX: Code Syntax
+- NEW: Add Footer Badges to README.md
+- NEW: Add Section Navigation Links to README.md
+- NEW: Add Badges to README.md
+- NEW: Add README Page Navigation Links
+- Update README.md
+- FIX: Content Flow for INSTALL.md
+- FIX: Content Flow for README.md
+- Cleanup Code
+- Create INSTALL.md
+- FIX: Database Statement Syntax
+
+
 ## v2.6
 
 _(most recent changes are listed on top):_
