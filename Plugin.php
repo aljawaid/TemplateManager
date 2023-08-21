@@ -84,8 +84,7 @@ class Plugin extends Base
 
     public function getPluginName()
     {
-        // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions
-        // Do not translate the plugin name here
+        // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions - do not translate the plugin name here
         return 'TemplateManager';
     }
 
@@ -106,10 +105,8 @@ class Plugin extends Base
 
     public function getCompatibleVersion()
     {
-        // Examples:
-        // >=1.0.37
-        // <1.0.37
-        // <=1.0.37
+        // Examples: '>=1.0.37' '<1.0.37' '<=1.0.37'
+        // Tested on KB v1.2.20 upto plugin v2.7.0, then KB v1.2.32+
         return '>=1.2.20';
     }
 
