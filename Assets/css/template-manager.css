@@ -112,7 +112,7 @@
     margin: var(--modal-page-header);
 }
 
-.modal-title {
+.template-manager-modal .modal-title {
     float: right;
     margin-right: 2em;
     font-weight: bold;

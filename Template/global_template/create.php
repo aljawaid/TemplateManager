@@ -1,4 +1,4 @@
-<div class="modal-page-header">
+<div class="modal-page-header template-manager-modal">
     <h2 class="relative">
         <svg width="24px" height="24px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g stroke-width="0"/>
