@@ -1,6 +1,13 @@
 # Changelog
 
 
+## v2.8
+
+_(most recent changes are listed on top):_
+- FIX: Missing Cursor
+- FIX: Modal Title Styling Conflict - affected display of third party modals
+- FIX: Schema File Comments
+
 ## v2.7
 
 _(most recent changes are listed on top):_
