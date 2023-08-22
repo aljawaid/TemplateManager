@@ -79,40 +79,40 @@
     width: 100%;
 }
 
-.template-manager-page-header h2 {
+.template-manager-modal-header h2 {
     margin-top: 0;
     font-weight: 600;
     border-bottom: 2px outset var(--button-blue-border-gradient-match);
     padding-bottom: 2px;
 }
 
-.template-manager-page-header h2 svg {
+.template-manager-modal-header h2 svg {
     vertical-align: bottom;
     width: 28px;
     height: 28px;
     pointer-events: none;
 }
 
-.modal-page-header {
+.modal-page-header.template-manager-modal-header {
     margin: var(--modal-page-header);
     margin-bottom: 0;
 }
 
-.modal-page-header h2 {
+.modal-page-header.template-manager-modal-header h2 {
     margin-top: 5px;
     margin-bottom: 0;
 }
 
-.modal-page-header h2 svg {
+.modal-page-header.template-manager-modal-header h2 svg {
     vertical-align: sub;
     pointer-events: none;
 }
 
-.modal-contents {
+.modal-contents.template-manager-modal-contents {
     margin: var(--modal-page-header);
 }
 
-.template-manager-modal .modal-title {
+.template-manager-modal-header .modal-title {
     float: right;
     margin-right: 2em;
     font-weight: bold;

@@ -1,4 +1,4 @@
-<div class="modal-page-header template-manager-modal">
+<div class="modal-page-header template-manager-modal-header">
     <h2 class="relative">
         <svg width="24px" height="24px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g stroke-width="0"/>
@@ -26,7 +26,7 @@
         </span>
     </h2>
 </div>
-<div id="DeleteModal" class="modal-contents">
+<div id="DeleteModal" class="modal-contents template-manager-modal-contents">
     <div class="confirm">
         <p class="confirm-notice">
             <?= t('Click on the button to confirm you would like to delete the template from the database') ?>

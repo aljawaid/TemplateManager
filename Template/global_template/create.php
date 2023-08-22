@@ -1,4 +1,4 @@
-<div class="modal-page-header template-manager-modal">
+<div class="modal-page-header template-manager-modal-header">
     <h2 class="relative">
         <svg width="24px" height="24px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g stroke-width="0"/>
@@ -27,7 +27,7 @@
         </span>
     </h2>
 </div>
-<div class="modal-contents">
+<div class="modal-contents template-manager-modal-contents">
     <form id="TemplateForm" class="template-form" method="post" action="<?= $this->url->href('GlobalContentController', 'save', array('plugin' => 'TemplateManager')) ?>" autocomplete="on">
         <?= $this->form->csrf() ?>
 
