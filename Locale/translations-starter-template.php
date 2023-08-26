@@ -147,7 +147,6 @@ return array(
     'Content Templates' => '',
     'Add Task Description Template' => '',
     'Add Comment Template' => '',
-    'Add Global Template' => '',
     'View Global Templates' => '',
     'Content templates are useful for repetitive content. Templates listed here apply to this project only. Each section describes how users should use the saved templates.' => '',
     'Task Description Templates' => '',
