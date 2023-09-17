@@ -4,8 +4,8 @@
 ## v2.9
 
 _(most recent changes are listed on top):_
-- 33f33e3 FIX: Duplicate Translation
-- cc1b6ed FIX: Modal Styling Conflicts
+- FIX: Duplicate Translation
+- FIX: Modal Styling Conflicts
 
 
 ## v2.8
