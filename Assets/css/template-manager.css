@@ -444,7 +444,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
 
 .view-desc-template-btn:hover, .edit-desc-template-btn:hover, .delete-desc-template-btn:hover, .view-comment-template-btn:hover, .edit-comment-template-btn:hover, .delete-comment-template-btn:hover {
     border-color: var(--pp-green);
-    background: rgba(46, 160, 46, .4);
+    background: rgb(46, 160, 46, .4);
 }
 
 .view-desc-template-btn:hover a, .edit-desc-template-btn:hover a, .delete-desc-template-btn:hover a, .view-comment-template-btn:hover a, .edit-comment-template-btn:hover a, .delete-comment-template-btn:hover a {
@@ -453,7 +453,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
 
 .delete-desc-template-btn:hover, .delete-comment-template-btn:hover {
     border-color: var(--pp-red-alt-2);
-    background: rgba(174, 0, 61, .4);
+    background: rgb(174, 0, 61, .4);
 }
 
 #ViewDescTemplate, #EditDescTemplate, #DeleteDescTemplate, #ViewCommentTemplate, #EditCommentTemplate, #DeleteCommentTemplate {
@@ -542,7 +542,7 @@ textarea#form-predefined_email_subjects {
 }
 
 span.example-detail code, .example-steps code {
-    background-color: rgba(27, 31, 35, .22);
+    background-color: rgb(27, 31, 35, .22);
     font-size: 1em;
     font-family: monospace;
     letter-spacing: .08rem;
@@ -606,8 +606,7 @@ span.example-detail code, .example-steps code {
 }
 
 .comments-header-title {
-    word-wrap: break-word;
-    word-break: break-word;
+    overflow-wrap: break-word;
     width: 80px;
     display: inline-block;
     vertical-align: middle;
@@ -668,7 +667,7 @@ span.example-detail code, .example-steps code {
 }
 
 .quick-template-content .tooltip .fa-info-circle, .template-row .tooltip .fa-info-circle {
-    color: rgba(5, 93, 32, .8);
+    color: rgb(5, 93, 32, .8);
     font-size: 1.312em !important;
     vertical-align: middle !important;
 }
@@ -890,7 +889,7 @@ a.top-btn, a.top-btn:visited {
 .task-desc-template-list.dropdown-submenu-open {
     border: 2px outset var(--pp-green);
     border-radius: var(--border-radius-t-manager);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .45);
+    box-shadow: 0 1px 3px rgb(0, 0, 0, .45);
 }
 
 /* END OF TEMPLATE TITLE FEATURE */
