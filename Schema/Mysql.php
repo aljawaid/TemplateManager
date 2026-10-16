@@ -4,7 +4,7 @@ namespace Kanboard\Plugin\TemplateManager\Schema;
 
 use PDO;
 
-const VERSION = 1;
+const VERSION = 2;
 
 function version_1(PDO $pdo)
 {
@@ -32,4 +32,21 @@ function version_1(PDO $pdo)
 
     /* IF THE PLUGIN IS NOT INSTALLING, DELETE IF THIS COLUMN EXISTS */
     $pdo->exec('ALTER TABLE `predefined_task_descriptions` ADD COLUMN `topic` TEXT, ADD COLUMN `note` TEXT, ADD COLUMN `instructions` TEXT');
+}
+
+function version_2(PDO $pdo)
+{
+    // Store project-managed templates separately so existing global templates remain application-wide.
+    $pdo->exec('CREATE TABLE IF NOT EXISTS project_templates (
+        id INT NOT NULL AUTO_INCREMENT,
+        project_id INT NOT NULL,
+        title TEXT NOT NULL,
+        topic TEXT,
+        description TEXT NOT NULL,
+        note TEXT NOT NULL,
+        instructions TEXT NOT NULL,
+        PRIMARY KEY(id),
+        INDEX project_templates_project_id_idx (project_id),
+        CONSTRAINT project_templates_project_fk FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
+    ) COMMENT "Template Manager project templates" ENGINE = InnoDB CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;');
 }

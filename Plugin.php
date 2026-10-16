@@ -77,7 +77,7 @@ class Plugin extends Base
     {
         return [
             'Plugin\TemplateManager\Model' => [
-                'TaskCommentTemplateModel', 'GlobalTemplateModel', 'TaskDescriptionTemplateModel',
+                'TaskCommentTemplateModel', 'GlobalTemplateModel', 'ProjectTemplateModel', 'TaskDescriptionTemplateModel',
             ],
         ];
     }
