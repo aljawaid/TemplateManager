@@ -1,10 +1,17 @@
 <?php
+
+/**
+ * Renders the project manager catalogue for task, comment, project and email templates.
+ */
+
 $taskTemplatesCount = $this->task->taskDescriptionTemplateModel->getAll($project['id']);
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
+$projectTemplatesCount = $this->task->projectTemplateModel->getAll($project['id']);
+$projectTemplatesCountTotal = count($projectTemplatesCount);
 $emailSubjectsCount = (!empty($project['predefined_email_subjects']) && !is_null($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
-$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
+$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $projectTemplatesCountTotal + $emailSubjectsCount);
 ?>
 
 <div class="template-manager-page-margin">
@@ -53,7 +60,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                 </a>
             </li>
             <li class="">
-                <a id="AddGlobalTemplate" href="<?= $this->url->href('GlobalContentController', 'create', array('plugin' => 'TemplateManager'), false, '', false) ?>" class="btn add-comment-template-btn js-modal-medium" title="<?=t('Add Template') ?>">
+                <a id="AddProjectTemplate" href="<?= $this->url->href('ProjectTemplateController', 'create', array('project_id' => $project['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn add-project-template-btn js-modal-medium" title="<?= t('Add Template') ?>">
                     <svg width="20px" height="20px" class="plus-circle-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                         <g stroke-width="0"/>
                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,9 +70,10 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                                 <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"/>
                             </g>
                         </g>
-                    </svg> <?= t('Add Global Template') ?>
+                    </svg> <?= t('Add Project Template') ?>
                 </a>
             </li>
+            <?php if ($this->user->isAdmin()): ?>
             <li class="">
                 <a id="ViewGlobalTemplates" href="<?= $this->url->href('GlobalTemplateController', 'show', array('plugin' => 'TemplateManager'), false, '', false) ?>" class="btn add-global-template-btn">
                     <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -86,6 +94,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                     <span class="templates-menu-count"><?= count($globalTemplatesCount) ?></span>
                 </a>
             </li>
+            <?php endif ?>
         </ul>
     </div>
     <p class="page-intro">
@@ -137,7 +146,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
                                 <?= $this->app->tooltipMarkdown($template['description']) ?>
-                                <a id="ViewDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-desc-template-btn js-modal-medium" title="<?=t('View Template') ?>">
+                                <a href="<?= $this->url->href('TaskDescriptionTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-desc-template-btn js-modal-medium" title="<?=t('View Template') ?>">
                                     <svg width="20px" height="20px" class="description-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -155,7 +164,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                                         </g>
                                     </svg> <?= t('View') ?>
                                 </a>
-                                <a id="EditDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-desc-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
+                                <a href="<?= $this->url->href('TaskDescriptionTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-desc-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -166,7 +175,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                                     </svg> <?= t('Edit') ?>
                                 </a>
                                 <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
-                                    <a id="DeleteDescTemplate" href="<?= $this->url->href('TaskDescriptionTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-desc-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
+                                    <a href="<?= $this->url->href('TaskDescriptionTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-desc-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
                                         <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                             <g stroke-width="0"/>
                                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -229,7 +238,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                         <td class="template-row table-corner-br">
                             <div class="btn-wrapper">
                                 <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
-                                <a id="ViewDescTemplate" href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-comment-template-btn js-modal-medium" title="<?=t('View Template') ?>">
+                                <a href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-comment-template-btn js-modal-medium" title="<?=t('View Template') ?>">
                                     <svg width="20px" height="20px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -242,7 +251,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                                         </g>
                                     </svg> <?= t('View') ?>
                                 </a>
-                                <a id="EditCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-comment-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
+                                <a href="<?= $this->url->href('CommentTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-comment-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
                                     <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <g stroke-width="0"/>
                                         <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -253,7 +262,7 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
                                     </svg> <?= t('Edit') ?>
                                 </a>
                                 <?php if ($this->user->hasProjectAccess('ProjectEditController', 'show', $project['id'])): ?>
-                                    <a id="DeleteCommentTemplate" href="<?= $this->url->href('CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-comment-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
+                                    <a href="<?= $this->url->href('CommentTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-comment-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
                                         <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                             <g stroke-width="0"/>
                                             <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -272,6 +281,60 @@ $allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $
             </table>
         <?php else: ?>
             <span class="no-templates"><?= t('Add a template to get started') ?></span>
+        <?php endif ?>
+    </fieldset>
+
+    <fieldset class="project-template-section">
+        <?php if (!empty($saved_project_templates)): ?>
+            <span class="count-badge"><?= count($saved_project_templates) ?></span>
+        <?php endif ?>
+        <legend id="ProjectTemplates">
+            <i class="fa fa-folder-open" aria-hidden="true"></i> <?= t('Project Templates') ?>
+            <?= $this->app->tooltipHTML($this->text->e(t('Project managers maintain these templates for this project. Project members and viewers can use them from task pages.'))) ?>
+        </legend>
+        <p class="section-intro">
+            <?= t('Project templates provide reusable guidance and content for this project only. They do not change administrator-managed global templates.') ?>
+        </p>
+        <?php if (!empty($saved_project_templates)): ?>
+            <div class="template-table-wrap">
+                <table class="template-table">
+                    <thead>
+                        <tr>
+                            <th class="template-header column-3 text-center pl-3 table-corner-tl"><?= t('ID') ?></th>
+                            <th class="template-header pl-10"><?= t('Title') ?></th>
+                            <th class="template-header column-25 pl-10"><?= t('Note') ?></th>
+                            <th class="template-header column-15 pl-10"><?= t('Topic') ?></th>
+                            <th class="template-header actions-column table-corner-tr pl-10"><?= t('Actions') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($saved_project_templates as $template): ?>
+                        <tr>
+                            <td class="template-row pt-5 pl-3 text-center table-corner-bl pp-grey"><?= $this->text->e($template['id']) ?></td>
+                            <td class="template-row template-title"><?= $this->text->e($template['title']) ?></td>
+                            <td class="template-row template-note"><?= $this->text->e($template['note']) ?></td>
+                            <td class="template-row"><?= $this->text->e($template['topic']) ?></td>
+                            <td class="template-row table-corner-br">
+                                <div class="btn-wrapper">
+                                    <?= $this->app->tooltipMarkdown($template['description']) ?>
+                                    <a href="<?= $this->url->href('ProjectTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn template-action-button js-modal-medium" title="<?= t('View Template') ?>">
+                                        <i class="fa fa-eye" aria-hidden="true"></i> <?= t('View') ?>
+                                    </a>
+                                    <a href="<?= $this->url->href('ProjectTemplateController', 'edit', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn template-action-button js-modal-medium" title="<?= t('Edit Template') ?>">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i> <?= t('Edit') ?>
+                                    </a>
+                                    <a href="<?= $this->url->href('ProjectTemplateController', 'confirm', array('project_id' => $project['id'], 'id' => $template['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn template-action-button template-action-button-danger js-modal-confirm" title="<?= t('Delete Template') ?>">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> <?= t('Delete') ?>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php else: ?>
+            <span class="no-templates"><?= t('Add a project template to get started') ?></span>
         <?php endif ?>
     </fieldset>
 

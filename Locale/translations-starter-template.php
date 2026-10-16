@@ -1,19 +1,23 @@
-<!-- REMOVE THIS SECTION -->
-<!-- ------------------- -->
-<!-- TEMPLATE FILE FOR LOCAL TRANSLATIONS - KEEP FILENAME IN LOWERCASE AS translations.php UNDER LANGUAGE CODE -->
-<!-- EXAMPLE FILE: /Locale/en_GB/translations.php -->
-<!-- EXAMPLE FILE: /Locale/en_US/translations.php -->
-<!-- EXAMPLE FILE: /Locale/fr_FR/translations.php -->
-<!-- EXAMPLE FILE: /Locale/de_DE/translations.php -->
-<!-- ------------------- -->
-<!-- REMOVE THIS SECTION -->
 <?php
+
+/**
+ * Starter catalogue for TemplateManager translations.
+ *
+ * Copy this file to Locale/<language_code>/translations.php, translate the
+ * values and retain every source key used by the plugin.
+ */
 
 return array(
     //
     // GENERAL
     //
-    'Speed through your tasks replacing Predefined Contents with the new Template Manager. Users can impove consistency of project data whilst saving time creating repetitive comments using saved templates. Project Editors can easily manage their template content for each project. Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place including adding notes and instructions separate to the template content to help keep content neat. The global templates feature displays for every project and can be used as a way to guide and advise users within tasks. Templates can also be useful in environments where auditing or standardization is required.' => '',
+    'Manage reusable task descriptions, comments, email subjects and project templates in one place. Administrators maintain global guidance for every project, while project managers maintain templates for their own projects.' => '',
+    'Project template created successfully' => '',
+    'Unable to create this project template' => '',
+    'Project template updated successfully' => '',
+    'Unable to update this project template' => '',
+    'Project template deleted successfully' => '',
+    'Unable to delete this project template' => '',
     //
     // Controller/CommentTemplateController.php
     //
@@ -102,6 +106,18 @@ return array(
     'Global Templates' => '',
     'Add Template' => '',
     'Add Global Template' => '',
+    'Add Project Template' => '',
+    'Project Templates' => '',
+    'Project Template' => '',
+    'Create Project Template' => '',
+    'Edit Project Template' => '',
+    'Delete Project Template' => '',
+    'Project managers maintain these templates for this project. Project members and viewers can use them from task pages.' => '',
+    'Project templates provide reusable guidance and content for this project only. They do not change administrator-managed global templates.' => '',
+    'Add a project template to get started' => '',
+    'This template will be available only in this project. Global templates remain controlled by administrators.' => '',
+    'This template is available only in this project. Global templates remain controlled by administrators.' => '',
+    'Confirm that you want to delete this project template.' => '',
     'These templates are used to guide users in their workflow. Global templates are available throughout the application. Templates are shown above the comments section of each task. Use topics to group and label similar templates. Use notes to describe the template.' => '',
     'ID' => '',
     'Actions' => '',
@@ -178,8 +194,17 @@ return array(
     // task/global-templates.php
     //
     'General Templates & Actions' => '',
+    'Reusable Templates & Actions' => '',
+    'Global templates' => '',
+    'Project templates' => '',
+    'Administrators maintain these templates for every project.' => '',
+    'Project managers maintain these templates for this project.' => '',
+    'Global templates are set by administrators. Project templates are set by project managers.' => '',
+    'Template content' => '',
     'Copy to Clipboard' => '',
     'Copy' => '',
+    'Copied' => '',
+    'Copy failed' => '',
     'Go to the top of this section' => '',
     'Section' => '',
     'Go to the top of this page' => '',

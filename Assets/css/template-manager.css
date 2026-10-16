@@ -440,6 +440,7 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
     background: var(--pp-white);
     display: inline-block;
     margin: auto 2px;
+    text-decoration: none !important;
 }
 
 .view-desc-template-btn:hover, .edit-desc-template-btn:hover, .delete-desc-template-btn:hover, .view-comment-template-btn:hover, .edit-comment-template-btn:hover, .delete-comment-template-btn:hover {
@@ -454,10 +455,6 @@ table.template-table > tbody > tr:not(:last-child) > td.template-row {
 .delete-desc-template-btn:hover, .delete-comment-template-btn:hover {
     border-color: var(--pp-red-alt-2);
     background: rgb(174, 0, 61, .4);
-}
-
-#ViewDescTemplate, #EditDescTemplate, #DeleteDescTemplate, #ViewCommentTemplate, #EditCommentTemplate, #DeleteCommentTemplate {
-    text-decoration: none !important;
 }
 
 svg.comment-templates-icon, .svg.icon-btn, svg.text-icon {
@@ -918,5 +915,329 @@ a.top-btn, a.top-btn:visited {
 @media screen and (max-width: 1482px) {
     .btn-wrapper .btn:not(:first-child) {
         margin-top: 5px;
+    }
+}
+
+/* Production presentation layer: scoped responsive layout with light and dark colour support. */
+.template-manager-page-margin,
+.template-manager-modal-contents,
+.template-manager-task-catalogue {
+    --tm-accent: #147A42;
+    --tm-accent-strong: #055D20;
+    --tm-border: light-dark(#B9C3C9, #52606B);
+    --tm-danger: light-dark(#A5213D, #FF8299);
+    --tm-muted: light-dark(#5C6770, #B7C0C8);
+    --tm-surface: light-dark(#FFFFFF, #20262C);
+    --tm-surface-subtle: light-dark(#F3F7F5, #283139);
+    --tm-text: light-dark(#24292E, #F0F3F5);
+    --tm-shadow: light-dark(rgba(0, 0, 0, .12), rgba(0, 0, 0, .42));
+    --tm-transition: 160ms ease-in-out;
+
+    box-sizing: border-box;
+    color: var(--tm-text);
+    color-scheme: light dark;
+}
+
+.template-manager-page-margin *,
+.template-manager-page-margin *::before,
+.template-manager-page-margin *::after,
+.template-manager-modal-contents *,
+.template-manager-modal-contents *::before,
+.template-manager-modal-contents *::after,
+.template-manager-task-catalogue *,
+.template-manager-task-catalogue *::before,
+.template-manager-task-catalogue *::after {
+    box-sizing: border-box;
+}
+
+body .template-manager-page-margin {
+    margin: 5px auto 20px;
+    max-width: 1180px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.template-manager-page-header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.template-manager-page-header h2 {
+    margin: 0;
+}
+
+.template-manager-page-margin .add-templates-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 18px;
+    padding: 0;
+}
+
+.template-manager-page-margin .add-templates-bar li {
+    margin: 0;
+}
+
+.add-desc-template-btn,
+.add-comment-template-btn,
+.add-project-template-btn,
+.add-global-template-btn,
+.template-action-button,
+.copy-global-template-button,
+#TemplateForm .form-actions .btn {
+    transition:
+        background-color var(--tm-transition),
+        border-color var(--tm-transition),
+        box-shadow var(--tm-transition),
+        color var(--tm-transition),
+        transform var(--tm-transition);
+}
+
+.add-desc-template-btn:hover,
+.add-comment-template-btn:hover,
+.add-project-template-btn:hover,
+.add-global-template-btn:hover,
+.template-action-button:hover,
+.copy-global-template-button:hover,
+.add-desc-template-btn:focus,
+.add-comment-template-btn:focus,
+.add-project-template-btn:focus,
+.add-global-template-btn:focus,
+.template-action-button:focus,
+.copy-global-template-button:focus {
+    border-color: var(--tm-accent);
+    box-shadow: 0 3px 10px var(--tm-shadow);
+    transform: translateY(-1px);
+}
+
+fieldset.task-desc-section,
+fieldset.task-comments-section,
+fieldset.project-template-section,
+fieldset.email-subject-section {
+    background: var(--tm-surface);
+    border: 1px solid var(--tm-border);
+    border-radius: 8px;
+    margin: 0 0 18px;
+    min-width: 0;
+    padding: 12px;
+    position: relative;
+}
+
+.task-desc-section legend,
+.task-comments-section legend,
+.project-template-section legend,
+.email-subject-section legend {
+    color: var(--tm-text);
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+fieldset span.count-badge,
+.templates-menu-count {
+    background: var(--tm-accent);
+    border-color: var(--tm-accent-strong);
+}
+
+.template-table-wrap,
+fieldset.task-desc-section,
+fieldset.task-comments-section,
+fieldset.project-template-section {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.template-manager-page-margin table.template-table {
+    background: var(--tm-surface);
+    min-width: 720px;
+    width: 100%;
+}
+
+.template-manager-page-margin table.template-table thead th {
+    background: var(--tm-surface-subtle);
+    border-color: var(--tm-border);
+    color: var(--tm-text);
+}
+
+.template-manager-page-margin table.template-table tbody td {
+    border-color: var(--tm-border);
+    color: var(--tm-text);
+}
+
+.template-manager-page-margin table.template-table tbody tr {
+    transition: background-color var(--tm-transition);
+}
+
+.template-manager-page-margin table.template-table tbody tr:hover,
+.template-manager-page-margin table.template-table tbody tr:focus-within {
+    background: var(--tm-surface-subtle);
+}
+
+.template-action-button {
+    background: var(--tm-surface);
+    border-color: var(--tm-border);
+    color: var(--tm-text);
+    display: inline-flex;
+    gap: 5px;
+    margin: 2px;
+}
+
+.template-action-button-danger:hover,
+.template-action-button-danger:focus {
+    border-color: var(--tm-danger);
+    color: var(--tm-danger);
+}
+
+.template-form-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 12px;
+}
+
+.template-form-field input,
+#TemplateForm textarea,
+#TemplateForm input,
+.text-editor-wrapper .text-editor .text-editor-preview-area {
+    background: var(--tm-surface);
+    border-color: var(--tm-border);
+    color: var(--tm-text);
+    max-width: 100%;
+    width: 100%;
+}
+
+.template-manager-modal-contents #form-note {
+    width: 100%;
+}
+
+.template-scope-help,
+.template-manager-scope-help,
+.template-manager-copy-status {
+    color: var(--tm-muted);
+}
+
+.template-manager-scope-group {
+    margin: 12px 0 20px;
+}
+
+.template-manager-scope-group h3 {
+    margin-bottom: 2px;
+}
+
+.template-manager-task-catalogue .global-template-content,
+.template-manager-task-catalogue .template-view,
+.template-manager-task-catalogue .template-view-description,
+.template-manager-task-catalogue .template-view-note,
+.template-manager-task-catalogue .template-view-instructions {
+    background: var(--tm-surface);
+    border-color: var(--tm-border);
+    color: var(--tm-text);
+}
+
+.template-manager-task-catalogue .copy-global-template-button {
+    background: var(--tm-accent);
+    border: 1px solid var(--tm-accent-strong);
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    margin: 0 0 8px 12px;
+    padding: 5px 10px;
+}
+
+button.copy-comment-template {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    transition: color 160ms ease-in-out, transform 160ms ease-in-out;
+}
+
+button.copy-comment-template:hover,
+button.copy-comment-template:focus {
+    transform: translateY(-1px);
+}
+
+.template-manager-page-margin .email-form-wrapper {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(260px, 2fr) minmax(280px, 3fr);
+    width: 100% !important;
+}
+
+.email-form-wrapper > div {
+    width: auto !important;
+}
+
+.template-manager-page-margin textarea#form-predefined_email_subjects {
+    background: var(--tm-surface-subtle);
+    color: var(--tm-text);
+    width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    .template-manager-page-margin,
+    .template-manager-modal-contents,
+    .template-manager-task-catalogue {
+        --tm-accent: #43B773;
+        --tm-accent-strong: #72D497;
+    }
+
+    .template-manager-page-margin .pp-grey,
+    .template-view .template-view-topic,
+    .template-scope-help,
+    .template-manager-scope-help {
+        color: var(--tm-muted);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .template-manager-page-margin {
+        margin-inline: 0;
+        padding-inline: 8px;
+    }
+
+    .template-manager-page-header,
+    .add-templates-bar,
+    #TemplateForm .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .add-templates-bar .btn,
+    #TemplateForm .form-actions .btn,
+    #TemplateForm .form-actions a {
+        display: block;
+        margin: 4px 0;
+        min-height: 40px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .template-form-grid,
+    .email-form-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .template-manager-modal-header .modal-title {
+        display: block;
+        float: none;
+        margin: 6px 0 0;
+    }
+
+    .global-template-section .global-template-content {
+        margin-inline: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .template-manager-page-margin *,
+    .template-manager-modal-contents *,
+    .template-manager-task-catalogue * {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
     }
 }

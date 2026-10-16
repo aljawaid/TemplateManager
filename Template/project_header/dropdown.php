@@ -1,11 +1,17 @@
-<?php // phpcs:disable PSR12.Files.FileHeader.SpacingAfterBlock
+<?php
+
+/**
+ * Renders the project Template Manager shortcut and its project-scoped content count.
+ */
+
 $taskTemplatesCount = $this->task->taskDescriptionTemplateModel->getAll($project['id']);
 $taskTemplatesCountTotal = count($taskTemplatesCount);
 $commentTemplatesCount = $this->task->taskCommentTemplateModel->getAll($project['id']);
 $commentTemplatesCountTotal = count($commentTemplatesCount);
+$projectTemplatesCount = $this->task->projectTemplateModel->getAll($project['id']);
+$projectTemplatesCountTotal = count($projectTemplatesCount);
 $emailSubjectsCount = (!empty($project['predefined_email_subjects']) && !is_null($project['predefined_email_subjects'])) ? count(explode("\r\n", trim($project['predefined_email_subjects']))) : 0;
-$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $emailSubjectsCount);
-// phpcs:enable
+$allTemplatesCount = ($taskTemplatesCountTotal + $commentTemplatesCountTotal + $projectTemplatesCountTotal + $emailSubjectsCount);
 ?>
 
 <li <?= $this->app->checkMenuSelection('TemplateContentController') ?>>

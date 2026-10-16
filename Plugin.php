@@ -52,18 +52,13 @@ class Plugin extends Base
 
         // JS - Asset Hook
         //  - Keep filename lowercase
-        if (!file_exists('plugins/Glancer') || !file_exists('plugins/PluginManager')) {
-            $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/clipboard-v2.0.11.min.js'));
-        }
         $this->hook->on('template:layout:js', array('template' => 'plugins/TemplateManager/Assets/js/template-manager.js'));
 
         // Views - Add Menu Item - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:project:dropdown', 'templateManager:project_header/dropdown');
-        if ($this->configModel->get('global_templates', '') == 'enable') {
-            $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
-            $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
-        }
+        $this->template->hook->attach('template:task:show:before-comments', 'templateManager:task/global-templates');
+        $this->template->hook->attach('template:config:sidebar', 'templateManager:config/sidebar');
         if (!file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
             $this->template->hook->attach('template:task:form:first-column', 'templateManager:task_creation_modification/show');
         } elseif (file_exists('plugins/Group_assign') && !file_exists('plugins/TemplateTitle')) {
@@ -100,7 +95,13 @@ class Plugin extends Base
 
     public function onStartup()
     {
-        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
+        // Load a complete English fallback before applying an available locale override.
+        Translator::load('en_US', __DIR__ . '/Locale');
+
+        $language = $this->languageModel->getCurrentLanguage();
+        if ($language !== 'en_US') {
+            Translator::load($language, __DIR__ . '/Locale');
+        }
     }
 
     public function getClasses()
@@ -120,7 +121,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('Speed through your tasks replacing Predefined Contents with the new Template Manager. Users can impove consistency of project data whilst saving time creating repetitive comments using saved templates. Project Editors can easily manage their template content for each project. Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place including adding notes and instructions separate to the template content to help keep content neat. The global templates feature displays for every project and can be used as a way to guide and advise users within tasks. Templates can also be useful in environments where auditing or standardization is required.');
+        return t('Manage reusable task descriptions, comments, email subjects and project templates in one place. Administrators maintain global guidance for every project, while project managers maintain templates for their own projects.');
     }
 
     public function getPluginAuthor()

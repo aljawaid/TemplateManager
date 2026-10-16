@@ -1,8 +1,28 @@
 <?php
-$saved_global_templates = $this->model->globalTemplateModel->getAll();
+
+/**
+ * Shows administrator-managed global templates and project-manager-managed project templates on tasks.
+ */
+
+$globalTemplatesEnabled = $this->model->configModel->get('global_templates', '') === 'enable';
+$templateGroups = array(
+    array(
+        'key' => 'global',
+        'title' => t('Global templates'),
+        'help' => t('Administrators maintain these templates for every project.'),
+        'templates' => $globalTemplatesEnabled ? $this->model->globalTemplateModel->getAll() : array(),
+    ),
+    array(
+        'key' => 'project',
+        'title' => t('Project templates'),
+        'help' => t('Project managers maintain these templates for this project.'),
+        'templates' => $this->model->projectTemplateModel->getAll($task['project_id']),
+    ),
+);
+$availableTemplateCount = count($templateGroups[0]['templates']) + count($templateGroups[1]['templates']);
 ?>
-<?php if (!empty($saved_global_templates)): ?>
-    <details id="GlobalTemplatesViewAccordion" class="accordion-section">
+<?php if ($availableTemplateCount > 0): ?>
+    <details id="TemplateManagerCatalogue" class="accordion-section template-manager-task-catalogue">
         <summary class="accordion-title acc-templates-title">
             <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                 <g stroke-width="0"/>
@@ -15,52 +35,51 @@ $saved_global_templates = $this->model->globalTemplateModel->getAll();
                         <path d="M160,224c17.656,0,32-14.344,32-32s-14.344-32-32-32s-32,14.344-32,32S142.344,224,160,224z M160,176 c8.812,0,16,7.188,16,16s-7.188,16-16,16s-16-7.188-16-16S151.188,176,160,176z"/>
                     </g>
                 </g>
-            </svg> <?= t('General Templates & Actions') ?>
-            <?php if (!empty($saved_global_templates)): ?>
-                <span class="global-templates-menu-count">(<?= count($saved_global_templates) ?>)</span>
-            <?php endif ?>
+            </svg> <?= t('Reusable Templates & Actions') ?>
+            <span class="global-templates-menu-count">(<?= $availableTemplateCount ?>)</span>
+            <?= $this->app->tooltipHTML($this->text->e(t('Global templates are set by administrators. Project templates are set by project managers.'))) ?>
         </summary>
         <div class="accordion-content">
-            <?php foreach ($saved_global_templates as $template): ?>
-                <details class="global-template-section">
-                    <summary class="global-template-section-title">
-                        <?= $this->text->e($template['title']) ?>
-                    </summary>
-                    <div class="global-template-content">
-                        <fieldset id="TemplateView-<?= $template['id'] ?>" class="template-view">
-                            <?php if (!empty($template['topic'])): ?>
-                                <legend class="template-view-topic"><?= $template['topic'] ?></legend>
-                            <?php endif ?>
-                            <?php if (!empty($template['note'])): ?>
-                                <fieldset class="template-view-note">
-                                    <legend><?= t('Note') ?></legend>
-                                    <?= $this->text->markdown($template['note']) ?>
-                                </fieldset>
-                            <?php endif ?>
-                            <?php if (!empty($template['instructions'])): ?>
-                                <fieldset class="template-view-instructions">
-                                    <legend><?= t('Instructions') ?></legend>
-                                    <?= $this->text->markdown($template['instructions']) ?>
-                                </fieldset>
-                            <?php endif ?>
-                            <fieldset class="template-view-description">
-                                <legend align="right" id="GlobalTemplateCopy<?= $template['id'] ?>" class="copy-global-template copy-global-template-button" data-clipboard-text="<?= htmlspecialchars($template['description']) ?>" title="<?= t('Copy to Clipboard') ?>">
-                                    <i class="fa fa-clipboard" aria-hidden="true"></i> <?= t('Copy') ?>
-                                </legend>
-                                <?= $this->text->markdown($template['description']) ?>
-                            </fieldset>
-                        </fieldset>
-                        <hr class="top-btn-border-top">
-                        <a class="top-btn" href="#GlobalTemplatesViewAccordion" title="<?= t('Go to the top of this section') ?>">
-                            <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Section') ?>
-                        </a>
-                        <a class="top-btn float-right mr-10" href="#main" title="<?= t('Go to the top of this page') ?>">
-                            <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Page') ?>
-                        </a>
-                        <hr class="top-btn-border-bottom">
-                    </div>
-                </details>
+            <?php foreach ($templateGroups as $group): ?>
+                <?php if (!empty($group['templates'])): ?>
+                    <section class="template-manager-scope-group" aria-labelledby="template-scope-<?= $group['key'] ?>">
+                        <h3 id="template-scope-<?= $group['key'] ?>"><?= $this->text->e($group['title']) ?></h3>
+                        <p class="template-manager-scope-help"><?= $this->text->e($group['help']) ?></p>
+                        <?php foreach ($group['templates'] as $template): ?>
+                            <details class="global-template-section">
+                                <summary class="global-template-section-title"><?= $this->text->e($template['title']) ?></summary>
+                                <div class="global-template-content">
+                                    <fieldset id="TemplateView-<?= $group['key'] ?>-<?= $this->text->e($template['id']) ?>" class="template-view">
+                                        <?php if (!empty($template['topic'])): ?>
+                                            <legend class="template-view-topic"><?= $this->text->e($template['topic']) ?></legend>
+                                        <?php endif ?>
+                                        <?php if (!empty($template['note'])): ?>
+                                            <fieldset class="template-view-note">
+                                                <legend><?= t('Note') ?></legend>
+                                                <?= $this->text->markdown($template['note']) ?>
+                                            </fieldset>
+                                        <?php endif ?>
+                                        <?php if (!empty($template['instructions'])): ?>
+                                            <fieldset class="template-view-instructions">
+                                                <legend><?= t('Instructions') ?></legend>
+                                                <?= $this->text->markdown($template['instructions']) ?>
+                                            </fieldset>
+                                        <?php endif ?>
+                                        <fieldset class="template-view-description">
+                                            <legend><?= t('Template content') ?></legend>
+                                            <button type="button" class="copy-global-template copy-global-template-button" data-clipboard-text="<?= $this->text->e($template['description']) ?>" data-copy-label="<?= t('Copy') ?>" data-copied-label="<?= t('Copied') ?>" data-copy-error-label="<?= t('Copy failed') ?>" title="<?= t('Copy to Clipboard') ?>">
+                                                <i class="fa fa-clipboard" aria-hidden="true"></i> <span><?= t('Copy') ?></span>
+                                            </button>
+                                            <?= $this->text->markdown($template['description']) ?>
+                                        </fieldset>
+                                    </fieldset>
+                                </div>
+                            </details>
+                        <?php endforeach ?>
+                    </section>
+                <?php endif ?>
             <?php endforeach ?>
+            <p class="template-manager-copy-status" role="status" aria-live="polite"></p>
         </div>
     </details>
 <?php endif ?>

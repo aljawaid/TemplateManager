@@ -1,56 +1,79 @@
-// KANBOARD PLUGIN - JS FILE
+// Provides clipboard and template-field interactions without exposing copied content in logs.
 
-$( document ).ready(function() {
-    var clipboard = new ClipboardJS('.copy-comment-template');
+(function () {
+    'use strict';
 
-    // COPY TO CLIPBOARD SCRIPT - SUCCESS/ERROR STATES
-    clipboard.on('success', function(e) {
-        $(e.trigger).html("<strong class='copied'>&#10004;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html('<i class="fa fa-clipboard" aria-hidden="true"></i>');
-        }, 1500);
-    });
-    clipboard.on('error', function(e) {
-        $(e.trigger).html("<strong>&#10008;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html('<i class="fa fa-clipboard" aria-hidden="true"></i>');
-        }, 3500);
-    });
-});
+    function copyWithFallback(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
 
-$( document ).ready(function() {
-    var clipboard = new ClipboardJS('.copy-global-template');
+        return new Promise(function (resolve, reject) {
+            var temporaryField = document.createElement('textarea');
+            temporaryField.value = text;
+            temporaryField.setAttribute('readonly', '');
+            temporaryField.style.position = 'fixed';
+            temporaryField.style.opacity = '0';
+            document.body.appendChild(temporaryField);
+            temporaryField.select();
 
-    // COPY TO CLIPBOARD SCRIPT - SUCCESS/ERROR STATES
-    clipboard.on('success', function(e) {
-        $(e.trigger).html("<strong class='copied'>&#10004;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html('<i class="fa fa-clipboard" aria-hidden="true"></i> Copy');
-        }, 1500);
+            try {
+                if (document.execCommand('copy')) {
+                    resolve();
+                } else {
+                    reject(new Error('Copy command was not accepted.'));
+                }
+            } catch (error) {
+                reject(error);
+            } finally {
+                document.body.removeChild(temporaryField);
+            }
+        });
+    }
+
+    function updateCopyButton(button, successful) {
+        var label = successful ? button.dataset.copiedLabel : button.dataset.copyErrorLabel;
+        var defaultLabel = button.dataset.copyLabel || '';
+        var status = document.querySelector('.template-manager-copy-status');
+        var stateIcon = document.createElement('strong');
+        var stateLabel = document.createElement('span');
+
+        stateIcon.className = successful ? 'copied' : '';
+        stateIcon.setAttribute('aria-hidden', 'true');
+        stateIcon.textContent = successful ? '\u2714' : '\u2718';
+        stateLabel.textContent = label || '';
+        button.replaceChildren(stateIcon, document.createTextNode(' '), stateLabel);
+
+        if (status) {
+            status.textContent = label || (successful ? 'Copied' : 'Copy failed');
+        }
+
+        window.setTimeout(function () {
+            var defaultIcon = document.createElement('i');
+            var defaultText = document.createElement('span');
+
+            defaultIcon.className = 'fa fa-clipboard';
+            defaultIcon.setAttribute('aria-hidden', 'true');
+            defaultText.textContent = defaultLabel;
+            button.replaceChildren(defaultIcon, document.createTextNode(' '), defaultText);
+        }, successful ? 1500 : 3500);
+    }
+
+    document.addEventListener('click', function (event) {
+        var button = event.target.closest('.copy-comment-template, .copy-global-template');
+
+        if (!button) {
+            return;
+        }
+
+        event.preventDefault();
+        copyWithFallback(button.dataset.clipboardText || '').then(function () {
+            updateCopyButton(button, true);
+        }).catch(function () {
+            updateCopyButton(button, false);
+        });
     });
-    clipboard.on('error', function(e) {
-        $(e.trigger).html("<strong>&#10008;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html('<i class="fa fa-clipboard" aria-hidden="true"></i> Copy');
-        }, 3500);
-    });
-});
+}());
 
 KB.onClick('.js-template-title', function (e) {
     var template = KB.dom(e.target).data('template');

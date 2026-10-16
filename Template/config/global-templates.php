@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * Renders administrator-managed global templates.
+ */
+
+?>
 <div class="template-manager-page-margin">
     <div class="template-manager-page-header">
         <h2 class="">
@@ -58,7 +65,7 @@
                     <td class="template-row table-corner-br">
                         <div class="btn-wrapper">
                             <?= $this->helper->app->tooltipMarkdown($globalTemplate['description']) ?>
-                            <a id="ViewDescTemplate" href="<?= $this->url->href('GlobalContentController', 'viewTemplate', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-comment-template-btn js-modal-medium" title="<?=t('View Template') ?>">
+                            <a href="<?= $this->url->href('GlobalContentController', 'viewTemplate', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn view-comment-template-btn js-modal-medium" title="<?=t('View Template') ?>">
                                 <svg width="20px" height="20px" class="globe-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <g stroke-width="0"/>
                                     <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -72,7 +79,7 @@
                                     </g>
                                 </svg> <?= t('View') ?>
                             </a>
-                            <a id="EditCommentTemplate" href="<?= $this->url->href('GlobalContentController', 'edit', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-comment-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
+                            <a href="<?= $this->url->href('GlobalContentController', 'edit', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn edit-comment-template-btn js-modal-medium" title="<?=t('Edit Template') ?>">
                                 <svg fill="currentColor" width="20px" height="20px" class="edit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <g stroke-width="0"/>
                                     <g stroke-linecap="round" stroke-linejoin="round"/>
@@ -82,7 +89,7 @@
                                     </g>
                                 </svg> <?= t('Edit') ?>
                             </a>
-                            <a id="DeleteCommentTemplate" href="<?= $this->url->href('GlobalContentController', 'confirm', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-comment-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
+                            <a href="<?= $this->url->href('GlobalContentController', 'confirm', array('id' => $globalTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="btn delete-comment-template-btn js-modal-confirm" title="<?=t('Delete Template') ?>">
                                 <svg width="20px" height="20px" class="delete-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <g stroke-width="0"/>
                                     <g stroke-linecap="round" stroke-linejoin="round"/>

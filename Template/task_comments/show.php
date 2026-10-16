@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * Extends task comments with accessible project comment template shortcuts.
+ */
+
+?>
 <details class="accordion-section" <?= empty($comments) ? '' : 'open' ?>>
     <summary class="accordion-title acc-comments-title">
         <i class="fa fa-comments-o"></i> <?= t('Comments') ?>
@@ -55,16 +62,16 @@
                         <?php else: ?>
                         <div class="quick-templates-label relative">
                         <?php endif ?>
-                            <span class="fixed-title" title="<?= $commentTemplate['title'] ?>"><?= $commentTemplate['title'] ?></span>
-                            <div id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= htmlspecialchars($commentTemplate['description']) ?>" title="<?= t('Copy to Clipboard') ?>">
+                            <span class="fixed-title" title="<?= $this->text->e($commentTemplate['title']) ?>"><?= $this->text->e($commentTemplate['title']) ?></span>
+                            <button type="button" id="CommentTemplate<?= $commentTemplate['id'] ?>" class="copy-comment-template quick-templates-title" data-clipboard-text="<?= $this->text->e($commentTemplate['description']) ?>" data-copied-label="<?= t('Copied') ?>" data-copy-error-label="<?= t('Copy failed') ?>" aria-label="<?= t('Copy to Clipboard') ?>" title="<?= t('Copy to Clipboard') ?>">
                                 <i class="fa fa-clipboard" aria-hidden="true"></i>
-                            </div>
+                            </button>
                             <div class="quick-template-content">
                                 <?= $this->helper->app->tooltipMarkdown($commentTemplate['description']) ?>
                             </div>
                             <div class="quick-templates-info">
                                 <?php if (!empty($commentTemplate['topic'])): ?>
-                                    <span class="template-topic" title="<?= ($commentTemplate['topic']) ?>"><?= ($commentTemplate['topic']) ?></span>
+                                    <span class="template-topic" title="<?= $this->text->e($commentTemplate['topic']) ?>"><?= $this->text->e($commentTemplate['topic']) ?></span>
                                 <?php endif ?>
                                 <a href="<?= $this->url->href('CommentTemplateController', 'viewTemplate', array('project_id' => $project['id'], 'id' => $commentTemplate['id'], 'plugin' => 'TemplateManager'), false, '', false) ?>" class="icon-btn js-modal-medium" title="<?=t('View Template') ?>">
                                     <svg width="21px" height="21px" class="comment-templates-icon" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
