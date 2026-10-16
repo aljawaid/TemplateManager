@@ -3,19 +3,21 @@
 namespace Kanboard\Plugin\TemplateManager\Controller;
 
 use Kanboard\Controller\BaseController;
-use Kanboard\Core\Plugin\Directory;
+use Kanboard\Core\Controller\AccessForbiddenException;
 use Kanboard\Core\Controller\PageNotFoundException;
 
 /**
  * Plugin TemplateManager
  * Class GlobalContentController
  * @author aljawaid
+ * Related test: tests/AuthorizationContractTest.php
  */
 
 class GlobalContentController extends BaseController
 {
     public function create(array $values = array(), array $errors = array())
     {
+        $this->requireAdmin();
         $this->response->html($this->template->render('templateManager:global_template/create', array(
             'values' => $values,
             'errors' => $errors,
@@ -24,6 +26,8 @@ class GlobalContentController extends BaseController
 
     public function save()
     {
+        $this->requireAdmin();
+        $this->checkCSRFForm();
         $values = $this->request->getValues();
 
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
@@ -43,7 +47,8 @@ class GlobalContentController extends BaseController
 
     public function edit(array $values = array(), array $errors = array())
     {
-        $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+        $this->requireAdmin();
+        $template = $this->getTemplate();
 
         $this->response->html($this->template->render('templateManager:global_template/edit', array(
             'values' => empty($values) ? $template : $values,
@@ -54,7 +59,9 @@ class GlobalContentController extends BaseController
 
     public function update()
     {
-        $template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
+        $this->requireAdmin();
+        $this->checkCSRFForm();
+        $template = $this->getTemplate();
         $values = $this->request->getValues();
 
         list($valid, $errors) = $this->predefinedTaskDescriptionValidator->validate($values);
@@ -74,6 +81,7 @@ class GlobalContentController extends BaseController
 
     public function confirm()
     {
+        $this->requireAdmin();
         $template = $this->getTemplate();
 
         $this->response->html($this->template->render('templateManager:global_template/remove', array(
@@ -83,6 +91,7 @@ class GlobalContentController extends BaseController
 
     public function remove()
     {
+        $this->requireAdmin();
         $this->checkCSRFParam();
         $template = $this->getTemplate();
 
@@ -108,10 +117,18 @@ class GlobalContentController extends BaseController
 
     public function viewTemplate()
     {
+        $this->requireAdmin();
         $template = $this->getTemplate();
 
         $this->response->html($this->template->render('templateManager:global_template/show', array(
             'template' => $template,
         )));
+    }
+
+    private function requireAdmin()
+    {
+        if (!$this->userSession->isAdmin()) {
+            throw new AccessForbiddenException();
+        }
     }
 }

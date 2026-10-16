@@ -2,13 +2,13 @@
 
 namespace Kanboard\Plugin\TemplateManager\Controller;
 
-use Kanboard\Controller\BaseController;
-use Kanboard\Core\Plugin\Directory;
+use Kanboard\Core\Controller\AccessForbiddenException;
 
 /**
  * Plugin TemplateManager
  * Class GlobalTemplateController
  * @author aljawaid
+ * Related test: tests/AuthorizationContractTest.php
  */
 
 class GlobalTemplateController extends \Kanboard\Controller\ConfigController
@@ -25,6 +25,10 @@ class GlobalTemplateController extends \Kanboard\Controller\ConfigController
 
     public function show(array $values = array(), array $errors = array())
     {
+        if (!$this->userSession->isAdmin()) {
+            throw new AccessForbiddenException();
+        }
+
         $global_template = $this->globalTemplateModel->getById($this->request->getIntegerParam('id'));
 
         $this->response->html($this->helper->layout->config('templateManager:config/global-templates', array(

@@ -10,6 +10,7 @@ use Kanboard\Core\Controller\PageNotFoundException;
  * Plugin TemplateManager
  * Class CommentTemplateController
  * @author aljawaid
+ * Related test: tests/AuthorizationContractTest.php
  */
 
 class CommentTemplateController extends BaseController
@@ -27,6 +28,7 @@ class CommentTemplateController extends BaseController
 
     public function save()
     {
+        $this->checkCSRFForm();
         $project = $this->getProject();
         $values = $this->request->getValues();
 
@@ -48,7 +50,7 @@ class CommentTemplateController extends BaseController
     public function edit(array $values = array(), array $errors = array())
     {
         $project = $this->getProject();
-        $template = $this->taskCommentTemplateModel->getByProjectId($project['id'], $this->request->getIntegerParam('id'));
+        $template = $this->getTemplate($project);
 
         $this->response->html($this->template->render('templateManager:comment_template/edit', array(
             'values' => empty($values) ? $template : $values,
@@ -60,6 +62,7 @@ class CommentTemplateController extends BaseController
 
     public function update()
     {
+        $this->checkCSRFForm();
         $project = $this->getProject();
         $template = $this->getTemplate($project);
         $values = $this->request->getValues();

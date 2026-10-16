@@ -3,12 +3,38 @@
 namespace Kanboard\Plugin\TemplateManager;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Security\Role;
 use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
     public function initialize()
     {
+        // Global template administration is application-wide and restricted to administrators.
+        $this->applicationAccessMap->add('GlobalTemplateController', '*', Role::APP_ADMIN);
+        $this->applicationAccessMap->add('GlobalContentController', '*', Role::APP_ADMIN);
+
+        // Project template catalogues are managed by project managers and read from task views by project viewers.
+        $this->projectAccessMap->add('TemplateContentController', '*', Role::PROJECT_MANAGER);
+        $this->projectAccessMap->add('TaskDescriptionTemplateController', '*', Role::PROJECT_VIEWER);
+        $this->projectAccessMap->add(
+            'TaskDescriptionTemplateController',
+            array('create', 'save', 'edit', 'update', 'confirm', 'remove'),
+            Role::PROJECT_MANAGER
+        );
+        $this->projectAccessMap->add('CommentTemplateController', '*', Role::PROJECT_VIEWER);
+        $this->projectAccessMap->add(
+            'CommentTemplateController',
+            array('create', 'save', 'edit', 'update', 'confirm', 'remove'),
+            Role::PROJECT_MANAGER
+        );
+        $this->projectAccessMap->add('ProjectTemplateController', '*', Role::PROJECT_VIEWER);
+        $this->projectAccessMap->add(
+            'ProjectTemplateController',
+            array('create', 'save', 'edit', 'update', 'confirm', 'remove'),
+            Role::PROJECT_MANAGER
+        );
+
         // Layout - Template Hook - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:config:application', 'templateManager:config/settings');
 
@@ -56,6 +82,10 @@ class Plugin extends Base
         $this->route->addRoute('project/:project_id/templates/comments/view/:id', 'CommentTemplateController', 'viewTemplate', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/edit/:id', 'CommentTemplateController', 'edit', 'TemplateManager');
         $this->route->addRoute('project/:project_id/templates/comments/delete/:id', 'CommentTemplateController', 'confirm', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/project/add', 'ProjectTemplateController', 'create', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/project/view/:id', 'ProjectTemplateController', 'viewTemplate', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/project/edit/:id', 'ProjectTemplateController', 'edit', 'TemplateManager');
+        $this->route->addRoute('project/:project_id/templates/project/delete/:id', 'ProjectTemplateController', 'confirm', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates', 'GlobalTemplateController', 'show', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/add', 'GlobalContentController', 'create', 'TemplateManager');
         $this->route->addRoute('/settings/global-templates/view/:id', 'GlobalContentController', 'viewTemplate', 'TemplateManager');

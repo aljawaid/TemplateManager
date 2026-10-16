@@ -9,6 +9,7 @@ use Kanboard\Core\Plugin\Directory;
  * Plugin TemplateManager
  * Class TemplateContentController
  * @author aljawaid
+ * Related test: tests/AuthorizationContractTest.php
  */
 
 class TemplateContentController extends BaseController
@@ -23,12 +24,14 @@ class TemplateContentController extends BaseController
             'project' => $project,
             'predefined_task_descriptions' => $this->taskDescriptionTemplateModel->getAll($project['id']),
             'saved_comment_templates' => $this->taskCommentTemplateModel->getAll($project['id']),
+            'saved_project_templates' => $this->projectTemplateModel->getAll($project['id']),
             'title' => 'Template Manager',
         )));
     }
 
     public function update()
     {
+        $this->checkCSRFForm();
         $project = $this->getProject();
         $values = $this->request->getValues();
 

@@ -11,6 +11,7 @@ use Kanboard\Core\Controller\PageNotFoundException;
  *
  * @package  Kanboard\Controller
  * Duplicates and extends PredefinedTaskDescriptionController to include topics feature
+ * Related test: tests/AuthorizationContractTest.php
  */
 class TaskDescriptionTemplateController extends BaseController
 {
@@ -27,6 +28,7 @@ class TaskDescriptionTemplateController extends BaseController
 
     public function save()
     {
+        $this->checkCSRFForm();
         $project = $this->getProject();
         $values = $this->request->getValues();
 
@@ -48,7 +50,7 @@ class TaskDescriptionTemplateController extends BaseController
     public function edit(array $values = array(), array $errors = array())
     {
         $project = $this->getProject();
-        $template = $this->taskDescriptionTemplateModel->getById($project['id'], $this->request->getIntegerParam('id'));
+        $template = $this->getTemplate($project);
 
         $this->response->html($this->template->render('templateManager:predefined_task_description/edit', array(
             'values' => empty($values) ? $template : $values,
@@ -60,6 +62,7 @@ class TaskDescriptionTemplateController extends BaseController
 
     public function update()
     {
+        $this->checkCSRFForm();
         $project = $this->getProject();
         $template = $this->getTemplate($project);
         $values = $this->request->getValues();
