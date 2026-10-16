@@ -31,9 +31,9 @@
     </a>
 </p>
 
-Speed through your tasks replacing Predefined Contents with the new Template Manager. Users can impove consistency of project data whilst saving time creating repetitive comments using saved templates. Project Editors can easily manage their template content for each project.
+Manage reusable task descriptions, comments, email subjects and guidance templates in one place. Administrators maintain global templates for every project, while project managers maintain a separate catalogue for their own project.
 
-Templates can be created for task descriptions (core feature), comments (new feature), global templates (new feature) and email subjects (core feature) all in one place including adding notes and instructions separate to the template content to help keep content neat. The global templates feature displays for every project and can be used as a way to guide and advise users within tasks. Templates can also be useful in environments where auditing or standardization is required.
+The responsive interface presents global and project templates clearly on task pages, preserves existing global content during upgrades and supports light and dark colour preferences.
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
@@ -60,6 +60,11 @@ Templates can be created for task descriptions (core feature), comments (new fea
     - `https://mydomain.com/project/[project_id]/templates/comments/view/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/comments/edit/[template_id]`
     - `https://mydomain.com/project/[project_id]/templates/comments/delete/[template_id]`
+  - _Project Templates:_
+    - `https://mydomain.com/project/[project_id]/templates/project/add`
+    - `https://mydomain.com/project/[project_id]/templates/project/view/[template_id]`
+    - `https://mydomain.com/project/[project_id]/templates/project/edit/[template_id]`
+    - `https://mydomain.com/project/[project_id]/templates/project/delete/[template_id]`
   - _Global Templates:_
     - `https://mydomain.com/global-templates/add`
     - `https://mydomain.com/global-templates/view/[template_id]`
@@ -86,9 +91,16 @@ Templates can be created for task descriptions (core feature), comments (new fea
 
 **NEW Global Templates**
 - Show generic templates common to your personal or organisational workflow (to your end users)
-- Inside tasks, global templates are shown under a new **General Templates & Actions** accordion section
+- Inside tasks, global templates are shown under the **Reusable Templates & Actions** accordion section
 - These templates are visible to all user roles and are not restricted by project
+- Only application administrators can create, edit or delete global templates
 - Can be disabled through `Settings`
+
+**NEW Project Templates**
+- Give each project its own reusable guidance and content catalogue
+- Project managers can create, edit and delete project templates for their project
+- Project members and viewers can use the templates available to their project from task pages
+- Project deletion also removes its project templates; global templates remain unchanged
 
 **Task Comments**
 - Show total number of comments created
@@ -166,8 +178,8 @@ Templates can be created for task descriptions (core feature), comments (new fea
   - _To use your comment templates_
 - Go to `Settings` &#10562; `Global Templates`
   - _To manage your global templates_
-- Go to any `Task` &#10562; General Templates & Actions
-  - _To use your global templates_
+- Go to any `Task` &#10562; Reusable Templates & Actions
+  - _To use the available global and project templates_
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
@@ -192,7 +204,8 @@ Templates can be created for task descriptions (core feature), comments (new fea
 <details>
     <summary><strong>Compatibility</strong></summary>
 
-- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.54`
+- Tested with PHP `8.2`, `8.3`, `8.4` and `8.5`
 - **Other Plugins & Action Plugins**
   - _No known issues_
   - Compatible with [KanboardCSS](https://github.com/aljawaid/KanboardCSS), [TemplateTitle](https://github.com/creecros/TemplateTitle), [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding), [Glancer](https://github.com/aljawaid/Glancer), [Group_assign](https://github.com/creecros/Group_assign), [PluginManager](https://github.com/aljawaid/PluginManager)
@@ -201,13 +214,15 @@ Templates can be created for task descriptions (core feature), comments (new fea
   - Database Changes:
     - `01` New database table created as `comment_templates`
     - `01` New database table created as `global_templates`
+    - `01` New database table created as `project_templates`
     - `03` New columns added to the `predefined_task_descriptions` table as `topic` `note` `instructions`
 
 </details>
 <details>
     <summary><strong>Translations</strong></summary>
 
-- _Starter template available_
+- Complete `en_GB` and `en_US` catalogues are included
+- A corrected starter catalogue is available for additional languages
 
 </details>
 

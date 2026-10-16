@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v3.0.0 (Unreleased)
+
+_(most recent changes are listed on top):_
+- NEW: Add project-scoped templates managed by project managers while retaining administrator-managed global templates - closes #17
+- FIX: Enforce explicit administrator and project-manager access boundaries for template management
+- FIX: Add responsive light and dark presentation with reduced-motion support
+- FIX: Replace the ClipboardJS runtime dependency and remove copied content from browser logs
+- FIX: Add complete English fallback catalogues and correct the translation starter file
+- FIX: Verify fresh database installation, project isolation and Kanboard 1.2.54 compatibility on PHP 8.2 through 8.5
+
+
 ## v2.9
 
 _(most recent changes are listed on top):_

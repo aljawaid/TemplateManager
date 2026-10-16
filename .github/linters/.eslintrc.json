@@ -9,7 +9,8 @@
     "extends": "eslint:recommended",
     "ignorePatterns": ["clipboard-*.min.js", "**/vendor/*.js"],
     "globals": {
-      "ClipboardJS": "readonly"
+      "KB": "readonly",
+      "_KB": "readonly"
     },
     "rules": {
         "no-undef": "warn"

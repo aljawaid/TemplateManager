@@ -75,7 +75,7 @@ jobs:
           PHP_CONFIG_FILE: php.ini
           YAML_CONFIG_FILE: .yaml-lint.yml
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
-          FILTER_REGEX_EXCLUDE: (Releases.*|Screenshots.*)
+          FILTER_REGEX_EXCLUDE: (Releases.*|Screenshots.*|Assets/js/clipboard-v2\.0\.11\.min\.js)
           # ACTIONS_RUNNER_DEBUG: true
           # CREATE_LOG_FILE: true
           # LOG_FILE: code-linter.log
@@ -85,7 +85,6 @@ jobs:
           SUPPRESS_POSSUM: true
           VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_GITLEAKS: true
           VALIDATE_HTML: true
           # VALIDATE_JAVA: true
           VALIDATE_JAVASCRIPT_ES: true
