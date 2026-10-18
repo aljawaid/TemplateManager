@@ -23,6 +23,7 @@ $presentationContracts = array(
     '--tm-transition: 160ms ease-in-out',
     '--tm-surface: var(--body-background-color)',
     '--tm-text: var(--color-primary)',
+    '--tm-muted: var(--color-primary)',
     '.template-form-grid',
     '.template-table-wrap',
 );

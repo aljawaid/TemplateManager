@@ -8,7 +8,7 @@
 
 $plugin = $loadedPlugins['TemplateManager'];
 
-templateManagerAssertSame('3.0.2', $plugin->getPluginVersion(), 'The theme-aware dual-scope feature set must expose version 3.0.2.');
+templateManagerAssertSame('3.0.3', $plugin->getPluginVersion(), 'The accessible theme-aware feature set must expose version 3.0.3.');
 templateManagerAssertSame('>=1.2.54', $plugin->getCompatibleVersion(), 'Compatibility must match the tested Kanboard baseline.');
 templateManagerAssertTrue(isset($container['projectTemplateModel']), 'The project template model must be registered.');
 

@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.0.3 - 2026-10-18
+
+_(most recent changes are listed on top):_
+- FIX: Use Kanboard's primary theme text colour for instructional and secondary template text so the light theme clears normal-text contrast requirements
+
+
 ## v3.0.2 - 2026-10-18
 
 _(most recent changes are listed on top):_
