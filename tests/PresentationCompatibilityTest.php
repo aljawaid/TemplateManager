@@ -18,10 +18,11 @@ $projectDropdown = file_get_contents($root . '/Template/project_header/dropdown.
 $taskComments = file_get_contents($root . '/Template/task_comments/show.php');
 
 $presentationContracts = array(
-    '@media (prefers-color-scheme: dark)',
     '@media screen and (max-width: 780px)',
     '@media (prefers-reduced-motion: reduce)',
     '--tm-transition: 160ms ease-in-out',
+    '--tm-surface: var(--body-background-color)',
+    '--tm-text: var(--color-primary)',
     '.template-form-grid',
     '.template-table-wrap',
 );
@@ -30,6 +31,8 @@ foreach ($presentationContracts as $contract) {
     templateManagerAssertContains($contract, $stylesheet, 'The presentation contract is incomplete.');
 }
 
+templateManagerAssertNotContains('light-dark(', $stylesheet, 'Theme colours must follow Kanboard rather than the operating-system preference.');
+templateManagerAssertNotContains('color-scheme: light dark', $stylesheet, 'The plug-in must not override Kanboard\'s selected colour scheme.');
 templateManagerAssertContains('navigator.clipboard.writeText(text)', $javascript, 'Modern clipboard support must be used.');
 templateManagerAssertContains("document.execCommand('copy')", $javascript, 'A clipboard fallback must remain available.');
 templateManagerAssertNotContains('console.', $javascript, 'Template content must never be written to browser logs.');

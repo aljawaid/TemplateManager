@@ -922,20 +922,19 @@ a.top-btn, a.top-btn:visited {
 .template-manager-page-margin,
 .template-manager-modal-contents,
 .template-manager-task-catalogue {
-    --tm-accent: #147A42;
-    --tm-accent-strong: #055D20;
-    --tm-border: light-dark(#B9C3C9, #52606B);
-    --tm-danger: light-dark(#A5213D, #FF8299);
-    --tm-muted: light-dark(#5C6770, #B7C0C8);
-    --tm-surface: light-dark(#FFFFFF, #20262C);
-    --tm-surface-subtle: light-dark(#F3F7F5, #283139);
-    --tm-text: light-dark(#24292E, #F0F3F5);
-    --tm-shadow: light-dark(rgba(0, 0, 0, .12), rgba(0, 0, 0, .42));
+    --tm-accent: var(--button-primary-background-color);
+    --tm-accent-strong: var(--button-primary-border-color);
+    --tm-border: var(--table-border-color);
+    --tm-danger: var(--form-error-color);
+    --tm-muted: var(--color-light);
+    --tm-surface: var(--body-background-color);
+    --tm-surface-subtle: var(--table-header-background-color);
+    --tm-text: var(--color-primary);
+    --tm-shadow: var(--tooltip-shadow-color);
     --tm-transition: 160ms ease-in-out;
 
     box-sizing: border-box;
     color: var(--tm-text);
-    color-scheme: light dark;
 }
 
 .template-manager-page-margin *,
@@ -1178,20 +1177,13 @@ button.copy-comment-template:focus {
     width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-    .template-manager-page-margin,
-    .template-manager-modal-contents,
-    .template-manager-task-catalogue {
-        --tm-accent: #43B773;
-        --tm-accent-strong: #72D497;
-    }
-
-    .template-manager-page-margin .pp-grey,
-    .template-view .template-view-topic,
-    .template-scope-help,
-    .template-manager-scope-help {
-        color: var(--tm-muted);
-    }
+.template-manager-page-margin .pp-grey,
+.template-view .template-view-topic,
+.template-scope-help,
+.template-manager-scope-help,
+.template-manager-page-margin .page-intro,
+.template-manager-page-margin .section-intro {
+    color: var(--tm-muted);
 }
 
 @media screen and (max-width: 780px) {

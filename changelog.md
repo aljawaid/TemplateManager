@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.0.2 - 2026-10-18
+
+_(most recent changes are listed on top):_
+- FIX: Follow Kanboard's selected light or dark theme variables so template pages, tables, forms and introductory text retain readable contrast independently of the operating-system preference
+
+
 ## v3.0.1 - 2026-10-18
 
 _(most recent changes are listed on top):_
