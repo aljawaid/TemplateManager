@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.0.1 - 2026-10-18
+
+_(most recent changes are listed on top):_
+- FIX: Keep the global template catalogue within narrow mobile viewports by using the existing bounded table scroll container
+
+
 ## v3.0.0 - 2026-10-18
 
 _(most recent changes are listed on top):_

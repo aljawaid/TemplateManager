@@ -4,12 +4,14 @@
  * Verifies responsive, theme-aware and privacy-preserving interface contracts.
  *
  * Related files: Assets/css/template-manager.css, Assets/js/template-manager.js,
- * Template/task/global-templates.php and Template/project_predefined_content/show.php.
+ * Template/config/global-templates.php, Template/task/global-templates.php and
+ * Template/project_predefined_content/show.php.
  */
 
 $root = dirname(__DIR__);
 $stylesheet = file_get_contents($root . '/Assets/css/template-manager.css');
 $javascript = file_get_contents($root . '/Assets/js/template-manager.js');
+$globalCatalogue = file_get_contents($root . '/Template/config/global-templates.php');
 $taskCatalogue = file_get_contents($root . '/Template/task/global-templates.php');
 $projectCatalogue = file_get_contents($root . '/Template/project_predefined_content/show.php');
 $projectDropdown = file_get_contents($root . '/Template/project_header/dropdown.php');
@@ -32,6 +34,7 @@ templateManagerAssertContains('navigator.clipboard.writeText(text)', $javascript
 templateManagerAssertContains("document.execCommand('copy')", $javascript, 'A clipboard fallback must remain available.');
 templateManagerAssertNotContains('console.', $javascript, 'Template content must never be written to browser logs.');
 templateManagerAssertNotContains('ClipboardJS', $javascript, 'The bundled clipboard dependency must not be required.');
+templateManagerAssertContains('class="template-table-wrap"', $globalCatalogue, 'The global catalogue must contain wide tables on narrow viewports.');
 templateManagerAssertContains('type="button" class="copy-global-template', $taskCatalogue, 'Copy controls must be accessible buttons.');
 templateManagerAssertContains("projectTemplateModel->getAll(\$task['project_id'])", $taskCatalogue, 'Task pages must load project-scoped templates.');
 templateManagerAssertContains("configModel->get('global_templates', '') === 'enable'", $taskCatalogue, 'The global visibility setting must not hide project templates.');
