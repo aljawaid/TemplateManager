@@ -1,6 +1,12 @@
 # Changelog
 
 
+## v3.0.4 - 2026-10-18
+
+_(most recent changes are listed on top):_
+- FIX: Display the saved global-template visibility choice instead of showing Enable when the setting is absent or disabled
+
+
 ## v3.0.3 - 2026-10-18
 
 _(most recent changes are listed on top):_

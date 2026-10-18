@@ -16,6 +16,7 @@ $taskCatalogue = file_get_contents($root . '/Template/task/global-templates.php'
 $projectCatalogue = file_get_contents($root . '/Template/project_predefined_content/show.php');
 $projectDropdown = file_get_contents($root . '/Template/project_header/dropdown.php');
 $taskComments = file_get_contents($root . '/Template/task_comments/show.php');
+$settings = file_get_contents($root . '/Template/config/settings.php');
 
 $presentationContracts = array(
     '@media screen and (max-width: 780px)',
@@ -34,6 +35,7 @@ foreach ($presentationContracts as $contract) {
 
 templateManagerAssertNotContains('light-dark(', $stylesheet, 'Theme colours must follow Kanboard rather than the operating-system preference.');
 templateManagerAssertNotContains('color-scheme: light dark', $stylesheet, 'The plug-in must not override Kanboard\'s selected colour scheme.');
+templateManagerAssertContains("configModel->get('global_templates', 'disable')", $settings, 'The settings control must reflect the persisted global-template state.');
 templateManagerAssertContains('navigator.clipboard.writeText(text)', $javascript, 'Modern clipboard support must be used.');
 templateManagerAssertContains("document.execCommand('copy')", $javascript, 'A clipboard fallback must remain available.');
 templateManagerAssertNotContains('console.', $javascript, 'Template content must never be written to browser logs.');

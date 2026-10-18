@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * Renders the persisted global-template visibility setting.
+ */
+
+$globalTemplatesSetting = isset($values['global_templates'])
+    ? $values['global_templates']
+    : $this->model->configModel->get('global_templates', 'disable');
+?>
 <fieldset id="TemplateSettings" class="panel template-manager-settings">
     <h3 class="">
         <svg width="26px" height="26px" class="template-manager-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -17,8 +27,8 @@
         <legend><?= t('Global Templates') ?></legend>
         <div class="template-options-section-radios">
             <div class="template-radio-options">
-                <?= $this->form->radio('global_templates', t('Enable'), 'enable', true, isset($values['global_templates']) && $values['global_templates'] == 'enable') ?>
-                <?= $this->form->radio('global_templates', t('Disable'), 'disable', isset($values['global_templates']) && $values['global_templates'] == 'disable') ?>
+                <?= $this->form->radio('global_templates', t('Enable'), 'enable', $globalTemplatesSetting === 'enable') ?>
+                <?= $this->form->radio('global_templates', t('Disable'), 'disable', $globalTemplatesSetting === 'disable') ?>
                 <p class="form-help"><?= t('Existing templates are not deleted through this setting') ?></p>
             </div>
         </div>
