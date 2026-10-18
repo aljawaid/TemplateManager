@@ -1,7 +1,7 @@
 # Changelog
 
 
-## v3.0.0 (Unreleased)
+## v3.0.0 - 2026-10-18
 
 _(most recent changes are listed on top):_
 - NEW: Add project-scoped templates managed by project managers while retaining administrator-managed global templates - closes #17
