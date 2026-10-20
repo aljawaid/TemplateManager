@@ -1,31 +1,32 @@
 # Changelog
 
 
-## v3.0.4 - 2026-10-18
+## v3.0.4
 
 _(most recent changes are listed on top):_
+- FIX: DEPENDENCY: Upgrade Super-Linter To 9.0.0
 - FIX: Display the saved global-template visibility choice instead of showing Enable when the setting is absent or disabled
 
 
-## v3.0.3 - 2026-10-18
+## v3.0.3
 
 _(most recent changes are listed on top):_
 - FIX: Use Kanboard's primary theme text colour for instructional and secondary template text so the light theme clears normal-text contrast requirements
 
 
-## v3.0.2 - 2026-10-18
+## v3.0.2
 
 _(most recent changes are listed on top):_
 - FIX: Follow Kanboard's selected light or dark theme variables so template pages, tables, forms and introductory text retain readable contrast independently of the operating-system preference
 
 
-## v3.0.1 - 2026-10-18
+## v3.0.1
 
 _(most recent changes are listed on top):_
 - FIX: Keep the global template catalogue within narrow mobile viewports by using the existing bounded table scroll container
 
 
-## v3.0.0 - 2026-10-18
+## v3.0.0
 
 _(most recent changes are listed on top):_
 - NEW: Add project-scoped templates managed by project managers while retaining administrator-managed global templates - closes #17

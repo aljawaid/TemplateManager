@@ -1,6 +1,6 @@
 # Plugin Installation
 
-> **Compatibility:** TemplateManager 3.0.0 requires Kanboard 1.2.54 or later and is tested with PHP 8.2 through 8.5.
+> **Compatibility:** TemplateManager 3.0.4 requires Kanboard 1.2.54 or later and is tested with PHP 8.2 through 8.5.
 
 - **Install via the [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
   - _Go to:_
